@@ -1,0 +1,2054 @@
+{
+  "term_index": {
+    "分治": {
+      "pinyin": "fen zhi",
+      "first_letters": "FZ",
+      "original": "分治",
+      "info": {
+        "en": "Divide and Conquer",
+        "category": "算法设计",
+        "tags": [
+          "基础",
+          "递归"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "分治法": {
+      "pinyin": "fen zhi fa",
+      "first_letters": "FZF",
+      "original": "分治法",
+      "info": {
+        "en": "Divide and Conquer",
+        "category": "算法设计",
+        "tags": [
+          "基础"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "动态规划": {
+      "pinyin": "dong tai gui hua",
+      "first_letters": "DTGH",
+      "original": "动态规划",
+      "info": {
+        "en": "Dynamic Programming",
+        "category": "算法设计",
+        "tags": [
+          "基础",
+          "优化"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "贪心算法": {
+      "pinyin": "tan xin suan fa",
+      "first_letters": "TXSF",
+      "original": "贪心算法",
+      "info": {
+        "en": "Greedy Algorithm",
+        "category": "算法设计",
+        "tags": [
+          "基础",
+          "优化"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "回溯算法": {
+      "pinyin": "hui su suan fa",
+      "first_letters": "HSSF",
+      "original": "回溯算法",
+      "info": {
+        "en": "Backtracking",
+        "category": "算法设计",
+        "tags": [
+          "搜索",
+          "枚举"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "递归": {
+      "pinyin": "di gui",
+      "first_letters": "DG",
+      "original": "递归",
+      "info": {
+        "en": "Recursion",
+        "category": "基础概念",
+        "tags": [
+          "基础",
+          "函数"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "迭代": {
+      "pinyin": "die dai",
+      "first_letters": "DD",
+      "original": "迭代",
+      "info": {
+        "en": "Iteration",
+        "category": "基础概念",
+        "tags": [
+          "基础",
+          "循环"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "快速排序": {
+      "pinyin": "kuai su pai xu",
+      "first_letters": "KSPX",
+      "original": "快速排序",
+      "info": {
+        "en": "Quick Sort",
+        "category": "排序算法",
+        "tags": [
+          "排序",
+          "分治"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "归并排序": {
+      "pinyin": "gui bing pai xu",
+      "first_letters": "GBPX",
+      "original": "归并排序",
+      "info": {
+        "en": "Merge Sort",
+        "category": "排序算法",
+        "tags": [
+          "排序",
+          "分治"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "堆排序": {
+      "pinyin": "dui pai xu",
+      "first_letters": "DPX",
+      "original": "堆排序",
+      "info": {
+        "en": "Heap Sort",
+        "category": "排序算法",
+        "tags": [
+          "排序",
+          "堆"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "插入排序": {
+      "pinyin": "cha ru pai xu",
+      "first_letters": "CRPX",
+      "original": "插入排序",
+      "info": {
+        "en": "Insertion Sort",
+        "category": "排序算法",
+        "tags": [
+          "排序",
+          "基础"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "冒泡排序": {
+      "pinyin": "mao pao pai xu",
+      "first_letters": "MPPX",
+      "original": "冒泡排序",
+      "info": {
+        "en": "Bubble Sort",
+        "category": "排序算法",
+        "tags": [
+          "排序",
+          "基础"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "选择排序": {
+      "pinyin": "xuan ze pai xu",
+      "first_letters": "XZPX",
+      "original": "选择排序",
+      "info": {
+        "en": "Selection Sort",
+        "category": "排序算法",
+        "tags": [
+          "排序",
+          "基础"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "二分查找": {
+      "pinyin": "er fen cha zhao",
+      "first_letters": "EFCZ",
+      "original": "二分查找",
+      "info": {
+        "en": "Binary Search",
+        "category": "查找算法",
+        "tags": [
+          "查找",
+          "分治"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "哈希查找": {
+      "pinyin": "ha xi cha zhao",
+      "first_letters": "HXCZ",
+      "original": "哈希查找",
+      "info": {
+        "en": "Hash Search",
+        "category": "查找算法",
+        "tags": [
+          "查找"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "深度优先搜索": {
+      "pinyin": "shen du you xian sou suo",
+      "first_letters": "SDYXSS",
+      "original": "深度优先搜索",
+      "info": {
+        "en": "DFS",
+        "category": "图算法",
+        "tags": [
+          "搜索",
+          "图"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "广度优先搜索": {
+      "pinyin": "guang du you xian sou suo",
+      "first_letters": "GDYXSS",
+      "original": "广度优先搜索",
+      "info": {
+        "en": "BFS",
+        "category": "图算法",
+        "tags": [
+          "搜索",
+          "图"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "Dijkstra算法": {
+      "pinyin": "dijkstra suan fa",
+      "first_letters": "DSF",
+      "original": "Dijkstra算法",
+      "info": {
+        "en": "Dijkstra Algorithm",
+        "category": "图算法",
+        "tags": [
+          "最短路径"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "Bellman-Ford算法": {
+      "pinyin": "bellman ford suan fa",
+      "first_letters": "BFSF",
+      "original": "Bellman-Ford算法",
+      "info": {
+        "en": "Bellman-Ford Algorithm",
+        "category": "图算法",
+        "tags": [
+          "最短路径"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "Floyd算法": {
+      "pinyin": "floyd suan fa",
+      "first_letters": "FSF",
+      "original": "Floyd算法",
+      "info": {
+        "en": "Floyd-Warshall Algorithm",
+        "category": "图算法",
+        "tags": [
+          "最短路径"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "Prim算法": {
+      "pinyin": "prim suan fa",
+      "first_letters": "PSF",
+      "original": "Prim算法",
+      "info": {
+        "en": "Prim Algorithm",
+        "category": "图算法",
+        "tags": [
+          "最小生成树"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "Kruskal算法": {
+      "pinyin": "kruskal suan fa",
+      "first_letters": "KSF",
+      "original": "Kruskal算法",
+      "info": {
+        "en": "Kruskal Algorithm",
+        "category": "图算法",
+        "tags": [
+          "最小生成树"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "二叉树": {
+      "pinyin": "er cha shu",
+      "first_letters": "ECS",
+      "original": "二叉树",
+      "info": {
+        "en": "Binary Tree",
+        "category": "数据结构",
+        "tags": [
+          "树",
+          "基础"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "完全二叉树": {
+      "pinyin": "wan quan er cha shu",
+      "first_letters": "WQECS",
+      "original": "完全二叉树",
+      "info": {
+        "en": "Complete Binary Tree",
+        "category": "数据结构",
+        "tags": [
+          "树"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "满二叉树": {
+      "pinyin": "man er cha shu",
+      "first_letters": "MECS",
+      "original": "满二叉树",
+      "info": {
+        "en": "Full Binary Tree",
+        "category": "数据结构",
+        "tags": [
+          "树"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "平衡二叉树": {
+      "pinyin": "ping heng er cha shu",
+      "first_letters": "PHECS",
+      "original": "平衡二叉树",
+      "info": {
+        "en": "Balanced Binary Tree",
+        "category": "数据结构",
+        "tags": [
+          "树",
+          "平衡"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "二叉搜索树": {
+      "pinyin": "er cha sou suo shu",
+      "first_letters": "ECSSS",
+      "original": "二叉搜索树",
+      "info": {
+        "en": "BST",
+        "category": "数据结构",
+        "tags": [
+          "树",
+          "搜索"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "堆": {
+      "pinyin": "dui",
+      "first_letters": "D",
+      "original": "堆",
+      "info": {
+        "en": "Heap",
+        "category": "数据结构",
+        "tags": [
+          "树",
+          "优先级队列"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "优先队列": {
+      "pinyin": "you xian dui lie",
+      "first_letters": "YXDL",
+      "original": "优先队列",
+      "info": {
+        "en": "Priority Queue",
+        "category": "数据结构",
+        "tags": [
+          "队列",
+          "堆"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "栈": {
+      "pinyin": "zhan",
+      "first_letters": "Z",
+      "original": "栈",
+      "info": {
+        "en": "Stack",
+        "category": "数据结构",
+        "tags": [
+          "基础",
+          "LIFO"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "队列": {
+      "pinyin": "dui lie",
+      "first_letters": "DL",
+      "original": "队列",
+      "info": {
+        "en": "Queue",
+        "category": "数据结构",
+        "tags": [
+          "基础",
+          "FIFO"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "链表": {
+      "pinyin": "lian biao",
+      "first_letters": "LB",
+      "original": "链表",
+      "info": {
+        "en": "Linked List",
+        "category": "数据结构",
+        "tags": [
+          "基础",
+          "线性"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "数组": {
+      "pinyin": "shu zu",
+      "first_letters": "SZ",
+      "original": "数组",
+      "info": {
+        "en": "Array",
+        "category": "数据结构",
+        "tags": [
+          "基础",
+          "线性"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "字符串": {
+      "pinyin": "zi fu chuan",
+      "first_letters": "ZFC",
+      "original": "字符串",
+      "info": {
+        "en": "String",
+        "category": "数据结构",
+        "tags": [
+          "基础"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "哈希表": {
+      "pinyin": "ha xi biao",
+      "first_letters": "HXB",
+      "original": "哈希表",
+      "info": {
+        "en": "Hash Table",
+        "category": "数据结构",
+        "tags": [
+          "查找"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "哈希表"
+    },
+    "图": {
+      "pinyin": "tu",
+      "first_letters": "T",
+      "original": "图",
+      "info": {
+        "en": "Graph",
+        "category": "数据结构",
+        "tags": [
+          "非线性"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "红黑树": {
+      "pinyin": "hong hei shu",
+      "first_letters": "HHS",
+      "original": "红黑树",
+      "info": {
+        "en": "Red-Black Tree",
+        "category": "高级数据结构",
+        "tags": [
+          "树",
+          "平衡"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "B树": {
+      "pinyin": "b shu",
+      "first_letters": "BS",
+      "original": "B树",
+      "info": {
+        "en": "B-Tree",
+        "category": "高级数据结构",
+        "tags": [
+          "树"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "B+树": {
+      "pinyin": "b  shu",
+      "first_letters": "BS",
+      "original": "B+树",
+      "info": {
+        "en": "B+ Tree",
+        "category": "高级数据结构",
+        "tags": [
+          "树"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "线段树": {
+      "pinyin": "xian duan shu",
+      "first_letters": "XDS",
+      "original": "线段树",
+      "info": {
+        "en": "Segment Tree",
+        "category": "高级数据结构",
+        "tags": [
+          "树",
+          "区间"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "树状数组": {
+      "pinyin": "shu zhuang shu zu",
+      "first_letters": "SZSZ",
+      "original": "树状数组",
+      "info": {
+        "en": "Fenwick Tree",
+        "category": "高级数据结构",
+        "tags": [
+          "树",
+          "前缀和"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "并查集": {
+      "pinyin": "bing cha ji",
+      "first_letters": "BCJ",
+      "original": "并查集",
+      "info": {
+        "en": "Union-Find",
+        "category": "高级数据结构",
+        "tags": [
+          "集合"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "字典树": {
+      "pinyin": "zi dian shu",
+      "first_letters": "ZDS",
+      "original": "字典树",
+      "info": {
+        "en": "Trie",
+        "category": "高级数据结构",
+        "tags": [
+          "树",
+          "字符串"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "时间复杂度": {
+      "pinyin": "shi jian fu za du",
+      "first_letters": "SJFZD",
+      "original": "时间复杂度",
+      "info": {
+        "en": "Time Complexity",
+        "category": "算法分析",
+        "tags": [
+          "复杂度"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "空间复杂度": {
+      "pinyin": "kong jian fu za du",
+      "first_letters": "KJFZD",
+      "original": "空间复杂度",
+      "info": {
+        "en": "Space Complexity",
+        "category": "算法分析",
+        "tags": [
+          "复杂度"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "最优子结构": {
+      "pinyin": "zui you zi jie gou",
+      "first_letters": "ZYZJG",
+      "original": "最优子结构",
+      "info": {
+        "en": "Optimal Substructure",
+        "category": "算法分析",
+        "tags": [
+          "动态规划"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "重叠子问题": {
+      "pinyin": "chong die zi wen ti",
+      "first_letters": "CDZWT",
+      "original": "重叠子问题",
+      "info": {
+        "en": "Overlapping Subproblems",
+        "category": "算法分析",
+        "tags": [
+          "动态规划"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "位运算": {
+      "pinyin": "wei yun suan",
+      "first_letters": "WYS",
+      "original": "位运算",
+      "info": {
+        "en": "Bit Manipulation",
+        "category": "技巧",
+        "tags": [
+          "优化"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "位运算"
+    },
+    "双指针": {
+      "pinyin": "shuang zhi zhen",
+      "first_letters": "SZZ",
+      "original": "双指针",
+      "info": {
+        "en": "Two Pointers",
+        "category": "技巧",
+        "tags": [
+          "优化"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "滑动窗口": {
+      "pinyin": "hua dong chuang kou",
+      "first_letters": "HDCK",
+      "original": "滑动窗口",
+      "info": {
+        "en": "Sliding Window",
+        "category": "技巧",
+        "tags": [
+          "优化"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "单调栈": {
+      "pinyin": "dan diao zhan",
+      "first_letters": "DDZ",
+      "original": "单调栈",
+      "info": {
+        "en": "Monotonic Stack",
+        "category": "技巧",
+        "tags": [
+          "栈"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "前缀和": {
+      "pinyin": "qian zhui he",
+      "first_letters": "QZH",
+      "original": "前缀和",
+      "info": {
+        "en": "Prefix Sum",
+        "category": "技巧",
+        "tags": [
+          "优化"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "差分数组": {
+      "pinyin": "cha fen shu zu",
+      "first_letters": "CFSZ",
+      "original": "差分数组",
+      "info": {
+        "en": "Difference Array",
+        "category": "技巧",
+        "tags": [
+          "优化"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "逆序对": {
+      "pinyin": "ni xu dui",
+      "first_letters": "NXD",
+      "original": "逆序对",
+      "info": {
+        "en": "Inversion Pair",
+        "category": "概念",
+        "tags": [
+          "排序"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "欧拉回路": {
+      "pinyin": "ou la hui lu",
+      "first_letters": "OLHL",
+      "original": "欧拉回路",
+      "info": {
+        "en": "Euler Circuit",
+        "category": "图论",
+        "tags": [
+          "回路"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "哈密顿回路": {
+      "pinyin": "ha mi dun hui lu",
+      "first_letters": "HMDHL",
+      "original": "哈密顿回路",
+      "info": {
+        "en": "Hamiltonian Circuit",
+        "category": "图论",
+        "tags": [
+          "回路"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "拓扑排序": {
+      "pinyin": "tuo pu pai xu",
+      "first_letters": "TPPX",
+      "original": "拓扑排序",
+      "info": {
+        "en": "Topological Sort",
+        "category": "图论",
+        "tags": [
+          "排序"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "关键路径": {
+      "pinyin": "guan jian lu jing",
+      "first_letters": "GJLJ",
+      "original": "关键路径",
+      "info": {
+        "en": "Critical Path",
+        "category": "图论",
+        "tags": [
+          "项目管理"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "网络流": {
+      "pinyin": "wang luo liu",
+      "first_letters": "WLL",
+      "original": "网络流",
+      "info": {
+        "en": "Network Flow",
+        "category": "图论",
+        "tags": [
+          "流量"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "最大流": {
+      "pinyin": "zui da liu",
+      "first_letters": "ZDL",
+      "original": "最大流",
+      "info": {
+        "en": "Maximum Flow",
+        "category": "图论",
+        "tags": [
+          "流量"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "最大流"
+    },
+    "最小割": {
+      "pinyin": "zui xiao ge",
+      "first_letters": "ZXG",
+      "original": "最小割",
+      "info": {
+        "en": "Minimum Cut",
+        "category": "图论",
+        "tags": [
+          "流量"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "最小割"
+    },
+    "二分图匹配": {
+      "pinyin": "er fen tu pi pei",
+      "first_letters": "EFTPP",
+      "original": "二分图匹配",
+      "info": {
+        "en": "Bipartite Matching",
+        "category": "图论",
+        "tags": [
+          "匹配"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "穷举法": {
+      "pinyin": "qiong ju fa",
+      "first_letters": "QJF",
+      "original": "穷举法",
+      "info": {
+        "en": "Brute Force",
+        "category": "算法设计",
+        "tags": [
+          "暴力"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "暴力搜索": {
+      "pinyin": "bao li sou suo",
+      "first_letters": "BLSS",
+      "original": "暴力搜索",
+      "info": {
+        "en": "Brute Force Search",
+        "category": "算法设计",
+        "tags": [
+          "暴力",
+          "搜索"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "减治法": {
+      "pinyin": "jian zhi fa",
+      "first_letters": "JZF",
+      "original": "减治法",
+      "info": {
+        "en": "Reduce and Conquer",
+        "category": "算法设计",
+        "tags": [
+          "基础"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "变治法": {
+      "pinyin": "bian zhi fa",
+      "first_letters": "BZF",
+      "original": "变治法",
+      "info": {
+        "en": "Transform and Conquer",
+        "category": "算法设计",
+        "tags": [
+          "基础"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "时空权衡": {
+      "pinyin": "shi kong quan heng",
+      "first_letters": "SKQH",
+      "original": "时空权衡",
+      "info": {
+        "en": "Space-Time Tradeoff",
+        "category": "算法设计",
+        "tags": [
+          "优化"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "近似算法": {
+      "pinyin": "jin si suan fa",
+      "first_letters": "JSSF",
+      "original": "近似算法",
+      "info": {
+        "en": "Approximation Algorithm",
+        "category": "算法类型",
+        "tags": [
+          "优化"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "随机算法": {
+      "pinyin": "sui ji suan fa",
+      "first_letters": "SJSF",
+      "original": "随机算法",
+      "info": {
+        "en": "Randomized Algorithm",
+        "category": "算法类型",
+        "tags": [
+          "概率"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "分布式算法": {
+      "pinyin": "fen bu shi suan fa",
+      "first_letters": "FBSSF",
+      "original": "分布式算法",
+      "info": {
+        "en": "Distributed Algorithm",
+        "category": "算法类型",
+        "tags": [
+          "并行"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "并行算法": {
+      "pinyin": "bing xing suan fa",
+      "first_letters": "BXSF",
+      "original": "并行算法",
+      "info": {
+        "en": "Parallel Algorithm",
+        "category": "算法类型",
+        "tags": [
+          "并行"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "NP完全问题": {
+      "pinyin": "np wan quan wen ti",
+      "first_letters": "NWQWT",
+      "original": "NP完全问题",
+      "info": {
+        "en": "NP-Complete",
+        "category": "计算复杂性",
+        "tags": [
+          "理论"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "P类问题": {
+      "pinyin": "p lei wen ti",
+      "first_letters": "PLWT",
+      "original": "P类问题",
+      "info": {
+        "en": "P Problem",
+        "category": "计算复杂性",
+        "tags": [
+          "理论"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "NP类问题": {
+      "pinyin": "np lei wen ti",
+      "first_letters": "NLWT",
+      "original": "NP类问题",
+      "info": {
+        "en": "NP Problem",
+        "category": "计算复杂性",
+        "tags": [
+          "理论"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "NPC": {
+      "pinyin": "npc",
+      "first_letters": "N",
+      "original": "NPC",
+      "info": {
+        "en": "NP-Complete",
+        "category": "计算复杂性",
+        "tags": [
+          "理论"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "NPH": {
+      "pinyin": "nph",
+      "first_letters": "N",
+      "original": "NPH",
+      "info": {
+        "en": "NP-Hard",
+        "category": "计算复杂性",
+        "tags": [
+          "理论"
+        ]
+      },
+      "is_asr_error": false,
+      "correct_term": ""
+    },
+    "分制": {
+      "pinyin": "fen zhi",
+      "first_letters": "FZ",
+      "original": "分制",
+      "info": {
+        "en": "Divide and Conquer",
+        "category": "算法设计",
+        "tags": [
+          "基础",
+          "递归"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "分治"
+    },
+    "分制法": {
+      "pinyin": "fen zhi fa",
+      "first_letters": "FZF",
+      "original": "分制法",
+      "info": {
+        "en": "Divide and Conquer",
+        "category": "算法设计",
+        "tags": [
+          "基础"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "分治法"
+    },
+    "动态鬼话": {
+      "pinyin": "dong tai gui hua",
+      "first_letters": "DTGH",
+      "original": "动态鬼话",
+      "info": {
+        "en": "Dynamic Programming",
+        "category": "算法设计",
+        "tags": [
+          "基础",
+          "优化"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "动态规划"
+    },
+    "贪心": {
+      "pinyin": "tan xin suan fa",
+      "first_letters": "TXSF",
+      "original": "贪心",
+      "info": {
+        "en": "Greedy Algorithm",
+        "category": "算法设计",
+        "tags": [
+          "基础",
+          "优化"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "贪心算法"
+    },
+    "深度优化搜索": {
+      "pinyin": "shen du you xian sou suo",
+      "first_letters": "SDYXSS",
+      "original": "深度优化搜索",
+      "info": {
+        "en": "DFS",
+        "category": "图算法",
+        "tags": [
+          "搜索",
+          "图"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "深度优先搜索"
+    },
+    "广度优化搜索": {
+      "pinyin": "guang du you xian sou suo",
+      "first_letters": "GDYXSS",
+      "original": "广度优化搜索",
+      "info": {
+        "en": "BFS",
+        "category": "图算法",
+        "tags": [
+          "搜索",
+          "图"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "广度优先搜索"
+    },
+    "二叉搜索": {
+      "pinyin": "er fen cha zhao",
+      "first_letters": "EFCZ",
+      "original": "二叉搜索",
+      "info": {
+        "en": "Binary Search",
+        "category": "查找算法",
+        "tags": [
+          "查找",
+          "分治"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "二分查找"
+    },
+    "堆排": {
+      "pinyin": "dui pai xu",
+      "first_letters": "DPX",
+      "original": "堆排",
+      "info": {
+        "en": "Heap Sort",
+        "category": "排序算法",
+        "tags": [
+          "排序",
+          "堆"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "堆排序"
+    },
+    "快排": {
+      "pinyin": "kuai su pai xu",
+      "first_letters": "KSPX",
+      "original": "快排",
+      "info": {
+        "en": "Quick Sort",
+        "category": "排序算法",
+        "tags": [
+          "排序",
+          "分治"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "快速排序"
+    },
+    "归排": {
+      "pinyin": "gui bing pai xu",
+      "first_letters": "GBPX",
+      "original": "归排",
+      "info": {
+        "en": "Merge Sort",
+        "category": "排序算法",
+        "tags": [
+          "排序",
+          "分治"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "归并排序"
+    },
+    "插入排": {
+      "pinyin": "cha ru pai xu",
+      "first_letters": "CRPX",
+      "original": "插入排",
+      "info": {
+        "en": "Insertion Sort",
+        "category": "排序算法",
+        "tags": [
+          "排序",
+          "基础"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "插入排序"
+    },
+    "冒泡排": {
+      "pinyin": "mao pao pai xu",
+      "first_letters": "MPPX",
+      "original": "冒泡排",
+      "info": {
+        "en": "Bubble Sort",
+        "category": "排序算法",
+        "tags": [
+          "排序",
+          "基础"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "冒泡排序"
+    },
+    "选择排": {
+      "pinyin": "xuan ze pai xu",
+      "first_letters": "XZPX",
+      "original": "选择排",
+      "info": {
+        "en": "Selection Sort",
+        "category": "排序算法",
+        "tags": [
+          "排序",
+          "基础"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "选择排序"
+    },
+    "递归算法": {
+      "pinyin": "di gui",
+      "first_letters": "DG",
+      "original": "递归算法",
+      "info": {
+        "en": "Recursion",
+        "category": "基础概念",
+        "tags": [
+          "基础",
+          "函数"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "递归"
+    },
+    "递归法": {
+      "pinyin": "di gui",
+      "first_letters": "DG",
+      "original": "递归法",
+      "info": {
+        "en": "Recursion",
+        "category": "基础概念",
+        "tags": [
+          "基础",
+          "函数"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "递归"
+    },
+    "回溯": {
+      "pinyin": "hui su suan fa",
+      "first_letters": "HSSF",
+      "original": "回溯",
+      "info": {
+        "en": "Backtracking",
+        "category": "算法设计",
+        "tags": [
+          "搜索",
+          "枚举"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "回溯算法"
+    },
+    "哈斯表": {
+      "pinyin": "ha xi biao",
+      "first_letters": "HXB",
+      "original": "哈斯表",
+      "info": {
+        "en": "Hash Table",
+        "category": "数据结构",
+        "tags": [
+          "查找"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "哈希表"
+    },
+    "图算法": {
+      "pinyin": "tu",
+      "first_letters": "T",
+      "original": "图算法",
+      "info": {
+        "en": "Graph",
+        "category": "数据结构",
+        "tags": [
+          "非线性"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "图"
+    },
+    "树结构": {
+      "pinyin": "er cha shu",
+      "first_letters": "ECS",
+      "original": "树结构",
+      "info": {
+        "en": "Binary Tree",
+        "category": "数据结构",
+        "tags": [
+          "树",
+          "基础"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "二叉树"
+    },
+    "满二叉": {
+      "pinyin": "man er cha shu",
+      "first_letters": "MECS",
+      "original": "满二叉",
+      "info": {
+        "en": "Full Binary Tree",
+        "category": "数据结构",
+        "tags": [
+          "树"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "满二叉树"
+    },
+    "完全二叉": {
+      "pinyin": "wan quan er cha shu",
+      "first_letters": "WQECS",
+      "original": "完全二叉",
+      "info": {
+        "en": "Complete Binary Tree",
+        "category": "数据结构",
+        "tags": [
+          "树"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "完全二叉树"
+    },
+    "平衡二叉": {
+      "pinyin": "ping heng er cha shu",
+      "first_letters": "PHECS",
+      "original": "平衡二叉",
+      "info": {
+        "en": "Balanced Binary Tree",
+        "category": "数据结构",
+        "tags": [
+          "树",
+          "平衡"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "平衡二叉树"
+    },
+    "红黑": {
+      "pinyin": "hong hei shu",
+      "first_letters": "HHS",
+      "original": "红黑",
+      "info": {
+        "en": "Red-Black Tree",
+        "category": "高级数据结构",
+        "tags": [
+          "树",
+          "平衡"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "红黑树"
+    },
+    "并查": {
+      "pinyin": "bing cha ji",
+      "first_letters": "BCJ",
+      "original": "并查",
+      "info": {
+        "en": "Union-Find",
+        "category": "高级数据结构",
+        "tags": [
+          "集合"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "并查集"
+    },
+    "字典": {
+      "pinyin": "zi dian shu",
+      "first_letters": "ZDS",
+      "original": "字典",
+      "info": {
+        "en": "Trie",
+        "category": "高级数据结构",
+        "tags": [
+          "树",
+          "字符串"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "字典树"
+    },
+    "线段树状数组": {
+      "pinyin": "xian duan shu",
+      "first_letters": "XDS",
+      "original": "线段树状数组",
+      "info": {
+        "en": "Segment Tree",
+        "category": "高级数据结构",
+        "tags": [
+          "树",
+          "区间"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "线段树"
+    },
+    "分段树": {
+      "pinyin": "xian duan shu",
+      "first_letters": "XDS",
+      "original": "分段树",
+      "info": {
+        "en": "Segment Tree",
+        "category": "高级数据结构",
+        "tags": [
+          "树",
+          "区间"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "线段树"
+    },
+    "前缀": {
+      "pinyin": "qian zhui he",
+      "first_letters": "QZH",
+      "original": "前缀",
+      "info": {
+        "en": "Prefix Sum",
+        "category": "技巧",
+        "tags": [
+          "优化"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "前缀和"
+    },
+    "差分": {
+      "pinyin": "cha fen shu zu",
+      "first_letters": "CFSZ",
+      "original": "差分",
+      "info": {
+        "en": "Difference Array",
+        "category": "技巧",
+        "tags": [
+          "优化"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "差分数组"
+    },
+    "逆序": {
+      "pinyin": "ni xu dui",
+      "first_letters": "NXD",
+      "original": "逆序",
+      "info": {
+        "en": "Inversion Pair",
+        "category": "概念",
+        "tags": [
+          "排序"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "逆序对"
+    },
+    "欧拉": {
+      "pinyin": "ou la hui lu",
+      "first_letters": "OLHL",
+      "original": "欧拉",
+      "info": {
+        "en": "Euler Circuit",
+        "category": "图论",
+        "tags": [
+          "回路"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "欧拉回路"
+    },
+    "哈密顿": {
+      "pinyin": "ha mi dun hui lu",
+      "first_letters": "HMDHL",
+      "original": "哈密顿",
+      "info": {
+        "en": "Hamiltonian Circuit",
+        "category": "图论",
+        "tags": [
+          "回路"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "哈密顿回路"
+    },
+    "拓扑": {
+      "pinyin": "tuo pu pai xu",
+      "first_letters": "TPPX",
+      "original": "拓扑",
+      "info": {
+        "en": "Topological Sort",
+        "category": "图论",
+        "tags": [
+          "排序"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "拓扑排序"
+    },
+    "关键": {
+      "pinyin": "guan jian lu jing",
+      "first_letters": "GJLJ",
+      "original": "关键",
+      "info": {
+        "en": "Critical Path",
+        "category": "图论",
+        "tags": [
+          "项目管理"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "关键路径"
+    },
+    "网络": {
+      "pinyin": "wang luo liu",
+      "first_letters": "WLL",
+      "original": "网络",
+      "info": {
+        "en": "Network Flow",
+        "category": "图论",
+        "tags": [
+          "流量"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "网络流"
+    },
+    "二分图": {
+      "pinyin": "er fen tu pi pei",
+      "first_letters": "EFTPP",
+      "original": "二分图",
+      "info": {
+        "en": "Bipartite Matching",
+        "category": "图论",
+        "tags": [
+          "匹配"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "二分图匹配"
+    },
+    "二分匹配": {
+      "pinyin": "er fen tu pi pei",
+      "first_letters": "EFTPP",
+      "original": "二分匹配",
+      "info": {
+        "en": "Bipartite Matching",
+        "category": "图论",
+        "tags": [
+          "匹配"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "二分图匹配"
+    },
+    "匹配": {
+      "pinyin": "er fen tu pi pei",
+      "first_letters": "EFTPP",
+      "original": "匹配",
+      "info": {
+        "en": "Bipartite Matching",
+        "category": "图论",
+        "tags": [
+          "匹配"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "二分图匹配"
+    },
+    "穷举": {
+      "pinyin": "qiong ju fa",
+      "first_letters": "QJF",
+      "original": "穷举",
+      "info": {
+        "en": "Brute Force",
+        "category": "算法设计",
+        "tags": [
+          "暴力"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "穷举法"
+    },
+    "暴力": {
+      "pinyin": "qiong ju fa",
+      "first_letters": "QJF",
+      "original": "暴力",
+      "info": {
+        "en": "Brute Force",
+        "category": "算法设计",
+        "tags": [
+          "暴力"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "穷举法"
+    },
+    "近似": {
+      "pinyin": "jin si suan fa",
+      "first_letters": "JSSF",
+      "original": "近似",
+      "info": {
+        "en": "Approximation Algorithm",
+        "category": "算法类型",
+        "tags": [
+          "优化"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "近似算法"
+    },
+    "随机": {
+      "pinyin": "sui ji suan fa",
+      "first_letters": "SJSF",
+      "original": "随机",
+      "info": {
+        "en": "Randomized Algorithm",
+        "category": "算法类型",
+        "tags": [
+          "概率"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "随机算法"
+    },
+    "分布式": {
+      "pinyin": "fen bu shi suan fa",
+      "first_letters": "FBSSF",
+      "original": "分布式",
+      "info": {
+        "en": "Distributed Algorithm",
+        "category": "算法类型",
+        "tags": [
+          "并行"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "分布式算法"
+    },
+    "并行": {
+      "pinyin": "bing xing suan fa",
+      "first_letters": "BXSF",
+      "original": "并行",
+      "info": {
+        "en": "Parallel Algorithm",
+        "category": "算法类型",
+        "tags": [
+          "并行"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "并行算法"
+    },
+    "NP": {
+      "pinyin": "np wan quan wen ti",
+      "first_letters": "NWQWT",
+      "original": "NP",
+      "info": {
+        "en": "NP-Complete",
+        "category": "计算复杂性",
+        "tags": [
+          "理论"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "NP完全问题"
+    },
+    "P类": {
+      "pinyin": "p lei wen ti",
+      "first_letters": "PLWT",
+      "original": "P类",
+      "info": {
+        "en": "P Problem",
+        "category": "计算复杂性",
+        "tags": [
+          "理论"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "P类问题"
+    },
+    "NP类": {
+      "pinyin": "np lei wen ti",
+      "first_letters": "NLWT",
+      "original": "NP类",
+      "info": {
+        "en": "NP Problem",
+        "category": "计算复杂性",
+        "tags": [
+          "理论"
+        ]
+      },
+      "is_asr_error": true,
+      "correct_term": "NP类问题"
+    }
+  },
+  "pinyin_to_term": {
+    "fen zhi": [
+      "分制",
+      "分治"
+    ],
+    "fen zhi fa": [
+      "分治法",
+      "分制法"
+    ],
+    "dong tai gui hua": [
+      "动态规划",
+      "动态鬼话"
+    ],
+    "tan xin suan fa": [
+      "贪心",
+      "贪心算法"
+    ],
+    "hui su suan fa": [
+      "回溯",
+      "回溯算法"
+    ],
+    "di gui": [
+      "递归算法",
+      "递归",
+      "递归法"
+    ],
+    "die dai": [
+      "迭代"
+    ],
+    "kuai su pai xu": [
+      "快速排序",
+      "快排"
+    ],
+    "gui bing pai xu": [
+      "归排",
+      "归并排序"
+    ],
+    "dui pai xu": [
+      "堆排序",
+      "堆排"
+    ],
+    "cha ru pai xu": [
+      "插入排序",
+      "插入排"
+    ],
+    "mao pao pai xu": [
+      "冒泡排序",
+      "冒泡排"
+    ],
+    "xuan ze pai xu": [
+      "选择排序",
+      "选择排"
+    ],
+    "er fen cha zhao": [
+      "二分查找",
+      "二叉搜索"
+    ],
+    "ha xi cha zhao": [
+      "哈希查找"
+    ],
+    "shen du you xian sou suo": [
+      "深度优先搜索",
+      "深度优化搜索"
+    ],
+    "guang du you xian sou suo": [
+      "广度优先搜索",
+      "广度优化搜索"
+    ],
+    "dijkstra suan fa": [
+      "Dijkstra算法"
+    ],
+    "bellman ford suan fa": [
+      "Bellman-Ford算法"
+    ],
+    "floyd suan fa": [
+      "Floyd算法"
+    ],
+    "prim suan fa": [
+      "Prim算法"
+    ],
+    "kruskal suan fa": [
+      "Kruskal算法"
+    ],
+    "er cha shu": [
+      "二叉树",
+      "树结构"
+    ],
+    "wan quan er cha shu": [
+      "完全二叉树",
+      "完全二叉"
+    ],
+    "man er cha shu": [
+      "满二叉树",
+      "满二叉"
+    ],
+    "ping heng er cha shu": [
+      "平衡二叉",
+      "平衡二叉树"
+    ],
+    "er cha sou suo shu": [
+      "二叉搜索树"
+    ],
+    "dui": [
+      "堆"
+    ],
+    "you xian dui lie": [
+      "优先队列"
+    ],
+    "zhan": [
+      "栈"
+    ],
+    "dui lie": [
+      "队列"
+    ],
+    "lian biao": [
+      "链表"
+    ],
+    "shu zu": [
+      "数组"
+    ],
+    "zi fu chuan": [
+      "字符串"
+    ],
+    "ha xi biao": [
+      "哈斯表",
+      "哈希表"
+    ],
+    "tu": [
+      "图算法",
+      "图"
+    ],
+    "hong hei shu": [
+      "红黑",
+      "红黑树"
+    ],
+    "b shu": [
+      "B树"
+    ],
+    "b  shu": [
+      "B+树"
+    ],
+    "xian duan shu": [
+      "分段树",
+      "线段树",
+      "线段树状数组"
+    ],
+    "shu zhuang shu zu": [
+      "树状数组"
+    ],
+    "bing cha ji": [
+      "并查集",
+      "并查"
+    ],
+    "zi dian shu": [
+      "字典",
+      "字典树"
+    ],
+    "shi jian fu za du": [
+      "时间复杂度"
+    ],
+    "kong jian fu za du": [
+      "空间复杂度"
+    ],
+    "zui you zi jie gou": [
+      "最优子结构"
+    ],
+    "chong die zi wen ti": [
+      "重叠子问题"
+    ],
+    "wei yun suan": [
+      "位运算"
+    ],
+    "shuang zhi zhen": [
+      "双指针"
+    ],
+    "hua dong chuang kou": [
+      "滑动窗口"
+    ],
+    "dan diao zhan": [
+      "单调栈"
+    ],
+    "qian zhui he": [
+      "前缀",
+      "前缀和"
+    ],
+    "cha fen shu zu": [
+      "差分数组",
+      "差分"
+    ],
+    "ni xu dui": [
+      "逆序",
+      "逆序对"
+    ],
+    "ou la hui lu": [
+      "欧拉回路",
+      "欧拉"
+    ],
+    "ha mi dun hui lu": [
+      "哈密顿",
+      "哈密顿回路"
+    ],
+    "tuo pu pai xu": [
+      "拓扑排序",
+      "拓扑"
+    ],
+    "guan jian lu jing": [
+      "关键",
+      "关键路径"
+    ],
+    "wang luo liu": [
+      "网络流",
+      "网络"
+    ],
+    "zui da liu": [
+      "最大流"
+    ],
+    "zui xiao ge": [
+      "最小割"
+    ],
+    "er fen tu pi pei": [
+      "二分图",
+      "二分图匹配",
+      "二分匹配",
+      "匹配"
+    ],
+    "qiong ju fa": [
+      "穷举法",
+      "穷举",
+      "暴力"
+    ],
+    "bao li sou suo": [
+      "暴力搜索"
+    ],
+    "jian zhi fa": [
+      "减治法"
+    ],
+    "bian zhi fa": [
+      "变治法"
+    ],
+    "shi kong quan heng": [
+      "时空权衡"
+    ],
+    "jin si suan fa": [
+      "近似算法",
+      "近似"
+    ],
+    "sui ji suan fa": [
+      "随机算法",
+      "随机"
+    ],
+    "fen bu shi suan fa": [
+      "分布式算法",
+      "分布式"
+    ],
+    "bing xing suan fa": [
+      "并行",
+      "并行算法"
+    ],
+    "np wan quan wen ti": [
+      "NP完全问题",
+      "NP"
+    ],
+    "p lei wen ti": [
+      "P类",
+      "P类问题"
+    ],
+    "np lei wen ti": [
+      "NP类",
+      "NP类问题"
+    ],
+    "npc": [
+      "NPC"
+    ],
+    "nph": [
+      "NPH"
+    ]
+  },
+  "term_count": 123
+}

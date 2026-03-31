@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.venv/
+venv/
+ENV/
+.env
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+*.log
