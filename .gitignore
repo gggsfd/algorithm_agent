@@ -26,3 +26,5 @@ Thumbs.db
 
 # Project specific
 *.log
+data/vector_store/
+data/test_vector_store/

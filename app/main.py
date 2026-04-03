@@ -26,9 +26,10 @@ def create_app() -> FastAPI:
         allow_headers=["*"],
     )
 
-    from app.api import srt, device
+    from app.api import srt, device, domain
     app.include_router(srt.router, prefix="/api/v1", tags=["字幕处理"])
     app.include_router(device.router, prefix="/api/v1", tags=["设备管理"])
+    app.include_router(domain.router, prefix="/api/v1", tags=["领域管理"])
 
     return app
 

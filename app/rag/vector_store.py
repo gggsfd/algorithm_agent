@@ -2,15 +2,17 @@ import os
 import json
 from typing import Dict, List, Optional, Tuple
 from pathlib import Path
+from threading import Lock
 from app.rag.pinyin_converter import PinyinConverter
-from scripts.import_terms import get_term_library, TermLibrary
+from scripts.import_terms import get_term_library
 
 
 class VectorStore:
-    def __init__(self, persist_dir: str = "./data/vector_store"):
-        self.persist_dir = persist_dir
+    def __init__(self, persist_dir: str = "./data/vector_store", domain: str = "algorithm"):
+        self.domain = domain
+        self.persist_dir = os.path.join(persist_dir, domain)
         self.pinyin_converter = PinyinConverter()
-        self.term_library = get_term_library()
+        self.term_library = get_term_library(domain=domain)
         self.term_index: Dict[str, Dict] = {}
         self.pinyin_to_term: Dict[str, List[str]] = {}
         self._ensure_dir()
@@ -153,19 +155,47 @@ class VectorStore:
 
 
 _default_vector_store: Optional[VectorStore] = None
+_domain_vector_stores: Dict[str, VectorStore] = {}
 
 
-def get_default_vector_store() -> VectorStore:
+def get_default_vector_store(domain: str = "algorithm") -> VectorStore:
     global _default_vector_store
-    if _default_vector_store is None:
-        _default_vector_store = VectorStore()
-        _default_vector_store.build_index()
-    return _default_vector_store
+    if domain == "algorithm":
+        if _default_vector_store is None:
+            _default_vector_store = VectorStore(domain="algorithm")
+            _default_vector_store.build_index()
+        return _default_vector_store
+
+    if domain not in _domain_vector_stores:
+        _domain_vector_stores[domain] = VectorStore(domain=domain)
+        _domain_vector_stores[domain].build_index()
+    return _domain_vector_stores[domain]
 
 
-def search_terms(query: str, top_k: int = 5) -> List[Tuple[str, float, Dict]]:
-    return get_default_vector_store().search_by_text(query, top_k)
+class DomainVectorStorePool:
+    _instance: "DomainVectorStorePool | None" = None
+    _lock = Lock()
+
+    def __new__(cls):
+        if cls._instance is None:
+            with cls._lock:
+                if cls._instance is None:
+                    cls._instance = super().__new__(cls)
+                    cls._instance._stores = {}
+        return cls._instance
+
+    def get_store(self, domain: str) -> VectorStore:
+        if domain not in self._stores:
+            self._stores[domain] = get_default_vector_store(domain=domain)
+        return self._stores[domain]
+
+    def get_loaded_domains(self) -> List[str]:
+        return list(self._stores.keys())
 
 
-def find_asr_errors(text: str) -> Dict[str, str]:
-    return get_default_vector_store().find_asr_errors(text)
+def search_terms(query: str, top_k: int = 5, domain: str = "algorithm") -> List[Tuple[str, float, Dict]]:
+    return get_default_vector_store(domain=domain).search_by_text(query, top_k)
+
+
+def find_asr_errors(text: str, domain: str = "algorithm") -> Dict[str, str]:
+    return get_default_vector_store(domain=domain).find_asr_errors(text)

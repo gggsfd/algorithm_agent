@@ -1,12 +1,11 @@
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional
 from app.rag.vector_store import VectorStore, get_default_vector_store
-from app.rag.pinyin_converter import PinyinConverter
 
 
 class RetrievalEngine:
-    def __init__(self, vector_store: Optional[VectorStore] = None):
-        self.vector_store = vector_store or get_default_vector_store()
-        self.pinyin_converter = PinyinConverter()
+    def __init__(self, domain: str = "algorithm", vector_store: Optional[VectorStore] = None):
+        self.domain = domain
+        self.vector_store = vector_store or get_default_vector_store(domain=domain)
 
     def retrieve(self, query: str, top_k: int = 5) -> List[Dict]:
         results = self.vector_store.search_by_text(query, top_k)
@@ -15,7 +14,8 @@ class RetrievalEngine:
             {
                 "term": term,
                 "similarity": similarity,
-                "info": info
+                "info": info,
+                "domain": self.domain,
             }
             for term, similarity, info in results
         ]
@@ -38,8 +38,8 @@ class RetrievalEngine:
                 results = self.vector_store.search_by_text(word, top_k=1)
                 if results:
                     best_match = results[0]
-                    if best_match["similarity"] > 0.9 and best_match["term"] != word:
-                        errors[word] = best_match["term"]
+                    if best_match[1] > 0.9 and best_match[0] != word:
+                        errors[word] = best_match[0]
 
         return errors
 
@@ -54,29 +54,34 @@ class RetrievalEngine:
                 results = self.vector_store.search_by_text(word, top_k=1)
                 if results:
                     best = results[0]
-                    if best["similarity"] > 0.95 and best["term"] != word:
-                        corrections[word] = best["term"]
+                    if best[1] > 0.95 and best[0] != word:
+                        corrections[word] = best[0]
 
         return corrections
 
 
 _default_engine: Optional[RetrievalEngine] = None
+_domain_engines: Dict[str, RetrievalEngine] = {}
 
 
-def get_default_engine() -> RetrievalEngine:
+def get_default_engine(domain: str = "algorithm") -> RetrievalEngine:
     global _default_engine
-    if _default_engine is None:
-        _default_engine = RetrievalEngine()
-    return _default_engine
+    if domain == "algorithm":
+        if _default_engine is None:
+            _default_engine = RetrievalEngine(domain=domain)
+        return _default_engine
+    if domain not in _domain_engines:
+        _domain_engines[domain] = RetrievalEngine(domain=domain)
+    return _domain_engines[domain]
 
 
-def retrieve_terms(query: str, top_k: int = 5) -> List[Dict]:
-    return get_default_engine().retrieve(query, top_k)
+def retrieve_terms(query: str, top_k: int = 5, domain: str = "algorithm") -> List[Dict]:
+    return get_default_engine(domain=domain).retrieve(query, top_k)
 
 
-def find_errors(text: str) -> Dict[str, str]:
-    return get_default_engine().find_errors_in_text(text)
+def find_errors(text: str, domain: str = "algorithm") -> Dict[str, str]:
+    return get_default_engine(domain=domain).find_errors_in_text(text)
 
 
-def get_corrections(text: str) -> Dict[str, str]:
-    return get_default_engine().get_correction_dict(text)
+def get_corrections(text: str, domain: str = "algorithm") -> Dict[str, str]:
+    return get_default_engine(domain=domain).get_correction_dict(text)
