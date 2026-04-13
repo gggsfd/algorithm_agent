@@ -1,6 +1,29 @@
 import json
+import os
 from typing import Dict, List, Optional, Any
 from app.rag.pinyin_converter import PinyinConverter
+
+
+def _get_incremental_config_path() -> str:
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(base_dir, "config", "domain_asr增量.json")
+
+
+def _load_incremental_asr_mapping(domain: str) -> Dict[str, str]:
+    config_path = _get_incremental_config_path()
+    if not os.path.exists(config_path):
+        return {}
+
+    try:
+        with open(config_path, "r", encoding="utf-8") as f:
+            config = json.load(f)
+
+        if domain in config and "asr_mapping" in config[domain]:
+            return config[domain]["asr_mapping"]
+
+        return {}
+    except Exception:
+        return {}
 
 
 ALGORITHM_TERMS = {
@@ -147,6 +170,21 @@ ASR_ERROR_MAPPING = {
     "NP": "NP完全问题",
     "P类": "P类问题",
     "NP类": "NP类问题",
+    "追历": "遍历",
+    "追历生成树": "遍历生成树",
+    "追历贝尔曼": "遍历贝尔曼",
+    "追历算法": "遍历算法",
+    "弗洛依德": "弗洛伊德",
+    "弗洛伊德": "弗洛伊德",
+    "贪念": "贪心",
+    "贪念算法": "贪心算法",
+    "复杂毒": "复杂度",
+    "实践复杂毒": "时间复杂度",
+    "空间复杂毒": "空间复杂度",
+    "归半分": "归并",
+    "归半分排序": "归并排序",
+    "查扎": "查找",
+    "二分查扎": "二分查找",
 }
 
 MEDICAL_TERMS = {
@@ -212,8 +250,13 @@ class TermLibrary:
         self.domain = domain
         self.terms = DOMAIN_LIBRARY_DATA[domain]["terms"].copy()
         self.asr_mapping = DOMAIN_LIBRARY_DATA[domain]["asr_mapping"].copy()
+        self._load_incremental_asr_mapping()
         self.pinyin_index: Dict[str, Dict] = {}
         self._build_index()
+
+    def _load_incremental_asr_mapping(self):
+        incremental = _load_incremental_asr_mapping(self.domain)
+        self.asr_mapping.update(incremental)
 
     def _build_index(self):
         converter = PinyinConverter()

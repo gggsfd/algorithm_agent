@@ -1,13 +1,23 @@
 from contextlib import asynccontextmanager
+from dotenv import load_dotenv
+from pathlib import Path
+import logging
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+
+load_dotenv(Path(__file__).parent.parent / ".env")
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    print("🚀 应用启动中...")
+    print("[APP] 应用启动中...")
     yield
-    print("👋 应用关闭中...")
+    print("[APP] 应用关闭中...")
 
 
 def create_app() -> FastAPI:

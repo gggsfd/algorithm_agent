@@ -138,7 +138,7 @@ class PinyinConverter:
             else:
                 similarity = self._calculate_pinyin_similarity(query_pinyin, term_pinyin)
 
-            if similarity > 0.5:
+            if similarity > 0.65:
                 en_info = data.get("info", {}).get("en", "") if isinstance(data.get("info"), dict) else ""
                 results.append((term, similarity, en_info))
 
@@ -155,18 +155,62 @@ class PinyinConverter:
         if not words1 or not words2:
             return 0.0
 
+        if len(words1) == 1 and len(words2) == 1:
+            return self._levenshtein_similarity(words1[0], words2[0])
+
         common = 0
         for w1 in words1:
             for w2 in words2:
                 if w1 == w2:
                     common += 1
                     break
-                elif w1 in w2 or w2 in w1:
-                    common += 0.5
-                    break
+                elif len(w1) > 1 and len(w2) > 1:
+                    char_sim = self._levenshtein_similarity(w1, w2)
+                    if char_sim >= 0.8:
+                        common += char_sim
+                        break
 
-        max_len = max(len(words1), len(words2))
-        return common / max_len if max_len > 0 else 0.0
+        word_similarity = common / max(len(words1), len(words2))
+
+        edit_sim = self._levenshtein_similarity(p1, p2)
+
+        return 0.6 * word_similarity + 0.4 * edit_sim
+
+    def _levenshtein_similarity(self, s1: str, s2: str) -> float:
+        if not s1 or not s2:
+            return 0.0
+
+        if s1 == s2:
+            return 1.0
+
+        len1, len2 = len(s1), len(s2)
+        if abs(len1 - len2) > max(len1, len2) * 0.5:
+            return 0.0
+
+        distance = self._levenshtein_distance(s1, s2)
+        max_len = max(len1, len2)
+
+        return 1.0 - (distance / max_len)
+
+    def _levenshtein_distance(self, s1: str, s2: str) -> int:
+        len1, len2 = len(s1), len(s2)
+        dp = [[0] * (len2 + 1) for _ in range(len1 + 1)]
+
+        for i in range(len1 + 1):
+            dp[i][0] = i
+        for j in range(len2 + 1):
+            dp[0][j] = j
+
+        for i in range(1, len1 + 1):
+            for j in range(1, len2 + 1):
+                cost = 0 if s1[i-1] == s2[j-1] else 1
+                dp[i][j] = min(
+                    dp[i-1][j] + 1,
+                    dp[i][j-1] + 1,
+                    dp[i-1][j-1] + cost
+                )
+
+        return dp[len1][len2]
 
 
 _default_converter: Optional[PinyinConverter] = None

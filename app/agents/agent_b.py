@@ -1,7 +1,10 @@
 import json
 import re
+import logging
 from typing import Dict, List, Optional
 from app.core.exceptions import AgentExecutionError
+
+logger = logging.getLogger(__name__)
 
 
 PROMPT_AGENT_B = """你是一个精确的字幕纠错系统。
@@ -20,11 +23,11 @@ PROMPT_AGENT_B = """你是一个精确的字幕纠错系统。
 【输入字幕】
 {subtitle_items}
 
-请返回 JSON 数组，只包含 id 和 text 字段，保持原始顺序：
-[
+请返回 JSON 对象，包含 items 数组字段：
+{{"items": [
     {{"id": 1, "text": "纠错后的文本"}},
     {{"id": 2, "text": "纠错后的文本"}}
-]
+]}}
 """
 
 
@@ -54,16 +57,20 @@ class AgentB:
                     {"role": "user", "content": prompt}
                 ],
                 temperature=0.1,
-                response_format={"type": "json_object"}
             )
 
             result_text = response.choices[0].message.content
-            return self._parse_json_response(result_text, len(subtitle_items))
+            parsed = self._parse_json_response(result_text, len(subtitle_items))
+            if parsed is not None:
+                return parsed
+            logger.warning("Agent B JSON 解析失败，使用规则纠错")
+            return self._rule_based_correction(subtitle_items, replacement_dict)
 
         except Exception as e:
-            raise AgentExecutionError(f"Agent B 执行失败: {str(e)}")
+            logger.warning(f"Agent B 执行异常: {str(e)}，使用规则纠错")
+            return self._rule_based_correction(subtitle_items, replacement_dict)
 
-    def _parse_json_response(self, response_text: str, expected_length: int) -> List[Dict]:
+    def _parse_json_response(self, response_text: str, expected_length: int) -> Optional[List[Dict]]:
         try:
             cleaned = response_text.strip()
             if cleaned.startswith("```json"):
@@ -72,13 +79,27 @@ class AgentB:
                 cleaned = cleaned[3:]
             if cleaned.endswith("```"):
                 cleaned = cleaned[:-3]
+            cleaned = cleaned.strip()
 
-            result = json.loads(cleaned)
+            try:
+                result = json.loads(cleaned)
+            except json.JSONDecodeError:
+                result = self._extract_json_flexible(cleaned, expected_length)
+                if result is None:
+                    logger.warning(f"Agent B JSON 解析失败: 无法提取有效 JSON")
+                    return None
 
             if isinstance(result, list):
                 items = result
-            elif isinstance(result, dict) and "items" in result:
-                items = result["items"]
+            elif isinstance(result, dict):
+                if "items" in result:
+                    items = result["items"]
+                elif "corrections" in result:
+                    items = result["corrections"]
+                elif "results" in result:
+                    items = result["results"]
+                else:
+                    items = list(result.values()) if all(isinstance(v, dict) for v in result.values()) else []
             else:
                 items = []
 
@@ -91,14 +112,44 @@ class AgentB:
                     })
 
             if len(validated_items) != expected_length:
-                raise AgentExecutionError(
-                    f"Agent B 返回数量不匹配: 期望 {expected_length}, 实际 {len(validated_items)}"
-                )
+                logger.warning(f"Agent B 返回数量不匹配: 期望 {expected_length}, 实际 {len(validated_items)}")
+                if expected_length > 0 and validated_items:
+                    return validated_items[:expected_length]
+                return None
 
             return validated_items
 
-        except (json.JSONDecodeError, AgentExecutionError):
-            raise AgentExecutionError("Agent B 返回格式无效")
+        except Exception as e:
+            logger.warning(f"Agent B JSON 解析失败: {str(e)}, 原始响应: {response_text[:200]}...")
+            return None
+
+    def _extract_json_flexible(self, text: str, expected_length: int):
+        try:
+            return json.loads(text)
+        except json.JSONDecodeError:
+            pass
+
+        patterns = [
+            r'"items"\s*:\s*\[(.*?)\]\s*\}',
+            r'"corrections"\s*:\s*\[(.*?)\]\s*\}',
+            r'"results"\s*:\s*\[(.*?)\]\s*\}',
+        ]
+
+        for pattern in patterns:
+            match = re.search(pattern, text, re.DOTALL)
+            if match:
+                bracket_content = match.group(1)
+                try:
+                    return json.loads("[" + bracket_content + "]")
+                except json.JSONDecodeError:
+                    pass
+
+        id_text_pairs = re.findall(r'"id"\s*:\s*(\d+).*?"text"\s*:\s*"([^"]*)"', text, re.DOTALL)
+        if id_text_pairs:
+            items = [{"id": int(id_val), "text": text_val} for id_val, text_val in id_text_pairs]
+            return items
+
+        return None
 
     def _rule_based_correction(self, subtitle_items: List[Dict], replacement_dict: Dict[str, str]) -> List[Dict]:
         corrected = []
