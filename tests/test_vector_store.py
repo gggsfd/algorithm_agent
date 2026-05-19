@@ -100,10 +100,10 @@ def test_batch_retrieve():
 def test_rag_pipeline():
     print("\n=== 测试 RAG Pipeline ===\n")
 
-    from app.agents.agent_a import AgentA
+    from app.agents.term_agent import TermAgent
 
-    print("模拟 Agent A + RAG 检索的协作流程:")
-    print("1. Agent A 分析文本...")
+    print("模拟 TermAgent + RAG 检索的协作流程:")
+    print("1. TermAgent 分析文本...")
     print("2. RAG 检索补充...")
 
     engine = get_default_engine()

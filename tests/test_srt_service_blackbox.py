@@ -136,32 +136,16 @@ class TestSRTServiceBlackBox:
         for i, block in enumerate(blocks):
             assert block.strip() != "", f"字幕块{i}不应为空"
 
-    def test_agent_mode_missing_api_key_raises_error(self):
+    def test_agent_mode_without_api_key_fallback(self):
         """
         覆盖点：
-        - 400 参数错误：缺少API Key
-        测试场景：Agent模式但无API Key → 抛出ValueError
+        - 正常路径：AGENT模式无Pipeline时自动降级到RULE模式
+        测试场景：AGENT模式 → _pipeline为None + agent_available=False → 自动降级到RULE模式
         """
         service = SRTService()
+        service._pipeline = None
         service.agent_available = False
-        service.pipeline = None
 
-        with pytest.raises(ValueError, match="missing api key"):
-            service.process_srt(self.SAMPLE_SRT_WITH_ERRORS, correction_mode=CorrectionMode.AGENT)
-
-    def test_agent_mode_fallback_to_rule(self):
-        """
-        覆盖点：
-        - 500 内部错误：Agent执行失败，降级到规则模式
-        测试场景：AGENT模式 → Agent失败 → 自动降级到RULE模式
-        """
-        service = SRTService()
-        service.agent_available = True
-
-        def raise_agent_error(_):
-            raise RuntimeError("mock llm error")
-
-        service._correct_by_agent_sync = raise_agent_error
         final_srt, success, mode_meta = service.process_srt(
             self.SAMPLE_SRT_WITH_ERRORS,
             correction_mode=CorrectionMode.AGENT
@@ -171,26 +155,24 @@ class TestSRTServiceBlackBox:
         assert mode_meta["effective_mode"] == "rule"
         assert mode_meta["degraded"] is True, "应标记为降级"
 
-    def test_hybrid_mode_fallback_to_rule(self):
+    def test_hybrid_mode_without_api_key_fallback(self):
         """
         覆盖点：
-        - 500 内部错误：Hybrid执行失败，降级到规则模式
+        - 正常路径：HYBRID模式无Pipeline时自动降级到RULE模式
+        测试场景：HYBRID模式 → _pipeline为None + agent_available=False → 自动降级到RULE模式
         """
         service = SRTService()
-        service.agent_available = True
+        service._pipeline = None
+        service.agent_available = False
 
-        def raise_hybrid_error(_):
-            raise RuntimeError("mock hybrid error")
-
-        service._correct_by_hybrid_sync = raise_hybrid_error
         final_srt, success, mode_meta = service.process_srt(
             self.SAMPLE_SRT_WITH_ERRORS,
             correction_mode=CorrectionMode.HYBRID
         )
-        assert success is True
-        assert "O(n log n)" in final_srt
+        assert success is True, "降级后应仍能处理"
+        assert "O(n log n)" in final_srt, "降级到规则模式后仍应纠错"
         assert mode_meta["effective_mode"] == "rule"
-        assert mode_meta["degraded"] is True
+        assert mode_meta["degraded"] is True, "应标记为降级"
 
     def test_invalid_srt_format_raises_error(self):
         """

@@ -99,7 +99,7 @@ async def correct_srt(
 async def correct_and_save_srt(
     file: UploadFile = File(...),
     domain: str = Form(default=Domain.ALGORITHM.value),
-    correction_mode: str = Form(default=CorrectionMode.HYBRID_AUTO.value),
+    correction_mode: str = Form(default=CorrectionMode.HYBRID.value),
     save_file: bool = Query(default=True, description="是否保存文件"),
     generate_report: bool = Query(default=True, description="是否生成报告")
 ):

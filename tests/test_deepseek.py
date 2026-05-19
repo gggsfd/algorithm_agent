@@ -39,32 +39,33 @@ async def test_deepseek_connection():
     return client
 
 
-async def test_agent_a(client):
+async def test_term_agent(client):
     print("\n" + "="*50)
-    print("=== 测试 Agent A（侦察）- DeepSeek ===")
+    print("=== 测试 TermAgent（侦察）- DeepSeek ===")
     print("="*50)
 
-    from app.agents.agent_a import AgentA
+    from app.agents.term_agent import TermAgent
 
-    agent_a = AgentA(llm_client=client, model_name="deepseek-chat")
+    term_agent = TermAgent(llm_client=client, model_name="deepseek-chat")
 
     test_text = "下面讲一个欧根老根的问题，动态鬼话是常用技巧"
 
     print(f"\n输入文本: {test_text}")
-    result = await agent_a.analyze(test_text)
-    print(f"Agent A 发现: {result}")
+    context = {"caption_text": test_text, "candidates": {}}
+    result = await term_agent.execute(context)
+    print(f"TermAgent 发现: {result}")
 
     return result
 
 
-async def test_agent_b(client):
+async def test_correction_agent(client):
     print("\n" + "="*50)
-    print("=== 测试 Agent B（主刀）- DeepSeek ===")
+    print("=== 测试 CorrectionAgent（主刀）- DeepSeek ===")
     print("="*50)
 
-    from app.agents.agent_b import AgentB
+    from app.agents.correction_agent import CorrectionAgent
 
-    agent_b = AgentB(llm_client=client, model_name="deepseek-chat")
+    correction_agent = CorrectionAgent(llm_client=client, model_name="deepseek-chat")
 
     subtitle_items = [
         {"id": 1, "text": "下面讲一个欧根老根的问题"},
@@ -79,25 +80,34 @@ async def test_agent_b(client):
     print(f"\n输入字幕: {subtitle_items}")
     print(f"替换规则: {replacement_dict}")
 
-    result = await agent_b.correct(subtitle_items, replacement_dict)
-    print(f"Agent B 输出: {result}")
+    context = {
+        "subtitle_items": subtitle_items,
+        "replacement_dict": replacement_dict
+    }
+    result = await correction_agent.execute(context)
+    print(f"CorrectionAgent 输出: {result}")
 
     return result
 
 
 async def test_full_pipeline(client):
     print("\n" + "="*50)
-    print("=== 测试完整 Pipeline - DeepSeek ===")
+    print("=== 测试完整 CorrectionPipeline - DeepSeek ===")
     print("="*50)
 
-    from app.agents.agent_a import AgentA
-    from app.agents.agent_b import AgentB
-    from app.agents.pipeline import AgentPipeline
+    from app.agents.term_agent import TermAgent
+    from app.agents.correction_agent import CorrectionAgent
+    from app.agents.pipeline import CorrectionPipeline
 
-    agent_a = AgentA(llm_client=client, model_name="deepseek-chat")
-    agent_b = AgentB(llm_client=client, model_name="deepseek-chat")
+    term_agent = TermAgent(llm_client=client, model_name="deepseek-chat")
+    correction_agent = CorrectionAgent(llm_client=client, model_name="deepseek-chat")
 
-    pipeline = AgentPipeline(llm_client=client)
+    pipeline = CorrectionPipeline(
+        term_agent=term_agent,
+        correction_agent=correction_agent,
+        domain="algorithm",
+        use_evidence=False,
+    )
 
     subtitle_items = [
         {"id": 1, "text": "下面讲一个欧根老根的问题"},
@@ -107,21 +117,21 @@ async def test_full_pipeline(client):
 
     print(f"\n输入字幕数量: {len(subtitle_items)}")
 
-    corrected, success = await pipeline.process_chunk(subtitle_items)
+    corrected, mode, degraded = await pipeline.process_async(subtitle_items)
 
-    print(f"\n成功: {success}")
+    print(f"\n模式: {mode}, 降级: {degraded}")
     print("纠错结果:")
     for item in corrected:
         print(f"  ID {item['id']}: {item['text']}")
 
-    return corrected, success
+    return corrected, mode, degraded
 
 
 if __name__ == "__main__":
     try:
         client = asyncio.run(test_deepseek_connection())
-        asyncio.run(test_agent_a(client))
-        asyncio.run(test_agent_b(client))
+        asyncio.run(test_term_agent(client))
+        asyncio.run(test_correction_agent(client))
         asyncio.run(test_full_pipeline(client))
         print("\n" + "="*50)
         print("✅ 所有 DeepSeek 测试完成！")

@@ -1,12 +1,14 @@
 import asyncio
 import logging
 from typing import List, Dict, Optional, Tuple
+from openai import AsyncOpenAI
 from app.core.srt_parser import SRTParser, SRTParseResult
 from app.core.constraint_checker import ConstraintChecker
 from app.core.exceptions import ConstraintCheckError, AgentExecutionError
 from app.core.task_dispatcher import TaskDispatcher
-from app.agents.pipeline import AgentPipeline
-from app.agents.hybrid_pipeline import HybridPipeline
+from app.agents.pipeline import CorrectionPipeline
+from app.agents.term_agent import TermAgent
+from app.agents.correction_agent import CorrectionAgent
 from app.core.llm_config import LLMConfig
 from app.rag.retrieval import get_default_engine
 from app.schemas.domain import Domain, is_supported_domain
@@ -25,14 +27,34 @@ class SRTService:
         self.llm_client = llm_client
         self.default_domain = default_domain
         self.llm_config = LLMConfig.from_env()
-        self.pipeline = None
-        self._hybrid_pipeline = None
+        self._pipeline = None
+        self._correction_pipeline = None
         self.agent_available = bool(self.llm_config.agent_a_api_key and self.llm_config.agent_b_api_key)
-        if llm_client:
-            self.pipeline = AgentPipeline(llm_client, self.llm_config)
-            self.agent_available = True
-        elif use_agent and self.agent_available:
-            self.pipeline = AgentPipeline(llm_config=self.llm_config)
+        if use_agent and self.agent_available:
+            self._pipeline = self._create_agent_pipeline()
+
+    def _create_agent_pipeline(self) -> CorrectionPipeline:
+        client = AsyncOpenAI(
+            api_key=self.llm_config.agent_a_api_key,
+            base_url=self.llm_config.base_url,
+        )
+        term_agent = TermAgent(
+            llm_client=client,
+            model_name=self.llm_config.agent_a_model,
+            domain=self.default_domain,
+            min_confidence=0.35,
+        )
+        correction_agent = CorrectionAgent(
+            llm_client=client,
+            model_name=self.llm_config.agent_b_model,
+            validate=True,
+        )
+        return CorrectionPipeline(
+            term_agent=term_agent,
+            correction_agent=correction_agent,
+            domain=self.default_domain,
+            use_evidence=False,
+        )
 
     def parse_srt(self, srt_content: str) -> SRTParseResult:
         return self.parser.parse(srt_content)
@@ -55,13 +77,13 @@ class SRTService:
         except ValueError as exc:
             raise ValueError(f"Unsupported correction mode: {mode}") from exc
 
-    def _ensure_pipeline(self) -> AgentPipeline:
-        if self.pipeline:
-            return self.pipeline
+    def _ensure_pipeline(self) -> CorrectionPipeline:
+        if self._pipeline:
+            return self._pipeline
         if not self.agent_available:
             raise ValueError("Agent mode unavailable: missing api key")
-        self.pipeline = AgentPipeline(llm_config=self.llm_config)
-        return self.pipeline
+        self._pipeline = self._create_agent_pipeline()
+        return self._pipeline
 
     def _correct_by_rule(self, items: List[Dict], domain: Optional[str] = None) -> List[Dict]:
         corrected = []
@@ -77,33 +99,51 @@ class SRTService:
 
     def _correct_by_agent_sync(self, items: List[Dict]) -> List[Dict]:
         pipeline = self._ensure_pipeline()
-        corrected, _ = pipeline.correct_subtitles_sync(items)
+        corrected, _, _ = asyncio.run(pipeline.process_async(items))
         return corrected
 
     async def _correct_by_agent_async(self, items: List[Dict]) -> List[Dict]:
         pipeline = self._ensure_pipeline()
-        corrected, _ = await pipeline.correct_subtitles(items)
+        corrected, _, _ = await pipeline.process_async(items)
         return corrected
 
-    def _ensure_hybrid_pipeline(self) -> HybridPipeline:
-        if self._hybrid_pipeline:
-            return self._hybrid_pipeline
+    def _ensure_correction_pipeline(self) -> CorrectionPipeline:
+        if self._correction_pipeline:
+            return self._correction_pipeline
         if not self.agent_available:
             raise ValueError("Hybrid mode unavailable: missing api key")
-        self._hybrid_pipeline = HybridPipeline(
-            llm_config=self.llm_config,
-            domain=self.default_domain,
+
+        client = AsyncOpenAI(
+            api_key=self.llm_config.agent_a_api_key,
+            base_url=self.llm_config.base_url,
         )
-        return self._hybrid_pipeline
+        term_agent = TermAgent(
+            llm_client=client,
+            model_name=self.llm_config.agent_a_model,
+            domain=self.default_domain,
+            min_confidence=0.35,
+        )
+        correction_agent = CorrectionAgent(
+            llm_client=client,
+            model_name=self.llm_config.agent_b_model,
+            validate=True,
+        )
+        self._correction_pipeline = CorrectionPipeline(
+            term_agent=term_agent,
+            correction_agent=correction_agent,
+            domain=self.default_domain,
+            use_evidence=True,
+        )
+        return self._correction_pipeline
 
     def _correct_by_hybrid_sync(self, items: List[Dict]) -> Tuple[List[Dict], str, bool]:
-        pipeline = self._ensure_hybrid_pipeline()
-        corrected, effective_mode, degraded = asyncio.run(pipeline.correct_subtitles(items))
+        pipeline = self._ensure_correction_pipeline()
+        corrected, effective_mode, degraded = asyncio.run(pipeline.process_async(items))
         return corrected, effective_mode, degraded
 
     async def _correct_by_hybrid_async(self, items: List[Dict]) -> Tuple[List[Dict], str, bool]:
-        pipeline = self._ensure_hybrid_pipeline()
-        corrected, effective_mode, degraded = await pipeline.correct_subtitles(items)
+        pipeline = self._ensure_correction_pipeline()
+        corrected, effective_mode, degraded = await pipeline.process_async(items)
         return corrected, effective_mode, degraded
 
     def _correct_items_by_mode_sync(
@@ -118,13 +158,13 @@ class SRTService:
         if normalized_mode == CorrectionMode.AGENT:
             try:
                 return self._correct_by_agent_sync(items), CorrectionMode.AGENT.value, False
-            except (RuntimeError, TimeoutError, AgentExecutionError) as e:
+            except (RuntimeError, TimeoutError, AgentExecutionError, ValueError) as e:
                 logger.warning(f"Agent mode failed: {e}, fallback to rule mode")
                 return self._correct_by_rule(items, domain), CorrectionMode.RULE.value, True
         if normalized_mode == CorrectionMode.HYBRID:
             try:
                 return self._correct_by_hybrid_sync(items)
-            except (RuntimeError, TimeoutError, AgentExecutionError) as e:
+            except (RuntimeError, TimeoutError, AgentExecutionError, ValueError) as e:
                 logger.warning(f"Hybrid mode failed: {e}, fallback to rule mode")
                 return self._correct_by_rule(items, domain), CorrectionMode.RULE.value, True
         raise ValueError(f"Unsupported correction mode: {normalized_mode}")
@@ -141,13 +181,13 @@ class SRTService:
         if normalized_mode == CorrectionMode.AGENT:
             try:
                 return await self._correct_by_agent_async(items), CorrectionMode.AGENT.value, False
-            except (RuntimeError, TimeoutError, AgentExecutionError) as e:
+            except (RuntimeError, TimeoutError, AgentExecutionError, ValueError) as e:
                 logger.warning(f"Agent mode failed: {e}, fallback to rule mode")
                 return self._correct_by_rule(items, domain), CorrectionMode.RULE.value, True
         if normalized_mode == CorrectionMode.HYBRID:
             try:
                 return await self._correct_by_hybrid_async(items)
-            except (RuntimeError, TimeoutError, AgentExecutionError) as e:
+            except (RuntimeError, TimeoutError, AgentExecutionError, ValueError) as e:
                 logger.warning(f"Hybrid mode failed: {e}, fallback to rule mode")
                 return self._correct_by_rule(items, domain), CorrectionMode.RULE.value, True
         raise ValueError(f"Unsupported correction mode: {normalized_mode}")

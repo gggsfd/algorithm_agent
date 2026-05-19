@@ -1,64 +1,271 @@
-from typing import List, Dict, Tuple, Optional
-from openai import AsyncOpenAI
-from app.agents.agent_a import AgentA
-from app.agents.agent_b import AgentB
-from app.core.constraint_checker import ConstraintChecker
-from app.core.exceptions import AgentExecutionError, ConstraintCheckError
+import asyncio
+import logging
+import sys
+from typing import Dict, List, Optional, Tuple
+from app.agents.term_agent import TermAgent
+from app.agents.correction_agent import CorrectionAgent
+from app.agents.evidence_collector import EvidenceCollector
 from app.core.llm_config import LLMConfig
+from app.schemas.domain import Domain
 
 
-class AgentPipeline:
+logger = logging.getLogger(__name__)
 
-    def __init__(self, llm_client=None, llm_config: Optional[LLMConfig] = None):
-        self.config = llm_config or LLMConfig.from_env()
 
-        if llm_client:
-            self.agent_a = AgentA(llm_client, model_name=self.config.agent_a_model)
-            self.agent_b = AgentB(llm_client, model_name=self.config.agent_b_model)
-        else:
-            client_a = AsyncOpenAI(
-                api_key=self.config.agent_a_api_key,
-                base_url=self.config.base_url
-            )
-            client_b = AsyncOpenAI(
-                api_key=self.config.agent_b_api_key,
-                base_url=self.config.base_url
-            )
-            self.agent_a = AgentA(client_a, model_name=self.config.agent_a_model)
-            self.agent_b = AgentB(client_b, model_name=self.config.agent_b_model)
+class CorrectionPipeline:
+    MAX_TEXT_LENGTH = 2000
+    MAX_ITEMS_PER_GROUP = 50
+    MAX_CONCURRENT_GROUPS = 3
 
-    async def process_chunk(self, subtitle_items: List[Dict]) -> Tuple[List[Dict], bool]:
+    def __init__(
+        self,
+        term_agent: TermAgent,
+        correction_agent: CorrectionAgent,
+        domain: str = Domain.ALGORITHM.value,
+        use_evidence: bool = True,
+        max_text_length: int = 2000,
+    ):
+        self.term_agent = term_agent
+        self.correction_agent = correction_agent
+        self.domain = domain
+        self.use_evidence = use_evidence
+        self.max_text_length = max_text_length
+        self._collector = EvidenceCollector(domain=domain) if use_evidence else None
+        self._progress_enabled = True
+        self._processed_groups = 0
+        self._total_groups = 0
+
+    def _print_progress(self, current: int, total: int, stage: str, message: str):
+        if not self._progress_enabled:
+            return
+        percent = int(current / total * 100) if total > 0 else 0
+        bar_len = 30
+        filled = int(bar_len * current / total) if total > 0 else 0
+        bar = "#" * filled + "-" * (bar_len - filled)
+        try:
+            sys.stdout.write(f"\r[{bar}] {percent}% | {stage} | {message}")
+            sys.stdout.flush()
+        except UnicodeEncodeError:
+            sys.stdout.write(f"\r[{stage}] {percent}% | {message}")
+            sys.stdout.flush()
+        if current >= total:
+            print()
+
+    async def process(
+        self,
+        subtitle_items: List[Dict],
+    ) -> Tuple[List[Dict], str, bool]:
         if not subtitle_items:
-            return [], True
+            return [], "hybrid", False
 
-        original_text = " ".join([item.get("text", "") for item in subtitle_items])
+        combined_text = " ".join([item.get("text", "") for item in subtitle_items])
 
-        replacement_dict = await self.agent_a.analyze(original_text)
+        if len(combined_text) <= self.max_text_length:
+            return await self._process_short_text(subtitle_items, combined_text)
 
-        if not replacement_dict:
-            return [{"id": item["id"], "text": item["text"]} for item in subtitle_items], True
+        return await self._process_long_text(subtitle_items, combined_text)
 
-        corrected_items = await self.agent_b.correct(subtitle_items, replacement_dict)
-
-        return corrected_items, True
-
-    def process_chunk_sync(self, subtitle_items: List[Dict]) -> Tuple[List[Dict], bool]:
-        if not subtitle_items:
-            return [], True
-
-        replacement_dict = self.agent_a._rule_based_fallback(
-            " ".join([item.get("text", "") for item in subtitle_items])
+    async def _process_short_text(
+        self,
+        subtitle_items: List[Dict],
+        combined_text: str,
+    ) -> Tuple[List[Dict], str, bool]:
+        self._print_progress(
+            0, 1, "Pipeline", f"处理 {len(subtitle_items)} 条字幕，字符数: {len(combined_text)}"
         )
 
-        if not replacement_dict:
-            return [{"id": item["id"], "text": item["text"]} for item in subtitle_items], True
+        candidates = {}
+        if self._collector:
+            evidence = self._collector.collect(combined_text)
+            candidates = {
+                k: v for k, v in evidence.items()
+                if v.confidence >= 0.9
+            }
 
-        corrected_items = self.agent_b._rule_based_correction(subtitle_items, replacement_dict)
+        context = {"caption_text": combined_text, "candidates": candidates}
+        try:
+            replacements = await self.term_agent.execute(context)
+        except Exception as e:
+            logger.warning(f"TermAgent 执行异常: {str(e)}")
+            if self._collector:
+                return self._fallback_by_evidence(subtitle_items, candidates), "partial", True
+            raise
 
-        return corrected_items, True
+        if not replacements:
+            self._print_progress(1, 1, "Pipeline", "无纠错结果")
+            return self._clone_items(subtitle_items), "hybrid", False
 
-    async def correct_subtitles(self, subtitle_items: List[Dict]) -> Tuple[List[Dict], bool]:
-        return await self.process_chunk(subtitle_items)
+        corrected = await self.correction_agent.execute({
+            "subtitle_items": subtitle_items,
+            "replacement_dict": replacements,
+        })
 
-    def correct_subtitles_sync(self, subtitle_items: List[Dict]) -> Tuple[List[Dict], bool]:
-        return self.process_chunk_sync(subtitle_items)
+        self._print_progress(1, 1, "Pipeline", "纠错完成")
+        return corrected, "hybrid", False
+
+    async def _process_long_text(
+        self,
+        subtitle_items: List[Dict],
+        combined_text: str,
+    ) -> Tuple[List[Dict], str, bool]:
+        groups = self._split_into_groups(subtitle_items, self.max_text_length)
+        self._total_groups = len(groups)
+        self._processed_groups = 0
+
+        self._print_progress(0, self._total_groups, "分组", f"共 {self._total_groups} 组")
+
+        semaphore = asyncio.Semaphore(self.MAX_CONCURRENT_GROUPS)
+
+        async def process_group_with_semaphore(group, group_idx):
+            async with semaphore:
+                result = await self._process_single_group(group, group_idx)
+                self._processed_groups += 1
+                self._print_progress(
+                    self._processed_groups,
+                    self._total_groups,
+                    "处理中",
+                    f"完成 {self._processed_groups}/{self._total_groups} 组"
+                )
+                return result
+
+        tasks = [
+            process_group_with_semaphore(group, idx)
+            for idx, group in enumerate(groups)
+        ]
+
+        group_results = await asyncio.gather(*tasks, return_exceptions=True)
+
+        all_results = []
+        any_partial = False
+
+        for result in group_results:
+            if isinstance(result, Exception):
+                logger.error(f"Group processing failed: {result}")
+                any_partial = True
+                continue
+            results, was_partial = result
+            all_results.extend(results)
+            any_partial = any_partial or was_partial
+
+        mode = "partial" if any_partial else "hybrid"
+        self._print_progress(self._total_groups, self._total_groups, "完成", "处理完毕")
+        return all_results, mode, any_partial
+
+    async def _process_single_group(
+        self,
+        group: List[Dict],
+        group_idx: int,
+    ) -> Tuple[List[Dict], bool]:
+        group_text = " ".join([item["text"] for item in group])
+
+        candidates = {}
+        if self._collector:
+            evidence = self._collector.collect(group_text)
+            candidates = {
+                k: v for k, v in evidence.items()
+                if v.confidence >= 0.9
+            }
+
+        context = {"caption_text": group_text, "candidates": candidates}
+        try:
+            replacements = await self.term_agent.execute(context)
+            if not replacements:
+                return [{"id": item["id"], "text": item["text"]} for item in group], False
+
+            corrected = await self.correction_agent.execute({
+                "subtitle_items": group,
+                "replacement_dict": replacements,
+            })
+            return corrected, False
+        except Exception as e:
+            logger.warning(f"Group {group_idx} processing failed: {str(e)}")
+            if self._collector:
+                return self._fallback_by_evidence(group, candidates), True
+            return [{"id": item["id"], "text": item["text"]} for item in group], True
+
+    def _split_into_groups(
+        self,
+        subtitle_items: List[Dict],
+        max_length: int,
+    ) -> List[List[Dict]]:
+        groups = []
+        current_group = []
+        current_length = 0
+
+        for item in subtitle_items:
+            item_length = len(item["text"])
+            if (current_length + item_length > max_length or len(current_group) >= self.MAX_ITEMS_PER_GROUP) and current_group:
+                groups.append(current_group)
+                current_group = [item]
+                current_length = item_length
+            else:
+                current_group.append(item)
+                current_length += item_length
+
+        if current_group:
+            groups.append(current_group)
+
+        return groups
+
+    def _fallback_by_evidence(
+        self,
+        subtitle_items: List[Dict],
+        candidates: Dict,
+    ) -> List[Dict]:
+        high_conf = {
+            k: v.correct if hasattr(v, 'correct') else v.get('correct', '')
+            for k, v in candidates.items()
+            if hasattr(v, 'confidence') and v.confidence >= 0.9
+        }
+        sorted_replacements = sorted(high_conf.items(), key=lambda x: len(x[0]), reverse=True)
+
+        corrected = []
+        for item in subtitle_items:
+            text = item["text"]
+            for wrong, correct in sorted_replacements:
+                if wrong in text:
+                    text = text.replace(wrong, correct)
+            corrected.append({"id": item["id"], "text": text})
+        return corrected
+
+    def _clone_items(self, subtitle_items: List[Dict]) -> List[Dict]:
+        return [{"id": item["id"], "text": item["text"]} for item in subtitle_items]
+
+    async def process_async(
+        self,
+        subtitle_items: List[Dict],
+    ) -> Tuple[List[Dict], str, bool]:
+        return await self.process(subtitle_items)
+
+    def process_sync(self, subtitle_items: List[Dict]) -> Tuple[List[Dict], str, bool]:
+        if not subtitle_items:
+            return [], "hybrid", False
+
+        combined_text = " ".join([item.get("text", "") for item in subtitle_items])
+
+        candidates = {}
+        if self._collector:
+            evidence = self._collector.collect(combined_text)
+            candidates = {
+                k: v for k, v in evidence.items()
+                if v.confidence >= 0.9
+            }
+
+        high_conf = {
+            k: v.correct
+            for k, v in candidates.items()
+            if v.confidence >= 0.9
+        }
+        sorted_replacements = sorted(high_conf.items(), key=lambda x: len(x[0]), reverse=True)
+
+        corrected = []
+        for item in subtitle_items:
+            text = item["text"]
+            for wrong, correct in sorted_replacements:
+                if wrong in text:
+                    text = text.replace(wrong, correct)
+            corrected.append({"id": item["id"], "text": text})
+
+        if not candidates:
+            return self._clone_items(subtitle_items), "hybrid", False
+        return corrected, "partial", True
