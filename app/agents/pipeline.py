@@ -13,9 +13,9 @@ logger = logging.getLogger(__name__)
 
 
 class CorrectionPipeline:
-    MAX_TEXT_LENGTH = 2000
+    MAX_TEXT_LENGTH = 3000
     MAX_ITEMS_PER_GROUP = 50
-    MAX_CONCURRENT_GROUPS = 3
+    MAX_CONCURRENT_GROUPS = 6
 
     def __init__(
         self,
@@ -23,13 +23,13 @@ class CorrectionPipeline:
         correction_agent: CorrectionAgent,
         domain: str = Domain.ALGORITHM.value,
         use_evidence: bool = True,
-        max_text_length: int = 2000,
+        max_text_length: Optional[int] = None,
     ):
         self.term_agent = term_agent
         self.correction_agent = correction_agent
         self.domain = domain
         self.use_evidence = use_evidence
-        self.max_text_length = max_text_length
+        self.max_text_length = max_text_length or self.MAX_TEXT_LENGTH
         self._collector = EvidenceCollector(domain=domain) if use_evidence else None
         self._progress_enabled = True
         self._processed_groups = 0
@@ -79,7 +79,7 @@ class CorrectionPipeline:
             evidence = self._collector.collect(combined_text)
             candidates = {
                 k: v for k, v in evidence.items()
-                if v.confidence >= 0.9
+                if v.confidence >= self._get_candidate_confidence_threshold()
             }
 
         context = {"caption_text": combined_text, "candidates": candidates}
@@ -163,7 +163,7 @@ class CorrectionPipeline:
             evidence = self._collector.collect(group_text)
             candidates = {
                 k: v for k, v in evidence.items()
-                if v.confidence >= 0.9
+                if v.confidence >= self._get_candidate_confidence_threshold()
             }
 
         context = {"caption_text": group_text, "candidates": candidates}
@@ -228,6 +228,9 @@ class CorrectionPipeline:
             corrected.append({"id": item["id"], "text": text})
         return corrected
 
+    def _get_candidate_confidence_threshold(self) -> float:
+        return getattr(self.term_agent, "min_confidence", 0.9)
+
     def _clone_items(self, subtitle_items: List[Dict]) -> List[Dict]:
         return [{"id": item["id"], "text": item["text"]} for item in subtitle_items]
 
@@ -248,7 +251,7 @@ class CorrectionPipeline:
             evidence = self._collector.collect(combined_text)
             candidates = {
                 k: v for k, v in evidence.items()
-                if v.confidence >= 0.9
+                if v.confidence >= self._get_candidate_confidence_threshold()
             }
 
         high_conf = {

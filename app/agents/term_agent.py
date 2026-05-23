@@ -3,15 +3,22 @@ import re
 from typing import Dict, Any
 from app.agents.base import BaseAgent
 from app.core.exceptions import AgentExecutionError
+from app.schemas.domain import DOMAIN_LABELS
 
 
-PROMPT_DEFAULT = """你是一个专业的计算机算法术语识别专家。
+PROMPT_DEFAULT = """你是一个专业领域字幕纠错专家。
+
+【当前领域】
+{domain_context}
+
 以下是从视频字幕中提取的文本，可能存在 ASR（语音识别）错误。
 
 请识别以下可疑的算法术语错误：
 - 发音相似导致的错误（如"分制"应为"分治"，"动态鬼话"应为"动态规划"）
 - 专业术语识别错误（如"O(n log n)"识别为"欧根老根"）
 - 常见的算法术语错误
+- 如果某个词在当前上下文中本身通顺、且没有充分证据，不要为了贴近术语库而强行替换
+- 不要把普通中文词误改成算法术语，例如在语义不明确时，不要把"数"改成"树"
 
 字幕内容：
 {caption_text}
@@ -23,6 +30,9 @@ PROMPT_DEFAULT = """你是一个专业的计算机算法术语识别专家。
 """
 
 PROMPT_ENHANCED = """你是一个精确的字幕纠错裁判。
+
+【当前领域】
+{domain_context}
 
 【背景知识】
 以下是从专业算法领域词典中预检索到的候选纠错列表（按置信度排序）：
@@ -37,6 +47,7 @@ PROMPT_ENHANCED = """你是一个精确的字幕纠错裁判。
 2. 忽略置信度过低（< 0.5）或明显错误的候选
 3. 如果候选列表遗漏了明显错误（如常见的音近错误），可以补充
 4. 只返回确认需要替换的词对
+5. 如果原文在当前语境下已经通顺，不要过度纠错，不要把普通词硬改成专业术语
 
 【输出格式】JSON:
 {{"需要替换的词1": "正确词1", "需要替换的词2": "正确词2"}}
@@ -85,7 +96,10 @@ class TermAgent(BaseAgent):
         return self._rule_based_fallback(caption_text)
 
     async def _default_analyze(self, caption_text: str) -> Dict[str, str]:
-        prompt = PROMPT_DEFAULT.format(caption_text=caption_text)
+        prompt = PROMPT_DEFAULT.format(
+            caption_text=caption_text,
+            domain_context=self._get_domain_context(),
+        )
 
         try:
             response = await self.llm_client.chat.completions.create(
@@ -116,6 +130,7 @@ class TermAgent(BaseAgent):
         prompt = PROMPT_ENHANCED.format(
             candidate_list=evidence.to_prompt_text(),
             original_text=caption_text,
+            domain_context=self._get_domain_context(),
         )
 
         try:
@@ -207,3 +222,14 @@ class TermAgent(BaseAgent):
     async def batch_execute(self, caption_items: list) -> Dict[str, str]:
         combined_text = " ".join([item.get("text", "") for item in caption_items])
         return await self.execute({"caption_text": combined_text, "candidates": {}})
+
+    def _get_domain_context(self) -> str:
+        domain_label = DOMAIN_LABELS.get(self.domain, self.domain)
+        domain_notes = {
+            "algorithm": "聚焦算法与数据结构语境，谨慎区分“数/树”“序/树”“回溯/回溯算法”等易混表达。",
+            "medical": "聚焦医学语境，优先保持症状、药品、诊疗术语的准确性。",
+            "legal": "聚焦法律语境，优先保持法条、案由、程序性表达的准确性。",
+            "finance": "聚焦金融语境，优先保持指标、产品、交易术语的准确性。",
+        }
+        note = domain_notes.get(self.domain, "优先保持当前领域术语准确，避免脱离语境的过度纠错。")
+        return f"{domain_label}。{note}"

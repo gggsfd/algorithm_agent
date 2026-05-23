@@ -16,15 +16,15 @@ class EvidenceCollector:
     CONFIDENCE_WEIGHTS = {
         "dict": 1.0,
         "asr_mapping": 0.95,
-        "rag": 0.90,
-        "pinyin": 0.60,
+        "rag": 0.85,
+        "pinyin": 0.70,
     }
 
     def __init__(
         self,
         domain: str = Domain.ALGORITHM.value,
         rag_threshold: float = 0.85,
-        pinyin_threshold: float = 0.60,
+        pinyin_threshold: float = 0.75,
     ):
         self.domain = domain
         self.rag_threshold = rag_threshold

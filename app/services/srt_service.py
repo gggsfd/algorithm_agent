@@ -1,7 +1,6 @@
 import asyncio
 import logging
 from typing import List, Dict, Optional, Tuple
-from openai import AsyncOpenAI
 from app.core.srt_parser import SRTParser, SRTParseResult
 from app.core.constraint_checker import ConstraintChecker
 from app.core.exceptions import ConstraintCheckError, AgentExecutionError
@@ -9,7 +8,7 @@ from app.core.task_dispatcher import TaskDispatcher
 from app.agents.pipeline import CorrectionPipeline
 from app.agents.term_agent import TermAgent
 from app.agents.correction_agent import CorrectionAgent
-from app.core.llm_config import LLMConfig
+from app.core.llm_config import LLMConfig, LLMClientFactory
 from app.rag.retrieval import get_default_engine
 from app.schemas.domain import Domain, is_supported_domain
 from app.schemas.correction_mode import CorrectionMode
@@ -20,6 +19,8 @@ logger = logging.getLogger(__name__)
 
 
 class SRTService:
+    TERM_AGENT_MIN_CONFIDENCE = 0.65
+
 
     def __init__(self, llm_client=None, use_agent: bool = False, default_domain: str = Domain.ALGORITHM.value):
         self.parser = SRTParser()
@@ -34,27 +35,28 @@ class SRTService:
             self._pipeline = self._create_agent_pipeline()
 
     def _create_agent_pipeline(self) -> CorrectionPipeline:
-        client = AsyncOpenAI(
-            api_key=self.llm_config.agent_a_api_key,
-            base_url=self.llm_config.base_url,
-        )
-        term_agent = TermAgent(
-            llm_client=client,
-            model_name=self.llm_config.agent_a_model,
-            domain=self.default_domain,
-            min_confidence=0.35,
-        )
-        correction_agent = CorrectionAgent(
-            llm_client=client,
-            model_name=self.llm_config.agent_b_model,
-            validate=True,
-        )
+        term_agent, correction_agent = self._build_agents()
         return CorrectionPipeline(
             term_agent=term_agent,
             correction_agent=correction_agent,
             domain=self.default_domain,
             use_evidence=False,
         )
+
+    def _build_agents(self) -> Tuple[TermAgent, CorrectionAgent]:
+        term_client, correction_client = LLMClientFactory.create_clients()
+        term_agent = TermAgent(
+            llm_client=term_client,
+            model_name=self.llm_config.agent_a_model,
+            domain=self.default_domain,
+            min_confidence=self.TERM_AGENT_MIN_CONFIDENCE,
+        )
+        correction_agent = CorrectionAgent(
+            llm_client=correction_client,
+            model_name=self.llm_config.agent_b_model,
+            validate=True,
+        )
+        return term_agent, correction_agent
 
     def parse_srt(self, srt_content: str) -> SRTParseResult:
         return self.parser.parse(srt_content)
@@ -113,21 +115,7 @@ class SRTService:
         if not self.agent_available:
             raise ValueError("Hybrid mode unavailable: missing api key")
 
-        client = AsyncOpenAI(
-            api_key=self.llm_config.agent_a_api_key,
-            base_url=self.llm_config.base_url,
-        )
-        term_agent = TermAgent(
-            llm_client=client,
-            model_name=self.llm_config.agent_a_model,
-            domain=self.default_domain,
-            min_confidence=0.35,
-        )
-        correction_agent = CorrectionAgent(
-            llm_client=client,
-            model_name=self.llm_config.agent_b_model,
-            validate=True,
-        )
+        term_agent, correction_agent = self._build_agents()
         self._correction_pipeline = CorrectionPipeline(
             term_agent=term_agent,
             correction_agent=correction_agent,
