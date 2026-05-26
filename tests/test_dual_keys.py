@@ -21,7 +21,7 @@ async def test_dual_api_keys():
     client_a = AsyncOpenAI(api_key=agent_a_key, base_url="https://api.deepseek.com")
     client_b = AsyncOpenAI(api_key=agent_b_key, base_url="https://api.deepseek.com")
 
-    print("\n--- 测试 Agent A (侦察) ---")
+    print("\n--- 测试 TermAgent (侦察) ---")
     response_a = await client_a.chat.completions.create(
         model="deepseek-chat",
         messages=[
@@ -34,7 +34,7 @@ async def test_dual_api_keys():
     print(f"Agent A 响应: {result_a}")
     print(f"Agent A Tokens: {response_a.usage.total_tokens}")
 
-    print("\n--- 测试 Agent B (主刀) ---")
+    print("\n--- 测试 CorrectionAgent (主刀) ---")
     response_b = await client_b.chat.completions.create(
         model="deepseek-chat",
         messages=[
@@ -52,12 +52,34 @@ async def test_dual_api_keys():
 
 async def test_pipeline_dual_keys():
     print("\n" + "="*50)
-    print("=== 测试 Pipeline 双 Key ===")
+    print("=== 测试 CorrectionPipeline 双 Key ===")
     print("="*50)
 
-    from app.agents.pipeline import AgentPipeline
+    from app.agents.term_agent import TermAgent
+    from app.agents.correction_agent import CorrectionAgent
+    from app.agents.pipeline import CorrectionPipeline
+    from app.core.llm_config import LLMConfig
 
-    pipeline = AgentPipeline()
+    config = LLMConfig.from_env()
+
+    term_agent = TermAgent(
+        llm_client=AsyncOpenAI(api_key=config.agent_a_api_key, base_url=config.base_url),
+        model_name=config.agent_a_model,
+        domain="algorithm",
+        min_confidence=0.35,
+    )
+    correction_agent = CorrectionAgent(
+        llm_client=AsyncOpenAI(api_key=config.agent_b_api_key, base_url=config.base_url),
+        model_name=config.agent_b_model,
+        validate=True,
+    )
+
+    pipeline = CorrectionPipeline(
+        term_agent=term_agent,
+        correction_agent=correction_agent,
+        domain="algorithm",
+        use_evidence=False,
+    )
 
     subtitle_items = [
         {"id": 1, "text": "下面讲一个欧根老根的问题"},
@@ -67,14 +89,14 @@ async def test_pipeline_dual_keys():
 
     print(f"\n输入字幕数量: {len(subtitle_items)}")
 
-    corrected, success = await pipeline.process_chunk(subtitle_items)
+    corrected, mode, degraded = await pipeline.process_async(subtitle_items)
 
-    print(f"\n成功: {success}")
+    print(f"\n模式: {mode}, 降级: {degraded}")
     print("纠错结果:")
     for item in corrected:
         print(f"  ID {item['id']}: {item['text']}")
 
-    return corrected, success
+    return corrected, mode, degraded
 
 
 if __name__ == "__main__":

@@ -4,6 +4,7 @@ sys.path.insert(0, 'd:/Mycode/算法_agent/algorithm_agent')
 import pytest
 from app.services.srt_service import SRTService
 from app.schemas.correction_mode import CorrectionMode
+import app.services.srt_service as srt_service_module
 
 
 SAMPLE_SRT = """1
@@ -33,13 +34,20 @@ def test_process_srt_rule_mode():
 def test_process_srt_agent_mode_missing_key():
     service = SRTService()
     service.agent_available = False
-    service.pipeline = None
+    service._pipeline = None
 
-    with pytest.raises(ValueError, match="missing api key"):
-        service.process_srt(SAMPLE_SRT, correction_mode=CorrectionMode.AGENT)
+    final_srt, success, mode_meta = service.process_srt(
+        SAMPLE_SRT,
+        correction_mode=CorrectionMode.AGENT
+    )
+    assert success is True
+    assert "O(n log n)" in final_srt
+    assert mode_meta["correction_mode"] == "agent"
+    assert mode_meta["effective_mode"] == "rule"
+    assert mode_meta["degraded"] is True
 
 
-def test_process_srt_auto_mode_degraded():
+def test_process_srt_agent_mode_degraded():
     service = SRTService()
     service.agent_available = True
 
@@ -49,17 +57,17 @@ def test_process_srt_auto_mode_degraded():
     service._correct_by_agent_sync = raise_agent_error
     final_srt, success, mode_meta = service.process_srt(
         SAMPLE_SRT,
-        correction_mode=CorrectionMode.AUTO
+        correction_mode=CorrectionMode.AGENT
     )
     assert success is True
     assert "O(n log n)" in final_srt
     assert "动态规划" in final_srt
-    assert mode_meta["correction_mode"] == "auto"
+    assert mode_meta["correction_mode"] == "agent"
     assert mode_meta["effective_mode"] == "rule"
     assert mode_meta["degraded"] is True
 
 
-def test_process_srt_hybrid_auto_mode_degraded():
+def test_process_srt_hybrid_mode_degraded():
     service = SRTService()
     service.agent_available = True
 
@@ -69,18 +77,56 @@ def test_process_srt_hybrid_auto_mode_degraded():
     service._correct_by_hybrid_sync = raise_hybrid_error
     final_srt, success, mode_meta = service.process_srt(
         SAMPLE_SRT,
-        correction_mode=CorrectionMode.HYBRID_AUTO
+        correction_mode=CorrectionMode.HYBRID
     )
     assert success is True
     assert "O(n log n)" in final_srt
     assert "动态规划" in final_srt
-    assert mode_meta["correction_mode"] == "hybrid_auto"
+    assert mode_meta["correction_mode"] == "hybrid"
     assert mode_meta["effective_mode"] == "rule"
     assert mode_meta["degraded"] is True
+
+
+def test_create_agent_pipeline_uses_dual_clients(monkeypatch):
+    term_client = object()
+    correction_client = object()
+
+    monkeypatch.setattr(
+        srt_service_module.LLMClientFactory,
+        "create_clients",
+        lambda: (term_client, correction_client),
+    )
+
+    service = SRTService()
+    pipeline = service._create_agent_pipeline()
+
+    assert pipeline.term_agent.llm_client is term_client
+    assert pipeline.correction_agent.llm_client is correction_client
+    assert pipeline.term_agent.min_confidence == SRTService.TERM_AGENT_MIN_CONFIDENCE
+
+
+def test_ensure_correction_pipeline_uses_dual_clients(monkeypatch):
+    term_client = object()
+    correction_client = object()
+
+    monkeypatch.setattr(
+        srt_service_module.LLMClientFactory,
+        "create_clients",
+        lambda: (term_client, correction_client),
+    )
+
+    service = SRTService()
+    service.agent_available = True
+
+    pipeline = service._ensure_correction_pipeline()
+
+    assert pipeline.term_agent.llm_client is term_client
+    assert pipeline.correction_agent.llm_client is correction_client
+    assert pipeline.use_evidence is True
 
 
 if __name__ == "__main__":
     test_process_srt_rule_mode()
     test_process_srt_agent_mode_missing_key()
-    test_process_srt_auto_mode_degraded()
-    test_process_srt_hybrid_auto_mode_degraded()
+    test_process_srt_agent_mode_degraded()
+    test_process_srt_hybrid_mode_degraded()
