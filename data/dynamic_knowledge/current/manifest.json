@@ -1,0 +1,56 @@
+{
+  "active_domain": "dynamic_current",
+  "created_at": "2026-06-09T12:05:43.145066+00:00",
+  "updated_at": "2026-06-09T12:10:00.817619+00:00",
+  "material_count": 4,
+  "term_count": 63,
+  "asr_mapping_count": 84,
+  "candidate_term_count": 66,
+  "candidate_asr_mapping_count": 170,
+  "materials": [
+    {
+      "id": "mat_f54cfa3226d2",
+      "filename": "01_基础知识.pdf",
+      "file_type": "pdf",
+      "stored_path": "D:\\Mycode\\算法_agent\\algorithm_agent\\data\\dynamic_knowledge\\current\\materials\\mat_f54cfa3226d2.pdf",
+      "text_length": 1477,
+      "term_count": 20,
+      "asr_mapping_count": 25,
+      "candidate_term_count": 20,
+      "candidate_asr_mapping_count": 40
+    },
+    {
+      "id": "mat_67b43682387b",
+      "filename": "02_分治与递归式.pdf",
+      "file_type": "pdf",
+      "stored_path": "D:\\Mycode\\算法_agent\\algorithm_agent\\data\\dynamic_knowledge\\current\\materials\\mat_67b43682387b.pdf",
+      "text_length": 1785,
+      "term_count": 9,
+      "asr_mapping_count": 24,
+      "candidate_term_count": 15,
+      "candidate_asr_mapping_count": 45
+    },
+    {
+      "id": "mat_82b5b1a1178d",
+      "filename": "03_动态规划.pdf",
+      "file_type": "pdf",
+      "stored_path": "D:\\Mycode\\算法_agent\\algorithm_agent\\data\\dynamic_knowledge\\current\\materials\\mat_82b5b1a1178d.pdf",
+      "text_length": 1950,
+      "term_count": 24,
+      "asr_mapping_count": 21,
+      "candidate_term_count": 20,
+      "candidate_asr_mapping_count": 63
+    },
+    {
+      "id": "mat_022f372ddb36",
+      "filename": "04_贪心法.pdf",
+      "file_type": "pdf",
+      "stored_path": "D:\\Mycode\\算法_agent\\algorithm_agent\\data\\dynamic_knowledge\\current\\materials\\mat_022f372ddb36.pdf",
+      "text_length": 1612,
+      "term_count": 10,
+      "asr_mapping_count": 14,
+      "candidate_term_count": 11,
+      "candidate_asr_mapping_count": 22
+    }
+  ]
+}

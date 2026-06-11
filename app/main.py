@@ -36,10 +36,12 @@ def create_app() -> FastAPI:
         allow_headers=["*"],
     )
 
-    from app.api import srt, device, domain
+    from app.api import srt, device, domain, adaptive, adaptive_materials
     app.include_router(srt.router, prefix="/api/v1", tags=["字幕处理"])
     app.include_router(device.router, prefix="/api/v1", tags=["设备管理"])
     app.include_router(domain.router, prefix="/api/v1", tags=["领域管理"])
+    app.include_router(adaptive.router, prefix="/api/v1", tags=["动态领域自适应"])
+    app.include_router(adaptive_materials.router, prefix="/api/v1", tags=["课程材料动态知识库"])
 
     return app
 

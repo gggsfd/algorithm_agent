@@ -74,11 +74,19 @@ class TermAgent(BaseAgent):
         self.llm_client = llm_client
         self.model_name = model_name
         self.domain = domain
-        self.min_confidence = min_confidence
+        self._min_confidence = min_confidence
 
     @property
     def name(self) -> str:
         return "TermAgent"
+
+    @property
+    def min_confidence(self) -> float:
+        return self._min_confidence
+
+    @min_confidence.setter
+    def min_confidence(self, value: float):
+        self._min_confidence = max(0.0, min(1.0, float(value)))
 
     async def execute(self, context: Dict[str, Any]) -> Dict[str, str]:
         caption_text = context.get("caption_text", "")
@@ -89,6 +97,9 @@ class TermAgent(BaseAgent):
 
         if candidates and self.llm_client:
             return await self._enhanced_analyze(caption_text, candidates)
+
+        if candidates:
+            return self._evidence_rule_based_fallback(candidates)
 
         if self.llm_client:
             return await self._default_analyze(caption_text)
@@ -189,10 +200,10 @@ class TermAgent(BaseAgent):
         result = {}
         for wrong, candidate in candidates.items():
             if isinstance(candidate, CandidateCorrection):
-                if candidate.confidence >= 0.90:
+                if candidate.confidence >= self.min_confidence:
                     result[wrong] = candidate.correct
             elif isinstance(candidate, dict):
-                if candidate.get("confidence", 0) >= 0.90:
+                if candidate.get("confidence", 0) >= self.min_confidence:
                     result[wrong] = candidate.get("correct", "")
         return result
 

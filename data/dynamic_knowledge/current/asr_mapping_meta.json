@@ -1,0 +1,509 @@
+{
+  "算法分": {
+    "correct": "算法分析",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "时间复杂": {
+    "correct": "时间复杂度",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "空间复杂": {
+    "correct": "空间复杂度",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "大O记": {
+    "correct": "大O记号",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "原地": {
+    "correct": "原地算法",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "原地算": {
+    "correct": "原地算法",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "循环不变": {
+    "correct": "循环不变式",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "大Ω记": {
+    "correct": "大Ω记号",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "大Θ记": {
+    "correct": "大Θ记号",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "小o记": {
+    "correct": "小o记号",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "尾递": {
+    "correct": "尾递归",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "数学归纳": {
+    "correct": "数学归纳法",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "反证": {
+    "correct": "反证法",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "展开": {
+    "correct": "展开法",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "代入": {
+    "correct": "代入法",
+    "source_materials": [
+      "mat_67b43682387b",
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "递归树": {
+    "correct": "递归树法",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "变量替换": {
+    "correct": "变量替换法",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "空间换时": {
+    "correct": "空间换时间",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "大欧记号": {
+    "correct": "大O记号",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "地柜": {
+    "correct": "递归",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "跌代": {
+    "correct": "迭代",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "大欧米伽记号": {
+    "correct": "大Ω记号",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "大西塔记号": {
+    "correct": "大Θ记号",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "小欧记号": {
+    "correct": "小o记号",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "伪递归": {
+    "correct": "尾递归",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "分治": {
+    "correct": "分治算法",
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "分治算": {
+    "correct": "分治算法",
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "归并排": {
+    "correct": "归并排序",
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "快速排": {
+    "correct": "快速排序",
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "二分查": {
+    "correct": "二分查找",
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "主定": {
+    "correct": "主定理",
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "递推方": {
+    "correct": "递推方程",
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "递归数": {
+    "correct": "递归树",
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "递归": {
+    "correct": "递归树",
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "Karatsuba算": {
+    "correct": "Karatsuba算法",
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "Karatsuba": {
+    "correct": "Karatsuba算法",
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "Strassen算": {
+    "correct": "Strassen算法",
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "Strassen": {
+    "correct": "Strassen算法",
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "分支算法": {
+    "correct": "分治算法",
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "分制算法": {
+    "correct": "分治算法",
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "归并拍序": {
+    "correct": "归并排序",
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "快排": {
+    "correct": "快速排序",
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "折半查找": {
+    "correct": "二分查找",
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "主定力": {
+    "correct": "主定理",
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "地推方程": {
+    "correct": "递推方程",
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "地归树": {
+    "correct": "递归树",
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "带入法": {
+    "correct": "代入法",
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "卡拉楚巴算法": {
+    "correct": "Karatsuba算法",
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "斯特拉森算法": {
+    "correct": "Strassen算法",
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "动态规": {
+    "correct": "动态规划",
+    "source_materials": [
+      "mat_022f372ddb36",
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "最优子结": {
+    "correct": "最优子结构",
+    "source_materials": [
+      "mat_022f372ddb36",
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "重叠子问": {
+    "correct": "重叠子问题",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "状态转移方": {
+    "correct": "状态转移方程",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "记忆化搜": {
+    "correct": "记忆化搜索",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "无后效": {
+    "correct": "无后效性",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "0/1背": {
+    "correct": "0/1背包",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "完全背": {
+    "correct": "完全背包",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "最长公共子序": {
+    "correct": "最长公共子序列",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "最长递增子序": {
+    "correct": "最长递增子序列",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "编辑距": {
+    "correct": "编辑距离",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "滚动数": {
+    "correct": "滚动数组",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "斐波那契数": {
+    "correct": "斐波那契数列",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "矩阵链": {
+    "correct": "矩阵链乘",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "自顶向": {
+    "correct": "自顶向下",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "自底向": {
+    "correct": "自底向上",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "空间优": {
+    "correct": "空间优化",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "前缀和优": {
+    "correct": "前缀和优化",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "单调队列优": {
+    "correct": "单调队列优化",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "状态压": {
+    "correct": "状态压缩",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "四边形不等": {
+    "correct": "四边形不等式",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "贪心策": {
+    "correct": "贪心策略",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ]
+  },
+  "贪心选择性": {
+    "correct": "贪心选择性质",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ]
+  },
+  "活动选择问": {
+    "correct": "活动选择问题",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ]
+  },
+  "Huffman编": {
+    "correct": "Huffman编码",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ]
+  },
+  "最小生成数": {
+    "correct": "最小生成树",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ]
+  },
+  "最小生成": {
+    "correct": "最小生成树",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ]
+  },
+  "Prim算": {
+    "correct": "Prim算法",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ]
+  },
+  "Prim": {
+    "correct": "Prim算法",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ]
+  },
+  "Kruskal": {
+    "correct": "Kruskal算法",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ]
+  },
+  "Kruskal算": {
+    "correct": "Kruskal算法",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ]
+  },
+  "Dijkstra算": {
+    "correct": "Dijkstra算法",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ]
+  },
+  "Dijkstra": {
+    "correct": "Dijkstra算法",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ]
+  },
+  "分数背包问": {
+    "correct": "分数背包问题",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ]
+  },
+  "交换论": {
+    "correct": "交换论证",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ]
+  }
+}

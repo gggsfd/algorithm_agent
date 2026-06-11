@@ -1,0 +1,2104 @@
+{
+  "主定理": {
+    "term": "主定理",
+    "definition": "用于分析分治算法时间复杂度的定理，形式为 T(n)=aT(n/b)+f(n)。",
+    "category": "复杂度分析",
+    "confidence": 0.7,
+    "reason": "课程章节包含递推关系求解方法，主定理是核心方法之一。",
+    "related_terms": [
+      "分治法",
+      "递归树法",
+      "时间复杂度的渐近阶"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "主定离",
+        "reason": "音近",
+        "confidence": 0.55
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "分治法": {
+    "term": "分治法",
+    "definition": "将问题分解为若干子问题，递归求解后合并的算法设计策略。",
+    "category": "算法设计",
+    "confidence": 0.65,
+    "reason": "课程话题涵盖分治策略，且常用于复杂度分析示例。",
+    "related_terms": [
+      "递归",
+      "主定理",
+      "归并排序"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "分支法",
+        "reason": "音近",
+        "confidence": 0.5
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "摊还分析": {
+    "term": "摊还分析",
+    "definition": "分析一系列操作的平均时间复杂度的方法。",
+    "category": "复杂度分析",
+    "confidence": 0.6,
+    "reason": "课程可能主题包括摊还分析，属于高级复杂度分析。",
+    "related_terms": [
+      "时间复杂度",
+      "平均情况",
+      "势能法"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "摊换分析",
+        "reason": "音近",
+        "confidence": 0.5
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "递归关系": {
+    "term": "递归关系",
+    "definition": "定义序列项的递推方程，如 T(n)=T(n-1)+1。",
+    "category": "递推关系",
+    "confidence": 0.75,
+    "reason": "课程有递推关系求解章节，递归关系是核心概念。",
+    "related_terms": [
+      "递推方程",
+      "递归树法",
+      "展开法"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "递规关系",
+        "reason": "音近",
+        "confidence": 0.55
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "初始条件": {
+    "term": "初始条件",
+    "definition": "递归关系中最小规模问题的值。",
+    "category": "递推关系",
+    "confidence": 0.7,
+    "reason": "求解递推关系时需要初始条件，课程中会涉及。",
+    "related_terms": [
+      "递归关系",
+      "边界条件",
+      "基础步骤"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "初试条件",
+        "reason": "音近",
+        "confidence": 0.55
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "边界条件": {
+    "term": "边界条件",
+    "definition": "递归终止时的条件。",
+    "category": "递归",
+    "confidence": 0.65,
+    "reason": "递归算法正确性证明需要边界条件。",
+    "related_terms": [
+      "递归",
+      "基础步骤",
+      "初始条件"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "编辑条件",
+        "reason": "音近",
+        "confidence": 0.5
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "最坏情况": {
+    "term": "最坏情况",
+    "definition": "算法运行时间的最坏输入。",
+    "category": "复杂度度量",
+    "confidence": 0.7,
+    "reason": "算法分析中常用最坏情况复杂度作为衡量标准。",
+    "related_terms": [
+      "时间复杂度",
+      "最好情况",
+      "平均情况"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "最坏情扩",
+        "reason": "音近",
+        "confidence": 0.55
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "最好情况": {
+    "term": "最好情况",
+    "definition": "算法运行时间的最佳输入。",
+    "category": "复杂度度量",
+    "confidence": 0.65,
+    "reason": "最好情况也是算法分析的一种参考。",
+    "related_terms": [
+      "时间复杂度",
+      "最坏情况",
+      "平均情况"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "最好情操",
+        "reason": "音近",
+        "confidence": 0.5
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "平均情况": {
+    "term": "平均情况",
+    "definition": "算法对所有可能输入的平均运行时间。",
+    "category": "复杂度度量",
+    "confidence": 0.65,
+    "reason": "平均情况分析是算法分析的重要方面。",
+    "related_terms": [
+      "时间复杂度",
+      "最坏情况",
+      "最好情况"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "平均情旷",
+        "reason": "音近",
+        "confidence": 0.5
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "紧致界": {
+    "term": "紧致界",
+    "definition": "即大Θ记号，表示渐近紧确界。",
+    "category": "复杂度记号",
+    "confidence": 0.7,
+    "reason": "课程中紧致界是核心概念，与大Θ记号紧密相关。",
+    "related_terms": [
+      "大Θ记号",
+      "渐近复杂度",
+      "上界"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "紧质界",
+        "reason": "音近",
+        "confidence": 0.55
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "上界": {
+    "term": "上界",
+    "definition": "大O记号表示的渐近上界。",
+    "category": "复杂度记号",
+    "confidence": 0.7,
+    "reason": "上界是渐近复杂度分析的基础。",
+    "related_terms": [
+      "大O记号",
+      "渐近复杂度",
+      "下界"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "善界",
+        "reason": "音近",
+        "confidence": 0.55
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "下界": {
+    "term": "下界",
+    "definition": "大Ω记号表示的渐近下界。",
+    "category": "复杂度记号",
+    "confidence": 0.7,
+    "reason": "下界是渐近复杂度分析的重要组成部分。",
+    "related_terms": [
+      "大Ω记号",
+      "渐近复杂度",
+      "上界"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "夏界",
+        "reason": "音近",
+        "confidence": 0.55
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "渐近分析": {
+    "term": "渐近分析",
+    "definition": "关注输入规模趋于无穷时算法性能的分析方法。",
+    "category": "算法分析",
+    "confidence": 0.7,
+    "reason": "课程核心方法，几乎所有复杂度分析都基于渐近分析。",
+    "related_terms": [
+      "时间复杂度",
+      "空间复杂度",
+      "大O记号"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "渐进分析",
+        "reason": "音近",
+        "confidence": 0.55
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "指数阶": {
+    "term": "指数阶",
+    "definition": "时间复杂度为O(2^n)或O(c^n)的复杂度阶。",
+    "category": "复杂度阶",
+    "confidence": 0.65,
+    "reason": "常见复杂度阶之一，课程会讨论。",
+    "related_terms": [
+      "多项式阶",
+      "对数阶",
+      "NP难问题"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "子数阶",
+        "reason": "音近",
+        "confidence": 0.5
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "对数阶": {
+    "term": "对数阶",
+    "definition": "时间复杂度为O(log n)的复杂度阶。",
+    "category": "复杂度阶",
+    "confidence": 0.65,
+    "reason": "常见复杂度阶，如二分搜索的复杂度。",
+    "related_terms": [
+      "二分搜索",
+      "分治法",
+      "指数阶"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "对竖阶",
+        "reason": "音近",
+        "confidence": 0.5
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "多项式阶": {
+    "term": "多项式阶",
+    "definition": "时间复杂度为O(n^k)的复杂度阶。",
+    "category": "复杂度阶",
+    "confidence": 0.65,
+    "reason": "常见复杂度阶，表示可解问题。",
+    "related_terms": [
+      "线性阶",
+      "平方阶",
+      "立方阶"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "多向式阶",
+        "reason": "音近",
+        "confidence": 0.5
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "阶乘阶": {
+    "term": "阶乘阶",
+    "definition": "时间复杂度为O(n!)的复杂度阶。",
+    "category": "复杂度阶",
+    "confidence": 0.6,
+    "reason": "常见于排列问题，课程可能提及。",
+    "related_terms": [
+      "排列问题",
+      "指数阶",
+      "多项式阶"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "介成阶",
+        "reason": "音近",
+        "confidence": 0.5
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "基础步骤": {
+    "term": "基础步骤",
+    "definition": "数学归纳法中证明基准情况成立。",
+    "category": "证明方法",
+    "confidence": 0.65,
+    "reason": "数学归纳法是课程证明方法之一，基础步骤是关键。",
+    "related_terms": [
+      "数学归纳法",
+      "归纳步骤",
+      "循环不变式"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "基础步轴",
+        "reason": "音近",
+        "confidence": 0.5
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "归纳步骤": {
+    "term": "归纳步骤",
+    "definition": "数学归纳法中假设n成立证明n+1成立。",
+    "category": "证明方法",
+    "confidence": 0.65,
+    "reason": "数学归纳法核心步骤。",
+    "related_terms": [
+      "数学归纳法",
+      "基础步骤",
+      "归纳假设"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "归拿步骤",
+        "reason": "音近",
+        "confidence": 0.5
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "问题规模": {
+    "term": "问题规模",
+    "definition": "描述算法输入大小的度量，通常为n。",
+    "category": "算法分析",
+    "confidence": 0.7,
+    "reason": "所有复杂度分析都基于问题规模。",
+    "related_terms": [
+      "时间复杂度",
+      "输入大小",
+      "递归关系"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "问题规摸",
+        "reason": "音近",
+        "confidence": 0.55
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "分治三步法": {
+    "term": "分治三步法",
+    "definition": "分治算法的经典实现步骤：分解（Divide）、解决（Conquer）、合并（Combine）。",
+    "category": "方法",
+    "confidence": 0.7,
+    "reason": "课程明确强调分治三步法描述，是分治核心框架",
+    "related_terms": [
+      "分治算法",
+      "归并排序",
+      "快速排序"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "分支三步法",
+        "reason": "语音相似，『分治』误听为『分支』",
+        "confidence": 0.6
+      },
+      {
+        "wrong": "分解解决合并",
+        "reason": "直接说出步骤名称",
+        "confidence": 0.5
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "分治适用条件": {
+    "term": "分治适用条件",
+    "definition": "分治算法适用的条件：子问题相互独立、子问题同构、子问题的解可合并得到原问题解。",
+    "category": "概念",
+    "confidence": 0.65,
+    "reason": "课程提到分治适用条件（子问题独立、同构、可合并）",
+    "related_terms": [
+      "分治算法",
+      "子问题重叠",
+      "动态规划"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "分治使用条件",
+        "reason": "『适用』与『使用』发音相近",
+        "confidence": 0.55
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "随机化快速排序": {
+    "term": "随机化快速排序",
+    "definition": "通过随机选取基准元素来避免最坏情况的快速排序变种，平均时间复杂度O(n log n)。",
+    "category": "算法",
+    "confidence": 0.7,
+    "reason": "课程核心主题中提到随机化快速排序",
+    "related_terms": [
+      "快速排序",
+      "平均情况",
+      "最坏情况"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "随机快排",
+        "reason": "简称，ASR可能输出缩写",
+        "confidence": 0.5
+      },
+      {
+        "wrong": "随机快速排序",
+        "reason": "相近但顺序不同",
+        "confidence": 0.4
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "Akra-Bazzi定理": {
+    "term": "Akra-Bazzi定理",
+    "definition": "主定理的推广，用于求解形式为T(n)=∑ a_i T(b_i n + h_i(n)) + f(n)的递推方程，其中子问题规模不一定相等。",
+    "category": "定理",
+    "confidence": 0.6,
+    "reason": "课程可能主题中提到Akra-Bazzi定理，是主定理的推广",
+    "related_terms": [
+      "主定理",
+      "递推方程",
+      "代入法"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "阿克拉-巴齐定理",
+        "reason": "英文音译可能被ASR误识别为中文音译",
+        "confidence": 0.5
+      },
+      {
+        "wrong": "Akra-Bazzi",
+        "reason": "未加『定理』二字",
+        "confidence": 0.4
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "最近点对": {
+    "term": "最近点对",
+    "definition": "分治算法在计算几何中的经典应用：在平面上找出距离最近的两个点，时间复杂度O(n log n)。",
+    "category": "算法",
+    "confidence": 0.65,
+    "reason": "课程可能主题中提到分治算法在几何问题中的应用（最近点对）",
+    "related_terms": [
+      "分治算法",
+      "归并排序",
+      "二分查找"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "最近点对问题",
+        "reason": "可能多出『问题』二字",
+        "confidence": 0.4
+      },
+      {
+        "wrong": "最近点对算法",
+        "reason": "换字",
+        "confidence": 0.4
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "递归深度": {
+    "term": "递归深度",
+    "definition": "递归算法中递归调用的层数，影响空间复杂度，与问题规模相关。",
+    "category": "概念",
+    "confidence": 0.68,
+    "reason": "课程提到分治递归深度与栈溢出",
+    "related_terms": [
+      "递归",
+      "栈溢出",
+      "空间复杂度"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "递归层次",
+        "reason": "同义词",
+        "confidence": 0.5
+      },
+      {
+        "wrong": "递归深度",
+        "reason": "可能正确",
+        "confidence": 0.3
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "栈溢出": {
+    "term": "栈溢出",
+    "definition": "递归深度过大导致系统栈空间耗尽，程序崩溃的现象。",
+    "category": "概念",
+    "confidence": 0.6,
+    "reason": "课程提到分治递归深度与栈溢出",
+    "related_terms": [
+      "递归深度",
+      "空间复杂度",
+      "尾递归"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "找溢出",
+        "reason": "『栈』与『找』发音相近",
+        "confidence": 0.7
+      },
+      {
+        "wrong": "战溢出",
+        "reason": "语音错误",
+        "confidence": 0.5
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "子问题重叠": {
+    "term": "子问题重叠",
+    "definition": "不同子问题包含相同的子子问题，导致重复计算，是动态规划适用的特征。",
+    "category": "概念",
+    "confidence": 0.6,
+    "reason": "课程提到子问题重叠与动态规划，作为分治的对比",
+    "related_terms": [
+      "分治算法",
+      "动态规划",
+      "子问题独立"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "子问题重叠性",
+        "reason": "多字",
+        "confidence": 0.4
+      },
+      {
+        "wrong": "子问题权重",
+        "reason": "发音相近",
+        "confidence": 0.3
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "动态规划": {
+    "term": "动态规划",
+    "definition": "一种算法设计方法，通过将问题分解为重叠子问题并存储子问题解避免重复计算，与分治对比。",
+    "category": "方法",
+    "confidence": 0.7,
+    "reason": "课程提到动态规划的空间优化及与分治的对比",
+    "related_terms": [
+      "分治算法",
+      "子问题重叠",
+      "最优子结构"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "动规",
+        "reason": "简称",
+        "confidence": 0.4
+      },
+      {
+        "wrong": "动态规划算法",
+        "reason": "多出『算法』二字",
+        "confidence": 0.3
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "小规模优化": {
+    "term": "小规模优化",
+    "definition": "在分治递归过程中，当问题规模很小时，采用直接解法（如插入排序）以降低递归开销的优化技术。",
+    "category": "方法",
+    "confidence": 0.55,
+    "reason": "课程提到小规模与尾递归优化",
+    "related_terms": [
+      "分治算法",
+      "尾递归",
+      "递归深度"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "小规模",
+        "reason": "缺少『优化』",
+        "confidence": 0.4
+      },
+      {
+        "wrong": "规模优化",
+        "reason": "漏字",
+        "confidence": 0.3
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "尾递归优化": {
+    "term": "尾递归优化",
+    "definition": "编译器对尾递归（递归调用在函数末尾）进行优化，复用栈帧，避免栈溢出并降低空间复杂度。",
+    "category": "方法",
+    "confidence": 0.6,
+    "reason": "课程提到尾递归优化",
+    "related_terms": [
+      "尾递归",
+      "递归",
+      "栈溢出"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "尾递归",
+        "reason": "缺少『优化』",
+        "confidence": 0.5
+      },
+      {
+        "wrong": "为递归优化",
+        "reason": "『尾』误听为『为』",
+        "confidence": 0.4
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "递推方程标准形式": {
+    "term": "递推方程标准形式",
+    "definition": "分治算法递推方程的一般形式T(n)=aT(n/b)+f(n)，其中a≥1,b>1,f(n)为合并代价。",
+    "category": "概念",
+    "confidence": 0.65,
+    "reason": "课程强调递推方程T(n)=aT(n/b)+f(n)",
+    "related_terms": [
+      "递推方程",
+      "主定理",
+      "代入法"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "递推方程标准式",
+        "reason": "少字",
+        "confidence": 0.4
+      },
+      {
+        "wrong": "递推形式",
+        "reason": "简化",
+        "confidence": 0.3
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "主定理三种情况": {
+    "term": "主定理三种情况",
+    "definition": "主定理中三种递推方程解的判定：1) f(n)=O(n^(log_b a - ε)) => T(n)=Θ(n^(log_b a)); 2) f(n)=Θ(n^(log_b a)) => T(n)=Θ(n^(log_b a) log n); 3) f(n)=Ω(n^(log_b a + ε))且满足正则条件 => T(n)=Θ(f(n))。",
+    "category": "定理",
+    "confidence": 0.7,
+    "reason": "课程明确说明主定理三种情况",
+    "related_terms": [
+      "主定理",
+      "递推方程",
+      "渐近复杂度"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "主定理的三个情况",
+        "reason": "多字",
+        "confidence": 0.4
+      },
+      {
+        "wrong": "三种情况",
+        "reason": "缺少『主定理』",
+        "confidence": 0.3
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "比较排序下界": {
+    "term": "比较排序下界",
+    "definition": "基于比较的排序算法在最坏情况下至少需要Ω(n log n)次比较，由决策树模型证明。",
+    "category": "概念",
+    "confidence": 0.6,
+    "reason": "与分治排序相关，课程提到排序算法复杂度分析",
+    "related_terms": [
+      "归并排序",
+      "快速排序",
+      "决策树"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "比较排序下限",
+        "reason": "同义词",
+        "confidence": 0.5
+      },
+      {
+        "wrong": "比较排序下届",
+        "reason": "别字",
+        "confidence": 0.4
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "决策树模型": {
+    "term": "决策树模型",
+    "definition": "用于证明比较排序下界的抽象模型，每个内部节点对应一次比较，叶子对应排序结果。",
+    "category": "概念",
+    "confidence": 0.55,
+    "reason": "与比较排序下界相关，可能出现在课程中",
+    "related_terms": [
+      "比较排序下界",
+      "时间复杂度",
+      "最坏情况"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "决策数模型",
+        "reason": "『树』误为『数』",
+        "confidence": 0.6
+      },
+      {
+        "wrong": "决策树",
+        "reason": "缺少『模型』",
+        "confidence": 0.4
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "多重背包": {
+    "term": "多重背包",
+    "definition": "每类物品有有限数量（非1也非无穷）的背包问题，可在完全背包和0/1背包基础上通过二进制拆分或单调队列优化求解。",
+    "category": "动态规划问题",
+    "confidence": 0.7,
+    "reason": "课程涵盖0/1背包和完全背包，多重背包是常见扩展，但未被显式抽取；ASR可能误识为'从重复背包'或'多重被包'。",
+    "related_terms": [
+      "0/1背包",
+      "完全背包",
+      "二进制拆分",
+      "单调队列优化"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "从重复背包",
+        "reason": "'多重'与'从重'发音相近",
+        "confidence": 0.55
+      },
+      {
+        "wrong": "多重被包",
+        "reason": "'背'与'被'同音",
+        "confidence": 0.6
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "决策单调性": {
+    "term": "决策单调性",
+    "definition": "对于动态规划状态转移，若决策点随状态增大而单调不减，则可利用分治或队列优化至O(n log n)或O(n)。",
+    "category": "动态规划优化性质",
+    "confidence": 0.65,
+    "reason": "课程提及四边形不等式和单调队列优化，决策单调性是核心理论基础；ASR可能误识为'决策单调形'或'绝策单调性'。",
+    "related_terms": [
+      "四边形不等式",
+      "单调队列优化",
+      "分治优化",
+      "斜率优化"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "绝策单调性",
+        "reason": "'决'与'绝'发音相同",
+        "confidence": 0.5
+      },
+      {
+        "wrong": "决策单调形",
+        "reason": "'性'与'形'方言混淆",
+        "confidence": 0.45
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "斜率优化": {
+    "term": "斜率优化",
+    "definition": "利用凸包性质将动态规划转移中的min/max转化为直线截距最值，通过单调队列或栈维护凸壳。",
+    "category": "动态规划优化技巧",
+    "confidence": 0.6,
+    "reason": "课程possible_topics包含凸优化与斜率优化，属于DP高级优化；ASR可能误识为'斜绿优化'或'协率优化'。",
+    "related_terms": [
+      "决策单调性",
+      "凸包",
+      "单调队列",
+      "凸优化"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "斜绿优化",
+        "reason": "'率'与'绿'音近",
+        "confidence": 0.5
+      },
+      {
+        "wrong": "协率优化",
+        "reason": "'斜'与'协'音近",
+        "confidence": 0.45
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "子问题图": {
+    "term": "子问题图",
+    "definition": "有向图，每个节点代表子问题，边表示子问题之间的依赖关系，动态规划实际上是对子问题图的拓扑序求解。",
+    "category": "动态规划概念",
+    "confidence": 0.7,
+    "reason": "课程讲解重叠子问题和状态转移，子问题图是理解DP结构的重要工具，但未被显式抽取；ASR可能误识为'字问题图'或'子问题突'。",
+    "related_terms": [
+      "重叠子问题",
+      "最优子结构",
+      "无后效性",
+      "状态转移方程"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "字问题图",
+        "reason": "'子'与'字'同音",
+        "confidence": 0.6
+      },
+      {
+        "wrong": "子问题突",
+        "reason": "'图'与'突'音近",
+        "confidence": 0.4
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "线性动态规划": {
+    "term": "线性动态规划",
+    "definition": "状态定义在一维线性序列上的动态规划，如最长递增子序列、最大子段和等，转移通常依赖有限前驱。",
+    "category": "动态规划问题类型",
+    "confidence": 0.7,
+    "reason": "课程包含典型线性DP（LIS、编辑距离等），但术语未显式列出；ASR可能误识为'现象动态规划'或'线性动太规划'。",
+    "related_terms": [
+      "最长递增子序列",
+      "编辑距离",
+      "区间动态规划",
+      "状态定义"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "现象动态规划",
+        "reason": "'线性'与'现象'音近",
+        "confidence": 0.5
+      },
+      {
+        "wrong": "线性动太规划",
+        "reason": "'态'与'太'发音相似",
+        "confidence": 0.55
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "区间动态规划": {
+    "term": "区间动态规划",
+    "definition": "状态表示区间[i,j]上的最优解，典型问题如矩阵链乘、石子合并等，转移枚举分割点。",
+    "category": "动态规划问题类型",
+    "confidence": 0.7,
+    "reason": "课程包含矩阵链乘（区间DP经典），但未抽取该类别术语；ASR可能误识为'区间动太规划'或'区建动态规划'。",
+    "related_terms": [
+      "矩阵链乘",
+      "状态定义",
+      "区间分割",
+      "四边形不等式"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "区间动太规划",
+        "reason": "'态'与'太'音近",
+        "confidence": 0.55
+      },
+      {
+        "wrong": "区建动态规划",
+        "reason": "'间'与'建'音近",
+        "confidence": 0.45
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "树形动态规划": {
+    "term": "树形动态规划",
+    "definition": "在树结构上递归进行动态规划，通常自底向上合并子树信息，如树上的背包、树的直径等。",
+    "category": "动态规划问题类型",
+    "confidence": 0.55,
+    "reason": "课程possible_topics提及树形动态规划，但未深入；作为扩展候选，ASR可能误识为'树形动太规划'或'书形动态规划'。",
+    "related_terms": [
+      "递归",
+      "状态定义",
+      "记忆化搜索",
+      "分治"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "树形动太规划",
+        "reason": "'态'与'太'音近",
+        "confidence": 0.5
+      },
+      {
+        "wrong": "书形动态规划",
+        "reason": "'树'与'书'同音",
+        "confidence": 0.6
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "数位动态规划": {
+    "term": "数位动态规划",
+    "definition": "按十进制数位进行状态转移的动态规划，常用于求解区间内满足某性质的数的个数，如不含'49'的数字个数。",
+    "category": "动态规划问题类型",
+    "confidence": 0.5,
+    "reason": "课程possible_topics包含数位动态规划，属于特殊DP；ASR可能误识为'数位动太规划'或'术位动态规划'。",
+    "related_terms": [
+      "状态定义",
+      "记忆化搜索",
+      "数位拆分",
+      "数位DP"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "数位动太规划",
+        "reason": "'态'与'太'音近",
+        "confidence": 0.5
+      },
+      {
+        "wrong": "术位动态规划",
+        "reason": "'数'与'术'同音",
+        "confidence": 0.55
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "概率动态规划": {
+    "term": "概率动态规划",
+    "definition": "状态转移包含概率因素，通常求解期望最优值，如赌徒破产问题、随机游走等。",
+    "category": "动态规划问题类型",
+    "confidence": 0.4,
+    "reason": "课程possible_topics包含概率动态规划，但非重点；作为补充，ASR可能误识为'盖率动态规划'或'概率动太规划'。",
+    "related_terms": [
+      "期望",
+      "随机化",
+      "递推",
+      "马尔可夫"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "盖率动态规划",
+        "reason": "'概'与'盖'音近",
+        "confidence": 0.5
+      },
+      {
+        "wrong": "概率动太规划",
+        "reason": "'态'与'太'音近",
+        "confidence": 0.55
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "动态规划初始化": {
+    "term": "动态规划初始化",
+    "definition": "在编写动态规划代码时，对dp数组设置初始值（如dp[0]=0, dp[inf]=∞等），是算法实现的关键步骤。",
+    "category": "动态规划实现步骤",
+    "confidence": 0.65,
+    "reason": "课程描述动态规划步骤时隐含初始化，但未列术语；ASR可能误识为'动太规划初始化'或'动态规划处使化'。",
+    "related_terms": [
+      "状态定义",
+      "状态转移方程",
+      "边界条件",
+      "最终答案提取"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "动太规划初始化",
+        "reason": "'态'与'太'音近",
+        "confidence": 0.6
+      },
+      {
+        "wrong": "动态规划处使化",
+        "reason": "'初'与'处'、'始'与'使'音近",
+        "confidence": 0.5
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "最终答案提取": {
+    "term": "最终答案提取",
+    "definition": "动态规划填表后，从dp数组中取出最终结果（如dp[n][W]或max(dp[n])），是完整DP算法的最后一步。",
+    "category": "动态规划实现步骤",
+    "confidence": 0.65,
+    "reason": "课程在状态转移后隐含答案提取，但未显式总结；ASR可能误识为'最终答案提却'或'最重答案提取'。",
+    "related_terms": [
+      "状态定义",
+      "状态转移方程",
+      "动态规划初始化",
+      "边界条件"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "最终答案提却",
+        "reason": "'取'与'却'音近",
+        "confidence": 0.45
+      },
+      {
+        "wrong": "最重答案提取",
+        "reason": "'终'与'重'音近",
+        "confidence": 0.5
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "分治与动态规划对比": {
+    "term": "分治与动态规划对比",
+    "definition": "分治将问题分解为独立子问题递归求解，而动态规划解决重叠子问题，二者在子问题性质上有本质区别。",
+    "category": "算法对比",
+    "confidence": 0.7,
+    "reason": "课程专节对比分治与动态规划，但该术语未被显式抽取；ASR可能误识为'分治与动太规划对比'或'分支与动态规划对比'。",
+    "related_terms": [
+      "分治",
+      "动态规划",
+      "重叠子问题",
+      "最优子结构"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "分治与动太规划对比",
+        "reason": "'态'与'太'音近",
+        "confidence": 0.55
+      },
+      {
+        "wrong": "分支与动态规划对比",
+        "reason": "'治'与'支'音近",
+        "confidence": 0.5
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "贪心与动态规划对比": {
+    "term": "贪心与动态规划对比",
+    "definition": "贪心每次选局部最优，无后效性且不保证全局最优；动态规划通过枚举状态保证全局最优，常用于有重叠子问题的情况。",
+    "category": "算法对比",
+    "confidence": 0.7,
+    "reason": "课程有贪心与DP的对比，但未显式抽取该术语；ASR可能误识为'担心与动态规划对比'或'贪心与动太规划对比'。",
+    "related_terms": [
+      "贪心",
+      "动态规划",
+      "最优子结构",
+      "无后效性"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "担心与动态规划对比",
+        "reason": "'贪'与'担'音近",
+        "confidence": 0.5
+      },
+      {
+        "wrong": "贪心与动太规划对比",
+        "reason": "'态'与'太'音近",
+        "confidence": 0.55
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "最优值函数": {
+    "term": "最优值函数",
+    "definition": "动态规划中定义的状态值（如dp[i]）表示达到该状态的最优值，是状态转移方程的目标函数。",
+    "category": "动态规划概念",
+    "confidence": 0.6,
+    "reason": "课程中反复使用状态值，但术语'最优值函数'未被抽取；ASR可能误识为'最优值含数'或'最优值函术'。",
+    "related_terms": [
+      "状态",
+      "状态转移方程",
+      "目标函数",
+      "递推关系"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "最优值含数",
+        "reason": "'函'与'含'音近",
+        "confidence": 0.55
+      },
+      {
+        "wrong": "最优值函术",
+        "reason": "'数'与'术'同音",
+        "confidence": 0.5
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "递推关系": {
+    "term": "递推关系",
+    "definition": "描述序列中项与先前项之间关系的方程，是动态规划和递推算法的核心，如斐波那契的F(n)=F(n-1)+F(n-2)。",
+    "category": "算法基础概念",
+    "confidence": 0.65,
+    "reason": "课程详解递推方程，但'递推关系'作为更泛化术语未被抽取；ASR可能误识为'地推关系'或'递推关细'。",
+    "related_terms": [
+      "递推方程",
+      "递归",
+      "状态转移方程",
+      "初始条件"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "地推关系",
+        "reason": "'递'与'地'同音",
+        "confidence": 0.6
+      },
+      {
+        "wrong": "递推关细",
+        "reason": "'系'与'细'音近",
+        "confidence": 0.45
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "多边形不等式": {
+    "term": "多边形不等式",
+    "definition": "四边形不等式的推广，用于km算法或更一般的DP优化，课程中仅提及四边形不等式。",
+    "category": "动态规划优化性质",
+    "confidence": 0.4,
+    "reason": "作为四边形不等式的延伸，可能被ASR混淆为'多边型不等式'或'多边形不登式'。",
+    "related_terms": [
+      "四边形不等式",
+      "决策单调性",
+      "分治优化"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "多边型不等式",
+        "reason": "'形'与'型'同音",
+        "confidence": 0.5
+      },
+      {
+        "wrong": "多边形不登式",
+        "reason": "'等'与'登'音近",
+        "confidence": 0.45
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "内存换效率": {
+    "term": "内存换效率",
+    "definition": "动态规划中常见空间换时间策略，例如使用滚动数组或记忆化搜索，但术语强调资源权衡。",
+    "category": "算法设计策略",
+    "confidence": 0.5,
+    "reason": "课程关注动态规划空间优化，该术语未被抽取；ASR可能误识为'内春换效率'或'内存换效录'。",
+    "related_terms": [
+      "空间换时间",
+      "滚动数组",
+      "空间优化",
+      "记忆化搜索"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "内春换效率",
+        "reason": "'存'与'春'音近（某些方言）",
+        "confidence": 0.4
+      },
+      {
+        "wrong": "内存换效录",
+        "reason": "'率'与'录'音近",
+        "confidence": 0.45
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "子问题独立性": {
+    "term": "子问题独立性",
+    "definition": "分治算法要求子问题相互独立、不重叠，与动态规划的重叠性形成对比，是选择算法的重要依据。",
+    "category": "分治算法概念",
+    "confidence": 0.6,
+    "reason": "课程强调分治适用条件（子问题独立），但未显式抽取；ASR可能误识为'自问题独立性'或'子问题独李性'。",
+    "related_terms": [
+      "分治适用条件",
+      "重叠子问题",
+      "分治与动态规划对比",
+      "无后效性"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "自问题独立性",
+        "reason": "'子'与'自'音近",
+        "confidence": 0.5
+      },
+      {
+        "wrong": "子问题独李性",
+        "reason": "'立'与'李'同音",
+        "confidence": 0.5
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "平摊分析": {
+    "term": "平摊分析",
+    "definition": "分析数据结构或算法在连续操作中的平均性能，如动态数组的均摊O(1)插入，课程在possible_topics中提及。",
+    "category": "算法分析技术",
+    "confidence": 0.55,
+    "reason": "课程提及摊还分析（已有术语），但'平摊分析'是常见同义词；ASR可能误识为'平谈分析'或'平摊分系'。",
+    "related_terms": [
+      "摊还分析",
+      "平均情况",
+      "时间复杂度",
+      "均摊复杂度"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "平谈分析",
+        "reason": "'摊'与'谈'音近",
+        "confidence": 0.5
+      },
+      {
+        "wrong": "平摊分系",
+        "reason": "'析'与'系'音近",
+        "confidence": 0.45
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "空间下界": {
+    "term": "空间下界",
+    "definition": "解决问题所需的最低空间复杂度证明，与时间下界对应，课程分析空间复杂度时可能隐含。",
+    "category": "算法分析概念",
+    "confidence": 0.45,
+    "reason": "课程讨论空间复杂度，但'空间下界'术语未被抽取；ASR可能误识为'空间下解'或'空间虾界'。",
+    "related_terms": [
+      "空间复杂度",
+      "下界",
+      "时间复杂度下界",
+      "紧致界"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "空间下解",
+        "reason": "'界'与'解'音近",
+        "confidence": 0.5
+      },
+      {
+        "wrong": "空间虾界",
+        "reason": "'下'与'虾'音近（方言）",
+        "confidence": 0.4
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "递推": {
+    "term": "递推",
+    "definition": "通过已知的递推关系求解问题的方法，常用于动态规划和递推方程求解。",
+    "category": "算法分析",
+    "confidence": 0.65,
+    "reason": "课程中多次出现递推关系，但术语'递推'未显式列出，易与'退推'混淆。",
+    "related_terms": [
+      "递推关系",
+      "递归"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "退推",
+        "reason": "音近",
+        "confidence": 0.5
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "分治递归深度": {
+    "term": "分治递归深度",
+    "definition": "分治算法中递归调用的嵌套层数，影响栈空间使用。",
+    "category": "分治算法",
+    "confidence": 0.6,
+    "reason": "课程提及栈溢出与递归深度相关，但未作为独立术语。",
+    "related_terms": [
+      "递归深度",
+      "栈溢出"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "分子递归深度",
+        "reason": "音近",
+        "confidence": 0.4
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "贪心算法误区与反例": {
+    "term": "贪心算法误区与反例",
+    "definition": "贪心算法可能出错的情况及对应的反例，用于理解算法局限性。",
+    "category": "贪心算法",
+    "confidence": 0.7,
+    "reason": "课程章节包含该内容，但未作为术语提取。",
+    "related_terms": [
+      "贪心算法",
+      "反证法"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "贪心算法无趋与反例",
+        "reason": "音近及错误理解",
+        "confidence": 0.3
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "割性质": {
+    "term": "割性质",
+    "definition": "最小生成树中，连接割的最小权值边必然属于某棵最小生成树。",
+    "category": "图论",
+    "confidence": 0.6,
+    "reason": "Prim和Kruskal算法的基础性质，课程未显式列出。",
+    "related_terms": [
+      "最小生成树",
+      "Prim算法",
+      "Kruskal算法"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "哥性质",
+        "reason": "音近",
+        "confidence": 0.5
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "优先队列": {
+    "term": "优先队列",
+    "definition": "支持插入和取出最小/最大元素的数据结构，常用于Dijkstra和Huffman编码。",
+    "category": "数据结构",
+    "confidence": 0.7,
+    "reason": "Dijkstra算法和Huffman编码中使用，但未列为术语。",
+    "related_terms": [
+      "Dijkstra算法",
+      "Huffman编码",
+      "堆"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "有先队列",
+        "reason": "音近",
+        "confidence": 0.4
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "并查集": {
+    "term": "并查集",
+    "definition": "一种管理不相交集合的数据结构，支持查找和合并操作，常用于Kruskal算法。",
+    "category": "数据结构",
+    "confidence": 0.6,
+    "reason": "Kruskal算法中常用，但课程未显式提到。",
+    "related_terms": [
+      "Kruskal算法",
+      "最小生成树"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "冰茶姬",
+        "reason": "音近及网络梗",
+        "confidence": 0.3
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "递推关系求解方法": {
+    "term": "递推关系求解方法",
+    "definition": "求解递推方程的技术集合，包括展开法、代入法、递归树法、主定理等。",
+    "category": "算法分析",
+    "confidence": 0.6,
+    "reason": "课程章节标题，但未作为术语提取。",
+    "related_terms": [
+      "递推关系",
+      "主定理",
+      "展开法",
+      "代入法"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "退推关系求解方法",
+        "reason": "音近",
+        "confidence": 0.4
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "自底向上递推与空间优化": {
+    "term": "自底向上递推与空间优化",
+    "definition": "动态规划中从最小子问题迭代求解并压缩存储空间的方法。",
+    "category": "动态规划",
+    "confidence": 0.6,
+    "reason": "课程章节内容，但未单独列为术语。",
+    "related_terms": [
+      "自底向上",
+      "空间优化",
+      "滚动数组"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "自底向上退推与空间优化",
+        "reason": "音近",
+        "confidence": 0.4
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "动态规划优化技巧": {
+    "term": "动态规划优化技巧",
+    "definition": "改进动态规划时间和空间效率的方法，如滚动数组、前缀和、单调队列、四边形不等式等。",
+    "category": "动态规划",
+    "confidence": 0.7,
+    "reason": "课程章节标题，但未作为术语。",
+    "related_terms": [
+      "滚动数组",
+      "前缀和优化",
+      "单调队列优化",
+      "四边形不等式",
+      "状态压缩"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "动态规划游戏技巧",
+        "reason": "音近",
+        "confidence": 0.3
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "算法正确性证明": {
+    "term": "算法正确性证明",
+    "definition": "通过数学方法证明算法对于所有合法输入都能得到正确输出，常用归纳法、反证法等。",
+    "category": "算法分析",
+    "confidence": 0.65,
+    "reason": "课程章节包含该内容，但未作为术语列出。",
+    "related_terms": [
+      "数学归纳法",
+      "反证法",
+      "循环不变式"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "算法正确性正名",
+        "reason": "音近",
+        "confidence": 0.2
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "递归与迭代分析": {
+    "term": "递归与迭代分析",
+    "definition": "比较递归与迭代两种算法实现方式在时间和空间上的优劣。",
+    "category": "递归",
+    "confidence": 0.5,
+    "reason": "课程章节标题，但未列为术语。",
+    "related_terms": [
+      "递归",
+      "迭代",
+      "尾递归"
+    ],
+    "likely_asr_confusions": [
+      {
+        "wrong": "递归与接待分析",
+        "reason": "音近",
+        "confidence": 0.4
+      }
+    ],
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  }
+}

@@ -24,13 +24,16 @@ class CorrectionPipeline:
         domain: str = Domain.ALGORITHM.value,
         use_evidence: bool = True,
         max_text_length: Optional[int] = None,
+        evidence_collector: Optional[EvidenceCollector] = None,
     ):
         self.term_agent = term_agent
         self.correction_agent = correction_agent
         self.domain = domain
         self.use_evidence = use_evidence
         self.max_text_length = max_text_length or self.MAX_TEXT_LENGTH
-        self._collector = EvidenceCollector(domain=domain) if use_evidence else None
+        self._collector = evidence_collector if use_evidence else None
+        if use_evidence and self._collector is None:
+            self._collector = EvidenceCollector(domain=domain)
         self._progress_enabled = True
         self._processed_groups = 0
         self._total_groups = 0
@@ -79,7 +82,7 @@ class CorrectionPipeline:
             evidence = self._collector.collect(combined_text)
             candidates = {
                 k: v for k, v in evidence.items()
-                if v.confidence >= self._get_candidate_confidence_threshold()
+                if self._passes_collection_threshold(v)
             }
 
         context = {"caption_text": combined_text, "candidates": candidates}
@@ -163,7 +166,7 @@ class CorrectionPipeline:
             evidence = self._collector.collect(group_text)
             candidates = {
                 k: v for k, v in evidence.items()
-                if v.confidence >= self._get_candidate_confidence_threshold()
+                if self._passes_collection_threshold(v)
             }
 
         context = {"caption_text": group_text, "candidates": candidates}
@@ -215,7 +218,7 @@ class CorrectionPipeline:
         high_conf = {
             k: v.correct if hasattr(v, 'correct') else v.get('correct', '')
             for k, v in candidates.items()
-            if hasattr(v, 'confidence') and v.confidence >= 0.9
+            if hasattr(v, 'confidence') and v.confidence >= self._get_candidate_confidence_threshold()
         }
         sorted_replacements = sorted(high_conf.items(), key=lambda x: len(x[0]), reverse=True)
 
@@ -230,6 +233,17 @@ class CorrectionPipeline:
 
     def _get_candidate_confidence_threshold(self) -> float:
         return getattr(self.term_agent, "min_confidence", 0.9)
+
+    def _passes_collection_threshold(self, candidate) -> bool:
+        confidence = getattr(candidate, "confidence", 0.0)
+        source = str(getattr(candidate, "source", ""))
+        threshold = self._get_candidate_confidence_threshold()
+        if source.startswith("candidate_"):
+            return confidence >= min(threshold, 0.35)
+        return confidence >= threshold
+
+    def set_min_confidence(self, value: float):
+        self.term_agent.min_confidence = value
 
     def _clone_items(self, subtitle_items: List[Dict]) -> List[Dict]:
         return [{"id": item["id"], "text": item["text"]} for item in subtitle_items]
@@ -251,13 +265,13 @@ class CorrectionPipeline:
             evidence = self._collector.collect(combined_text)
             candidates = {
                 k: v for k, v in evidence.items()
-                if v.confidence >= self._get_candidate_confidence_threshold()
+                if self._passes_collection_threshold(v)
             }
 
         high_conf = {
             k: v.correct
             for k, v in candidates.items()
-            if v.confidence >= 0.9
+            if v.confidence >= self._get_candidate_confidence_threshold()
         }
         sorted_replacements = sorted(high_conf.items(), key=lambda x: len(x[0]), reverse=True)
 

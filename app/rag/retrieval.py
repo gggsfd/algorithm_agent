@@ -75,6 +75,16 @@ def get_default_engine(domain: str = "algorithm") -> RetrievalEngine:
     return _domain_engines[domain]
 
 
+def register_engine(domain: str, vector_store: VectorStore) -> RetrievalEngine:
+    engine = RetrievalEngine(domain=domain, vector_store=vector_store)
+    if domain == "algorithm":
+        global _default_engine
+        _default_engine = engine
+    else:
+        _domain_engines[domain] = engine
+    return engine
+
+
 def retrieve_terms(query: str, top_k: int = 5, domain: str = "algorithm") -> List[Dict]:
     return get_default_engine(domain=domain).retrieve(query, top_k)
 

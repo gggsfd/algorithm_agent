@@ -149,7 +149,7 @@ class SRTService:
             except (RuntimeError, TimeoutError, AgentExecutionError, ValueError) as e:
                 logger.warning(f"Agent mode failed: {e}, fallback to rule mode")
                 return self._correct_by_rule(items, domain), CorrectionMode.RULE.value, True
-        if normalized_mode == CorrectionMode.HYBRID:
+        if normalized_mode in (CorrectionMode.HYBRID, CorrectionMode.HYBRID_AUTO):
             try:
                 return self._correct_by_hybrid_sync(items)
             except (RuntimeError, TimeoutError, AgentExecutionError, ValueError) as e:
@@ -172,7 +172,7 @@ class SRTService:
             except (RuntimeError, TimeoutError, AgentExecutionError, ValueError) as e:
                 logger.warning(f"Agent mode failed: {e}, fallback to rule mode")
                 return self._correct_by_rule(items, domain), CorrectionMode.RULE.value, True
-        if normalized_mode == CorrectionMode.HYBRID:
+        if normalized_mode in (CorrectionMode.HYBRID, CorrectionMode.HYBRID_AUTO):
             try:
                 return await self._correct_by_hybrid_async(items)
             except (RuntimeError, TimeoutError, AgentExecutionError, ValueError) as e:

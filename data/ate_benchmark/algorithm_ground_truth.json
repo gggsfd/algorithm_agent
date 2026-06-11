@@ -1,0 +1,222 @@
+{
+  "算法": {
+    "definition": "解决特定问题的一系列清晰、有限的指令序列，具有有穷性、确定性、可行性、输入和输出五大特性。",
+    "category": "理论",
+    "importance": "high"
+  },
+  "时间复杂度": {
+    "definition": "衡量算法运行时间随输入规模n的增长趋势，关注n→∞时的渐近行为，用大O等记号表示。",
+    "category": "理论",
+    "importance": "high"
+  },
+  "空间复杂度": {
+    "definition": "衡量算法执行所需的额外内存空间（不含输入本身），原地算法为O(1)。",
+    "category": "理论",
+    "importance": "high"
+  },
+  "大O记号": {
+    "definition": "渐近上界记号，f(n)=O(g(n))表示存在c>0和n₀，使得∀n≥n₀, f(n)≤c·g(n)，描述最坏情况保证。",
+    "category": "理论",
+    "importance": "high"
+  },
+  "大Omega记号": {
+    "definition": "渐近下界记号，f(n)=Ω(g(n))表示存在c>0和n₀，使得∀n≥n₀, f(n)≥c·g(n)，描述最好情况保证。",
+    "category": "理论",
+    "importance": "medium"
+  },
+  "大Theta记号": {
+    "definition": "渐近紧确界记号，f(n)=Θ(g(n))当且仅当f(n)=O(g(n))且f(n)=Ω(g(n))，表示同阶增长。",
+    "category": "理论",
+    "importance": "medium"
+  },
+  "递归": {
+    "definition": "函数调用自身的编程技术，代码结构清晰接近数学定义，但存在系统栈开销和栈溢出风险。",
+    "category": "算法",
+    "importance": "high"
+  },
+  "迭代": {
+    "definition": "通过循环结构显式维护状态重复执行，空间可控，适合线性处理和大规模数据。",
+    "category": "算法",
+    "importance": "medium"
+  },
+  "尾递归": {
+    "definition": "递归调用是函数最后执行的语句，可被编译器优化为迭代，避免栈空间增长。",
+    "category": "算法",
+    "importance": "low"
+  },
+  "循环不变式": {
+    "definition": "算法正确性证明工具，需满足初始化保持、迭代保持和终止时给出正确结果三个条件。",
+    "category": "理论",
+    "importance": "medium"
+  },
+  "分治": {
+    "definition": "将原问题分解为k个规模较小的独立子问题，递归求解后合并子问题解的算法设计范式。",
+    "category": "算法",
+    "importance": "high"
+  },
+  "归并排序": {
+    "definition": "分治排序算法，将数组分为两半递归排序后合并，时间复杂度Θ(n log n)，空间复杂度O(n)。",
+    "category": "算法",
+    "importance": "high"
+  },
+  "快速排序": {
+    "definition": "分治排序算法，选择基准pivot分区后递归排序，平均Θ(n log n)，最坏O(n²)，可随机化避免。",
+    "category": "算法",
+    "importance": "high"
+  },
+  "二分查找": {
+    "definition": "在有序数组中通过反复比较中间元素将搜索范围减半的查找算法，时间复杂度Θ(log n)。",
+    "category": "算法",
+    "importance": "high"
+  },
+  "Karatsuba算法": {
+    "definition": "大整数乘法分治算法，将n位数拆分后通过3次乘法计算，复杂度Θ(n^log₂3)≈Θ(n^1.585)。",
+    "category": "算法",
+    "importance": "medium"
+  },
+  "主定理": {
+    "definition": "求解分治递归式T(n)=aT(n/b)+f(n)的通用方法，通过比较f(n)与n^(log_b a)确定渐近解。",
+    "category": "理论",
+    "importance": "high"
+  },
+  "递归式": {
+    "definition": "描述分治算法运行时间的递推方程，一般形式T(n)=a·T(n/b)+f(n)，其中a为子问题数量。",
+    "category": "理论",
+    "importance": "high"
+  },
+  "代入法": {
+    "definition": "求解递归式的方法：猜测解的形式后用数学归纳法证明，可引入低阶项辅助证明。",
+    "category": "理论",
+    "importance": "medium"
+  },
+  "递归树法": {
+    "definition": "求解递归式的方法：画出递归调用树，计算每层代价后求和，直观展示递归过程。",
+    "category": "理论",
+    "importance": "medium"
+  },
+  "动态规划": {
+    "definition": "通过将问题分解为重叠子问题并记忆化存储结果来求最优解的算法设计方法，以空间换时间。",
+    "category": "算法",
+    "importance": "high"
+  },
+  "最优子结构": {
+    "definition": "全局最优解包含子问题的最优解，是动态规划和贪心法适用的核心性质，可递归定义。",
+    "category": "理论",
+    "importance": "high"
+  },
+  "重叠子问题": {
+    "definition": "递归求解中大量重复计算相同子问题的性质，是动态规划使用记忆化优化的前提。",
+    "category": "理论",
+    "importance": "high"
+  },
+  "记忆化": {
+    "definition": "动态规划实现技术，存储已计算子问题的结果避免重复计算，通常采用自顶向下递归实现。",
+    "category": "算法",
+    "importance": "high"
+  },
+  "无后效性": {
+    "definition": "未来状态只与当前状态有关而与如何到达无关的性质，是动态规划状态定义的基本要求。",
+    "category": "理论",
+    "importance": "high"
+  },
+  "0/1背包": {
+    "definition": "每件物品只能选一次的经典DP问题，状态dp[i][w]表示前i件物品容量w的最大价值，时间O(nW)。",
+    "category": "算法",
+    "importance": "high"
+  },
+  "完全背包": {
+    "definition": "每种物品可选无限次的背包问题，状态转移使用dp[i]而非dp[i-1]，一维优化需正序更新。",
+    "category": "算法",
+    "importance": "medium"
+  },
+  "最长公共子序列": {
+    "definition": "求两个序列最长公共子序列长度的经典DP问题，时间O(mn)，用于DNA比对和版本控制diff。",
+    "category": "算法",
+    "importance": "high"
+  },
+  "最长递增子序列": {
+    "definition": "求数组中最长严格递增子序列长度的DP问题，基础解法O(n²)，二分优化可达O(n log n)。",
+    "category": "算法",
+    "importance": "high"
+  },
+  "编辑距离": {
+    "definition": "将字符串A转换为B的最少插入/删除/替换操作次数，经典DP应用，用于拼写检查和DNA比对。",
+    "category": "算法",
+    "importance": "high"
+  },
+  "矩阵链乘": {
+    "definition": "给定矩阵链求最优计算顺序使乘法次数最少，区间DP经典问题，状态dp[i][j]时间O(n³)。",
+    "category": "算法",
+    "importance": "medium"
+  },
+  "滚动数组": {
+    "definition": "动态规划空间优化技术，当状态只依赖前一行时降维处理，将空间从O(n²)降至O(n)。",
+    "category": "数据结构",
+    "importance": "medium"
+  },
+  "贪心法": {
+    "definition": "每一步做出当前最优选择且不回溯的算法策略，适用于具有贪心选择性质和最优子结构的问题。",
+    "category": "算法",
+    "importance": "high"
+  },
+  "贪心选择性质": {
+    "definition": "全局最优解可以通过一系列局部最优选择达到，即存在某个最优解其第一步就是贪心选择。",
+    "category": "理论",
+    "importance": "high"
+  },
+  "活动选择问题": {
+    "definition": "求最多互不冲突活动数的经典贪心问题，策略为每次选择结束时间最早的活动，时间O(n log n)。",
+    "category": "算法",
+    "importance": "medium"
+  },
+  "哈夫曼编码": {
+    "definition": "给定字符频率构造最优前缀编码使总长度最短，每次合并频率最低两节点，使用优先队列实现。",
+    "category": "算法",
+    "importance": "high"
+  },
+  "最小生成树": {
+    "definition": "连接图中所有顶点的边权之和最小的树，Prim适合稠密图，Kruskal适合稀疏图，均基于贪心。",
+    "category": "算法",
+    "importance": "high"
+  },
+  "Prim算法": {
+    "definition": "从单一顶点开始每次选连接树与非树顶点最小边的MST算法，适合稠密图，时间O(n²)或O(m log n)。",
+    "category": "算法",
+    "importance": "high"
+  },
+  "Kruskal算法": {
+    "definition": "按边权排序后每次选最小边不形成环则加入的MST算法，适合稀疏图，时间O(m log m)。",
+    "category": "算法",
+    "importance": "high"
+  },
+  "Dijkstra算法": {
+    "definition": "非负权图中求单源最短路径的贪心算法，每次选距离源点最近的未确定顶点，时间O((n+m) log n)。",
+    "category": "算法",
+    "importance": "high"
+  },
+  "分数背包": {
+    "definition": "物品可分割的背包问题，按单位重量价值降序贪心选取，时间O(n log n)，与0/1背包有本质区别。",
+    "category": "算法",
+    "importance": "medium"
+  },
+  "交换论证": {
+    "definition": "贪心法正确性证明方法，假设最优解不采用贪心选择，通过交换元素构造不劣于原解的新解。",
+    "category": "理论",
+    "importance": "medium"
+  },
+  "优先队列": {
+    "definition": "支持按优先级取出元素的数据结构，通常用最小堆实现，用于Dijkstra、Prim和哈夫曼编码。",
+    "category": "数据结构",
+    "importance": "high"
+  },
+  "最小堆": {
+    "definition": "父节点值不大于子节点的完全二叉树，支持O(1)查询最小值和O(log n)插入/删除，用于优先队列。",
+    "category": "数据结构",
+    "importance": "high"
+  },
+  "斐波那契堆": {
+    "definition": "支持摊还O(1)插入和O(log n)删除的堆结构，可优化Dijkstra至O(m + n log n)，但常数较大。",
+    "category": "数据结构",
+    "importance": "low"
+  }
+}

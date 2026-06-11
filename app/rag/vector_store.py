@@ -12,7 +12,12 @@ class VectorStore:
         self.domain = domain
         self.persist_dir = os.path.join(persist_dir, domain)
         self.pinyin_converter = PinyinConverter()
-        self.term_library = get_term_library(domain=domain)
+        try:
+            self.term_library = get_term_library(domain=domain)
+        except ValueError:
+            self.term_library = None
+        self.dynamic_terms: Dict[str, Dict] = {}
+        self.dynamic_asr_mapping: Dict[str, str] = {}
         self.term_index: Dict[str, Dict] = {}
         self.pinyin_to_term: Dict[str, List[str]] = {}
         self._ensure_dir()
@@ -21,7 +26,22 @@ class VectorStore:
         Path(self.persist_dir).mkdir(parents=True, exist_ok=True)
 
     def build_index(self):
-        self.term_index = self.term_library.get_pinyin_index()
+        if self.term_library is not None:
+            self.term_index = self.term_library.get_pinyin_index().copy()
+        else:
+            self.term_index = {}
+
+        if self.dynamic_terms:
+            dynamic_index = self.pinyin_converter.build_pinyin_index(self.dynamic_terms)
+            self.term_index.update(dynamic_index)
+
+        for wrong, correct in self.dynamic_asr_mapping.items():
+            if correct in self.term_index:
+                self.term_index[wrong] = self.term_index[correct].copy()
+                self.term_index[wrong]["original"] = wrong
+                self.term_index[wrong]["is_asr_error"] = True
+                self.term_index[wrong]["correct_term"] = correct
+
         self.pinyin_to_term.clear()
 
         for term, data in self.term_index.items():
@@ -108,7 +128,9 @@ class VectorStore:
         return results[:top_k]
 
     def search_by_text(self, query: str, top_k: int = 5) -> List[Tuple[str, float, Dict]]:
-        asr_correct = self.term_library.find_correct_term(query)
+        asr_correct = self.dynamic_asr_mapping.get(query)
+        if asr_correct is None and self.term_library is not None:
+            asr_correct = self.term_library.find_correct_term(query)
         if asr_correct:
             data = self.term_index.get(asr_correct, {})
             if data:
@@ -119,13 +141,58 @@ class VectorStore:
     def find_asr_errors(self, text: str) -> Dict[str, str]:
         result = {}
 
-        asr_mapping = self.term_library.get_asr_mapping()
+        asr_mapping = {}
+        if self.term_library is not None:
+            asr_mapping.update(self.term_library.get_asr_mapping())
+        asr_mapping.update(self.dynamic_asr_mapping)
 
         for wrong, correct in asr_mapping.items():
             if wrong in text:
                 result[wrong] = correct
 
         return result
+
+    def load_dynamic_terms(self, terms: Dict[str, Dict] | List[Dict], asr_mapping: Dict[str, str] | None = None):
+        normalized_terms: Dict[str, Dict] = {}
+        if isinstance(terms, dict):
+            for term, info in terms.items():
+                if isinstance(info, dict):
+                    normalized_terms[term] = info
+                else:
+                    normalized_terms[term] = {"score": info}
+        else:
+            for item in terms:
+                if not isinstance(item, dict) or not item.get("term"):
+                    continue
+                term = str(item["term"])
+                normalized_terms[term] = {
+                    "definition": item.get("definition", ""),
+                    "category": item.get("category", ""),
+                    "importance": item.get("importance", 1),
+                }
+
+        self.dynamic_terms.update(normalized_terms)
+        if asr_mapping:
+            self.dynamic_asr_mapping.update({
+                wrong: correct
+                for wrong, correct in asr_mapping.items()
+                if wrong and correct and wrong != correct
+            })
+        self.build_index()
+
+    def clear_dynamic_terms(self):
+        self.dynamic_terms.clear()
+        self.dynamic_asr_mapping.clear()
+        self.build_index()
+
+    def get_dynamic_stats(self) -> Dict[str, int | str]:
+        return {
+            "domain": self.domain,
+            "dynamic_term_count": len(self.dynamic_terms),
+            "dynamic_asr_mapping_count": len(self.dynamic_asr_mapping),
+            "term_index_count": len(self.term_index),
+            "pinyin_count": len(self.pinyin_to_term),
+        }
 
     def _calculate_similarity(self, p1: str, p2: str) -> float:
         words1 = p1.split()

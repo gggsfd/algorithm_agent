@@ -1,0 +1,510 @@
+{
+  "算法": {
+    "definition": "解决特定问题的一系列清晰、有限的指令序列",
+    "category": "theory",
+    "importance": 5,
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "算法分析": {
+    "definition": "评估算法的正确性、时间效率、空间效率等",
+    "category": "theory",
+    "importance": 5,
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "时间复杂度": {
+    "definition": "算法运行时间随输入规模增长的渐近趋势",
+    "category": "theory",
+    "importance": 5,
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "空间复杂度": {
+    "definition": "算法执行所需的额外内存空间，不含输入本身",
+    "category": "theory",
+    "importance": 5,
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "大O记号": {
+    "definition": "表示算法最坏情况渐近上界的符号，f(n) ≤ c·g(n)",
+    "category": "theory",
+    "importance": 5,
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "递归": {
+    "definition": "函数调用自身，代码简洁但可能栈溢出",
+    "category": "theory",
+    "importance": 4,
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "迭代": {
+    "definition": "循环结构，显式维护状态，空间可控",
+    "category": "theory",
+    "importance": 4,
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "原地算法": {
+    "definition": "使用O(1)额外空间的算法，如冒泡排序",
+    "category": "algorithm",
+    "importance": 4,
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "循环不变式": {
+    "definition": "循环前、中、后保持的性质，用于证明正确性",
+    "category": "theory",
+    "importance": 4,
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "大Ω记号": {
+    "definition": "表示算法最好情况渐近下界的符号，f(n) ≥ c·g(n)",
+    "category": "theory",
+    "importance": 4,
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "大Θ记号": {
+    "definition": "同时表示渐近上界和下界的紧确界符号",
+    "category": "theory",
+    "importance": 4,
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "小o记号": {
+    "definition": "表示严格渐近上界，f(n)/g(n) → 0",
+    "category": "theory",
+    "importance": 3,
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "尾递归": {
+    "definition": "递归调用在函数末尾，可优化为迭代",
+    "category": "theory",
+    "importance": 3,
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "数学归纳法": {
+    "definition": "证明算法正确性：基例、归纳假设、归纳步骤",
+    "category": "theory",
+    "importance": 3,
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "反证法": {
+    "definition": "假设算法不正确推出矛盾以证明正确性",
+    "category": "theory",
+    "importance": 3,
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "展开法": {
+    "definition": "展开递推式，找规律求和求解时间复杂度",
+    "category": "theory",
+    "importance": 3,
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "代入法": {
+    "definition": "猜测递推式解的形式并用数学归纳法证明的复杂度分析方法",
+    "category": "method",
+    "importance": 4,
+    "source_materials": [
+      "mat_67b43682387b",
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "递归树法": {
+    "definition": "画出递归树，计算每层代价并求和",
+    "category": "theory",
+    "importance": 3,
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "变量替换法": {
+    "definition": "通过变量替换简化复杂递推式求解",
+    "category": "theory",
+    "importance": 3,
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "空间换时间": {
+    "definition": "用额外存储减少计算时间，如动态规划",
+    "category": "theory",
+    "importance": 3,
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ]
+  },
+  "分治算法": {
+    "definition": "将问题分解为子问题递归求解再合并的算法范式",
+    "category": "algorithm",
+    "importance": 5,
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "归并排序": {
+    "definition": "采用分治策略的排序算法，分解为两半递归排序后合并",
+    "category": "algorithm",
+    "importance": 5,
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "快速排序": {
+    "definition": "通过基准分割数组递归排序，平均时间复杂度O(n log n)",
+    "category": "algorithm",
+    "importance": 5,
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "二分查找": {
+    "definition": "在有序数组中通过比较中间元素递归缩小搜索范围的算法",
+    "category": "algorithm",
+    "importance": 5,
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "主定理": {
+    "definition": "求解形如T(n)=aT(n/b)+f(n)递推式的渐近界的方法",
+    "category": "theory",
+    "importance": 5,
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "递推方程": {
+    "definition": "描述分治算法运行时间的递归表达式，如T(n)=aT(n/b)+f(n)",
+    "category": "theory",
+    "importance": 4,
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "递归树": {
+    "definition": "通过绘制递归调用树并求和计算时间复杂度的分析方法",
+    "category": "tool",
+    "importance": 4,
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "Karatsuba算法": {
+    "definition": "通过减少乘法次数优化大整数乘法的分治算法，复杂度O(n^1.585)",
+    "category": "algorithm",
+    "importance": 3,
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "Strassen算法": {
+    "definition": "矩阵乘法的分治算法，时间复杂度O(n^2.81)",
+    "category": "algorithm",
+    "importance": 3,
+    "source_materials": [
+      "mat_67b43682387b"
+    ]
+  },
+  "动态规划": {
+    "definition": "通过存储子问题结果求解全局最优的算法方法",
+    "category": "algorithm",
+    "importance": 5,
+    "source_materials": [
+      "mat_022f372ddb36",
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "最优子结构": {
+    "definition": "原问题最优解包含子问题最优解的性质",
+    "category": "theory",
+    "importance": 5,
+    "source_materials": [
+      "mat_022f372ddb36",
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "重叠子问题": {
+    "definition": "递归求解中大量重复计算相同的子问题",
+    "category": "theory",
+    "importance": 5,
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "状态": {
+    "definition": "表示问题求解过程中某个阶段的决策结果",
+    "category": "concept",
+    "importance": 4,
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "状态转移方程": {
+    "definition": "描述状态之间递推关系的数学公式",
+    "category": "concept",
+    "importance": 4,
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "记忆化搜索": {
+    "definition": "自顶向下递归并存储子问题结果避免重复计算",
+    "category": "algorithm",
+    "importance": 4,
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "无后效性": {
+    "definition": "未来状态只与当前状态有关，与如何到达无关",
+    "category": "theory",
+    "importance": 4,
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "0/1背包": {
+    "definition": "每个物品只能选或不选，求最大价值的背包问题",
+    "category": "algorithm",
+    "importance": 4,
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "完全背包": {
+    "definition": "每种物品可选无限次，求最大价值的背包问题",
+    "category": "algorithm",
+    "importance": 4,
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "最长公共子序列": {
+    "definition": "求两个序列的最长公共子序列长度的问题",
+    "category": "algorithm",
+    "importance": 4,
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "最长递增子序列": {
+    "definition": "求数组中最长严格递增子序列长度的问题",
+    "category": "algorithm",
+    "importance": 4,
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "编辑距离": {
+    "definition": "将字符串A转换为B的最少操作（插入、删除、替换）次数",
+    "category": "algorithm",
+    "importance": 4,
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "滚动数组": {
+    "definition": "通过复用数组空间降低动态规划空间复杂度的技巧",
+    "category": "tool",
+    "importance": 3,
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "斐波那契数列": {
+    "definition": "F(0)=0,F(1)=1,F(n)=F(n-1)+F(n-2)的数列",
+    "category": "concept",
+    "importance": 3,
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "矩阵链乘": {
+    "definition": "求矩阵链相乘的最小乘法次数的问题",
+    "category": "algorithm",
+    "importance": 3,
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "自顶向下": {
+    "definition": "从最终问题开始递归求解子问题的动态规划实现方式",
+    "category": "concept",
+    "importance": 3,
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "自底向上": {
+    "definition": "从最小子问题开始逐步求解到原问题的动态规划实现方式",
+    "category": "concept",
+    "importance": 3,
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "分治": {
+    "definition": "将问题分解为独立子问题递归求解的算法方法",
+    "category": "algorithm",
+    "importance": 4,
+    "source_materials": [
+      "mat_022f372ddb36",
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "贪心": {
+    "definition": "局部最优即全局最优，无需回溯的算法范式",
+    "category": "algorithm",
+    "importance": 3,
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "空间优化": {
+    "definition": "通过分析状态依赖减少存储空间的通用技巧",
+    "category": "tool",
+    "importance": 2,
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "前缀和优化": {
+    "definition": "用前缀和加速区间和计算的动态规划优化技巧",
+    "category": "tool",
+    "importance": 2,
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "单调队列优化": {
+    "definition": "用单调队列维护滑动窗口最值，优化动态规划",
+    "category": "tool",
+    "importance": 2,
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "状态压缩": {
+    "definition": "用二进制位表示集合，处理小规模集合的优化技巧",
+    "category": "tool",
+    "importance": 2,
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "四边形不等式": {
+    "definition": "用于优化区间DP分割点枚举的不等式性质",
+    "category": "theory",
+    "importance": 2,
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ]
+  },
+  "贪心策略": {
+    "definition": "每一步都选择当前最优的算法设计方法，不回溯",
+    "category": "algorithm",
+    "importance": 5,
+    "source_materials": [
+      "mat_022f372ddb36"
+    ]
+  },
+  "贪心选择性质": {
+    "definition": "全局最优解可通过一系列局部最优选择达到的性质",
+    "category": "theory",
+    "importance": 5,
+    "source_materials": [
+      "mat_022f372ddb36"
+    ]
+  },
+  "活动选择问题": {
+    "definition": "给定区间，求最多互不冲突区间数的经典贪心问题",
+    "category": "algorithm",
+    "importance": 4,
+    "source_materials": [
+      "mat_022f372ddb36"
+    ]
+  },
+  "Huffman编码": {
+    "definition": "通过合并最低频字符构造最优前缀编码的贪心算法",
+    "category": "algorithm",
+    "importance": 4,
+    "source_materials": [
+      "mat_022f372ddb36"
+    ]
+  },
+  "最小生成树": {
+    "definition": "连通加权图中权值最小的生成树",
+    "category": "data structure",
+    "importance": 4,
+    "source_materials": [
+      "mat_022f372ddb36"
+    ]
+  },
+  "Prim算法": {
+    "definition": "从顶点开始每次选连接树与非树的最小边的MST算法",
+    "category": "algorithm",
+    "importance": 4,
+    "source_materials": [
+      "mat_022f372ddb36"
+    ]
+  },
+  "Kruskal算法": {
+    "definition": "按边权排序选最小边不形成环的MST算法",
+    "category": "algorithm",
+    "importance": 4,
+    "source_materials": [
+      "mat_022f372ddb36"
+    ]
+  },
+  "Dijkstra算法": {
+    "definition": "非负权图中每次选最近顶点并松弛的贪心最短路径算法",
+    "category": "algorithm",
+    "importance": 4,
+    "source_materials": [
+      "mat_022f372ddb36"
+    ]
+  },
+  "分数背包问题": {
+    "definition": "物品可分割，按单位价值贪心选取的背包问题",
+    "category": "algorithm",
+    "importance": 3,
+    "source_materials": [
+      "mat_022f372ddb36"
+    ]
+  },
+  "交换论证": {
+    "definition": "通过交换元素构造新解证明贪心选择正确的证明方法",
+    "category": "theory",
+    "importance": 3,
+    "source_materials": [
+      "mat_022f372ddb36"
+    ]
+  }
+}

@@ -5,7 +5,15 @@ from typing import Dict, Literal, Optional
 @dataclass
 class CandidateCorrection:
     correct: str
-    source: Literal["dict", "rag", "pinyin", "asr_mapping"]
+    source: Literal[
+        "dict",
+        "rag",
+        "pinyin",
+        "asr_mapping",
+        "candidate_dict",
+        "candidate_asr_mapping",
+        "candidate_pinyin",
+    ]
     confidence: float
     method: str
 

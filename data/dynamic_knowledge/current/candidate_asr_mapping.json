@@ -1,0 +1,2892 @@
+{
+  "主定离": {
+    "wrong": "主定离",
+    "correct": "主定理",
+    "confidence": 0.55,
+    "reason": "音近",
+    "source_term": "主定理",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "主定": {
+    "wrong": "主定",
+    "correct": "主定理",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "主定理",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "分支法": {
+    "wrong": "分支法",
+    "correct": "分治法",
+    "confidence": 0.5,
+    "reason": "音近",
+    "source_term": "分治法",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "分治": {
+    "wrong": "分治",
+    "correct": "分治法",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "分治法",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "分治发": {
+    "wrong": "分治发",
+    "correct": "分治法",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "分治法",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "摊换分析": {
+    "wrong": "摊换分析",
+    "correct": "摊还分析",
+    "confidence": 0.5,
+    "reason": "音近",
+    "source_term": "摊还分析",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "摊还分": {
+    "wrong": "摊还分",
+    "correct": "摊还分析",
+    "confidence": 0.6,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "摊还分析",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "递规关系": {
+    "wrong": "递规关系",
+    "correct": "递归关系",
+    "confidence": 0.55,
+    "reason": "音近",
+    "source_term": "递归关系",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "递归关": {
+    "wrong": "递归关",
+    "correct": "递归关系",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "递归关系",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "初试条件": {
+    "wrong": "初试条件",
+    "correct": "初始条件",
+    "confidence": 0.55,
+    "reason": "音近",
+    "source_term": "初始条件",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "初始条": {
+    "wrong": "初始条",
+    "correct": "初始条件",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "初始条件",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "编辑条件": {
+    "wrong": "编辑条件",
+    "correct": "边界条件",
+    "confidence": 0.5,
+    "reason": "音近",
+    "source_term": "边界条件",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "边界条": {
+    "wrong": "边界条",
+    "correct": "边界条件",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "边界条件",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "最坏情扩": {
+    "wrong": "最坏情扩",
+    "correct": "最坏情况",
+    "confidence": 0.55,
+    "reason": "音近",
+    "source_term": "最坏情况",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "最坏情": {
+    "wrong": "最坏情",
+    "correct": "最坏情况",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "最坏情况",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "最好情操": {
+    "wrong": "最好情操",
+    "correct": "最好情况",
+    "confidence": 0.5,
+    "reason": "音近",
+    "source_term": "最好情况",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "最好情": {
+    "wrong": "最好情",
+    "correct": "最好情况",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "最好情况",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "平均情旷": {
+    "wrong": "平均情旷",
+    "correct": "平均情况",
+    "confidence": 0.5,
+    "reason": "音近",
+    "source_term": "平均情况",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "平均情": {
+    "wrong": "平均情",
+    "correct": "平均情况",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "平均情况",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "紧质界": {
+    "wrong": "紧质界",
+    "correct": "紧致界",
+    "confidence": 0.55,
+    "reason": "音近",
+    "source_term": "紧致界",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "紧致": {
+    "wrong": "紧致",
+    "correct": "紧致界",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "紧致界",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "紧致届": {
+    "wrong": "紧致届",
+    "correct": "紧致界",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "紧致界",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "善界": {
+    "wrong": "善界",
+    "correct": "上界",
+    "confidence": 0.55,
+    "reason": "音近",
+    "source_term": "上界",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "夏界": {
+    "wrong": "夏界",
+    "correct": "下界",
+    "confidence": 0.55,
+    "reason": "音近",
+    "source_term": "下界",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "渐进分析": {
+    "wrong": "渐进分析",
+    "correct": "渐近分析",
+    "confidence": 0.55,
+    "reason": "音近",
+    "source_term": "渐近分析",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "渐近分": {
+    "wrong": "渐近分",
+    "correct": "渐近分析",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "渐近分析",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "子数阶": {
+    "wrong": "子数阶",
+    "correct": "指数阶",
+    "confidence": 0.5,
+    "reason": "音近",
+    "source_term": "指数阶",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "指数": {
+    "wrong": "指数",
+    "correct": "指数阶",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "指数阶",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "对竖阶": {
+    "wrong": "对竖阶",
+    "correct": "对数阶",
+    "confidence": 0.5,
+    "reason": "音近",
+    "source_term": "对数阶",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "对数": {
+    "wrong": "对数",
+    "correct": "对数阶",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "对数阶",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "多向式阶": {
+    "wrong": "多向式阶",
+    "correct": "多项式阶",
+    "confidence": 0.5,
+    "reason": "音近",
+    "source_term": "多项式阶",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "多项式": {
+    "wrong": "多项式",
+    "correct": "多项式阶",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "多项式阶",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "介成阶": {
+    "wrong": "介成阶",
+    "correct": "阶乘阶",
+    "confidence": 0.5,
+    "reason": "音近",
+    "source_term": "阶乘阶",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "阶乘": {
+    "wrong": "阶乘",
+    "correct": "阶乘阶",
+    "confidence": 0.6,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "阶乘阶",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "基础步轴": {
+    "wrong": "基础步轴",
+    "correct": "基础步骤",
+    "confidence": 0.5,
+    "reason": "音近",
+    "source_term": "基础步骤",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "基础步": {
+    "wrong": "基础步",
+    "correct": "基础步骤",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "基础步骤",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "归拿步骤": {
+    "wrong": "归拿步骤",
+    "correct": "归纳步骤",
+    "confidence": 0.5,
+    "reason": "音近",
+    "source_term": "归纳步骤",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "归纳步": {
+    "wrong": "归纳步",
+    "correct": "归纳步骤",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "归纳步骤",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "问题规摸": {
+    "wrong": "问题规摸",
+    "correct": "问题规模",
+    "confidence": 0.55,
+    "reason": "音近",
+    "source_term": "问题规模",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "问题规": {
+    "wrong": "问题规",
+    "correct": "问题规模",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "问题规模",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_f54cfa3226d2"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:06:48.133035+00:00",
+    "updated_at": "2026-06-09T12:06:48.133035+00:00"
+  },
+  "分支三步法": {
+    "wrong": "分支三步法",
+    "correct": "分治三步法",
+    "confidence": 0.6,
+    "reason": "语音相似，『分治』误听为『分支』",
+    "source_term": "分治三步法",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "分解解决合并": {
+    "wrong": "分解解决合并",
+    "correct": "分治三步法",
+    "confidence": 0.5,
+    "reason": "直接说出步骤名称",
+    "source_term": "分治三步法",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "分治三步发": {
+    "wrong": "分治三步发",
+    "correct": "分治三步法",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "分治三步法",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "分治三步": {
+    "wrong": "分治三步",
+    "correct": "分治三步法",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "分治三步法",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "分治使用条件": {
+    "wrong": "分治使用条件",
+    "correct": "分治适用条件",
+    "confidence": 0.55,
+    "reason": "『适用』与『使用』发音相近",
+    "source_term": "分治适用条件",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "分治适用条": {
+    "wrong": "分治适用条",
+    "correct": "分治适用条件",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "分治适用条件",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "随机快排": {
+    "wrong": "随机快排",
+    "correct": "随机化快速排序",
+    "confidence": 0.5,
+    "reason": "简称，ASR可能输出缩写",
+    "source_term": "随机化快速排序",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "随机快速排序": {
+    "wrong": "随机快速排序",
+    "correct": "随机化快速排序",
+    "confidence": 0.4,
+    "reason": "相近但顺序不同",
+    "source_term": "随机化快速排序",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "随机化快速排": {
+    "wrong": "随机化快速排",
+    "correct": "随机化快速排序",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "随机化快速排序",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "阿克拉-巴齐定理": {
+    "wrong": "阿克拉-巴齐定理",
+    "correct": "Akra-Bazzi定理",
+    "confidence": 0.5,
+    "reason": "英文音译可能被ASR误识别为中文音译",
+    "source_term": "Akra-Bazzi定理",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "Akra-Bazzi": {
+    "wrong": "Akra-Bazzi",
+    "correct": "Akra-Bazzi定理",
+    "confidence": 0.4,
+    "reason": "未加『定理』二字",
+    "source_term": "Akra-Bazzi定理",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "Akra-Bazzi定": {
+    "wrong": "Akra-Bazzi定",
+    "correct": "Akra-Bazzi定理",
+    "confidence": 0.6,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "Akra-Bazzi定理",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "最近点对问题": {
+    "wrong": "最近点对问题",
+    "correct": "最近点对",
+    "confidence": 0.4,
+    "reason": "可能多出『问题』二字",
+    "source_term": "最近点对",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "最近点对算法": {
+    "wrong": "最近点对算法",
+    "correct": "最近点对",
+    "confidence": 0.4,
+    "reason": "换字",
+    "source_term": "最近点对",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "最近点": {
+    "wrong": "最近点",
+    "correct": "最近点对",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "最近点对",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "递归层次": {
+    "wrong": "递归层次",
+    "correct": "递归深度",
+    "confidence": 0.5,
+    "reason": "同义词",
+    "source_term": "递归深度",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "递归深": {
+    "wrong": "递归深",
+    "correct": "递归深度",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "递归深度",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "找溢出": {
+    "wrong": "找溢出",
+    "correct": "栈溢出",
+    "confidence": 0.7,
+    "reason": "『栈』与『找』发音相近",
+    "source_term": "栈溢出",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "战溢出": {
+    "wrong": "战溢出",
+    "correct": "栈溢出",
+    "confidence": 0.5,
+    "reason": "语音错误",
+    "source_term": "栈溢出",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "栈溢": {
+    "wrong": "栈溢",
+    "correct": "栈溢出",
+    "confidence": 0.6,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "栈溢出",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "子问题重叠性": {
+    "wrong": "子问题重叠性",
+    "correct": "子问题重叠",
+    "confidence": 0.4,
+    "reason": "多字",
+    "source_term": "子问题重叠",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "子问题权重": {
+    "wrong": "子问题权重",
+    "correct": "子问题重叠",
+    "confidence": 0.3,
+    "reason": "发音相近",
+    "source_term": "子问题重叠",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "子问题重": {
+    "wrong": "子问题重",
+    "correct": "子问题重叠",
+    "confidence": 0.6,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "子问题重叠",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "动规": {
+    "wrong": "动规",
+    "correct": "动态规划",
+    "confidence": 0.4,
+    "reason": "简称",
+    "source_term": "动态规划",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "动态规划算法": {
+    "wrong": "动态规划算法",
+    "correct": "动态规划",
+    "confidence": 0.3,
+    "reason": "多出『算法』二字",
+    "source_term": "动态规划",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "动态规": {
+    "wrong": "动态规",
+    "correct": "动态规划",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "动态规划",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "小规模": {
+    "wrong": "小规模",
+    "correct": "小规模优化",
+    "confidence": 0.4,
+    "reason": "缺少『优化』",
+    "source_term": "小规模优化",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "规模优化": {
+    "wrong": "规模优化",
+    "correct": "小规模优化",
+    "confidence": 0.3,
+    "reason": "漏字",
+    "source_term": "小规模优化",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "小规模优": {
+    "wrong": "小规模优",
+    "correct": "小规模优化",
+    "confidence": 0.55,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "小规模优化",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "尾递归": {
+    "wrong": "尾递归",
+    "correct": "尾递归优化",
+    "confidence": 0.5,
+    "reason": "缺少『优化』",
+    "source_term": "尾递归优化",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "为递归优化": {
+    "wrong": "为递归优化",
+    "correct": "尾递归优化",
+    "confidence": 0.4,
+    "reason": "『尾』误听为『为』",
+    "source_term": "尾递归优化",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "尾递归优": {
+    "wrong": "尾递归优",
+    "correct": "尾递归优化",
+    "confidence": 0.6,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "尾递归优化",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "递推方程标准式": {
+    "wrong": "递推方程标准式",
+    "correct": "递推方程标准形式",
+    "confidence": 0.4,
+    "reason": "少字",
+    "source_term": "递推方程标准形式",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "递推形式": {
+    "wrong": "递推形式",
+    "correct": "递推方程标准形式",
+    "confidence": 0.3,
+    "reason": "简化",
+    "source_term": "递推方程标准形式",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "递推方程标准形": {
+    "wrong": "递推方程标准形",
+    "correct": "递推方程标准形式",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "递推方程标准形式",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "递推方程标准形是": {
+    "wrong": "递推方程标准形是",
+    "correct": "递推方程标准形式",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "递推方程标准形式",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "主定理的三个情况": {
+    "wrong": "主定理的三个情况",
+    "correct": "主定理三种情况",
+    "confidence": 0.4,
+    "reason": "多字",
+    "source_term": "主定理三种情况",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "三种情况": {
+    "wrong": "三种情况",
+    "correct": "主定理三种情况",
+    "confidence": 0.3,
+    "reason": "缺少『主定理』",
+    "source_term": "主定理三种情况",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "主定理三种情": {
+    "wrong": "主定理三种情",
+    "correct": "主定理三种情况",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "主定理三种情况",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "比较排序下限": {
+    "wrong": "比较排序下限",
+    "correct": "比较排序下界",
+    "confidence": 0.5,
+    "reason": "同义词",
+    "source_term": "比较排序下界",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "比较排序下届": {
+    "wrong": "比较排序下届",
+    "correct": "比较排序下界",
+    "confidence": 0.4,
+    "reason": "别字",
+    "source_term": "比较排序下界",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "比较排序下": {
+    "wrong": "比较排序下",
+    "correct": "比较排序下界",
+    "confidence": 0.6,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "比较排序下界",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "决策数模型": {
+    "wrong": "决策数模型",
+    "correct": "决策树模型",
+    "confidence": 0.6,
+    "reason": "『树』误为『数』",
+    "source_term": "决策树模型",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "决策树": {
+    "wrong": "决策树",
+    "correct": "决策树模型",
+    "confidence": 0.4,
+    "reason": "缺少『模型』",
+    "source_term": "决策树模型",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "决策树模": {
+    "wrong": "决策树模",
+    "correct": "决策树模型",
+    "confidence": 0.55,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "决策树模型",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_67b43682387b"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:07:49.354575+00:00",
+    "updated_at": "2026-06-09T12:07:49.354575+00:00"
+  },
+  "从重复背包": {
+    "wrong": "从重复背包",
+    "correct": "多重背包",
+    "confidence": 0.55,
+    "reason": "'多重'与'从重'发音相近",
+    "source_term": "多重背包",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "多重被包": {
+    "wrong": "多重被包",
+    "correct": "多重背包",
+    "confidence": 0.6,
+    "reason": "'背'与'被'同音",
+    "source_term": "多重背包",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "多重背": {
+    "wrong": "多重背",
+    "correct": "多重背包",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "多重背包",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "绝策单调性": {
+    "wrong": "绝策单调性",
+    "correct": "决策单调性",
+    "confidence": 0.5,
+    "reason": "'决'与'绝'发音相同",
+    "source_term": "决策单调性",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "决策单调形": {
+    "wrong": "决策单调形",
+    "correct": "决策单调性",
+    "confidence": 0.45,
+    "reason": "'性'与'形'方言混淆",
+    "source_term": "决策单调性",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "决策单调": {
+    "wrong": "决策单调",
+    "correct": "决策单调性",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "决策单调性",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "斜绿优化": {
+    "wrong": "斜绿优化",
+    "correct": "斜率优化",
+    "confidence": 0.5,
+    "reason": "'率'与'绿'音近",
+    "source_term": "斜率优化",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "协率优化": {
+    "wrong": "协率优化",
+    "correct": "斜率优化",
+    "confidence": 0.45,
+    "reason": "'斜'与'协'音近",
+    "source_term": "斜率优化",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "斜率优": {
+    "wrong": "斜率优",
+    "correct": "斜率优化",
+    "confidence": 0.6,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "斜率优化",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "字问题图": {
+    "wrong": "字问题图",
+    "correct": "子问题图",
+    "confidence": 0.6,
+    "reason": "'子'与'字'同音",
+    "source_term": "子问题图",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "子问题突": {
+    "wrong": "子问题突",
+    "correct": "子问题图",
+    "confidence": 0.4,
+    "reason": "'图'与'突'音近",
+    "source_term": "子问题图",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "子问题途": {
+    "wrong": "子问题途",
+    "correct": "子问题图",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "子问题图",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "子问题": {
+    "wrong": "子问题",
+    "correct": "子问题图",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "子问题图",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "现象动态规划": {
+    "wrong": "现象动态规划",
+    "correct": "线性动态规划",
+    "confidence": 0.5,
+    "reason": "'线性'与'现象'音近",
+    "source_term": "线性动态规划",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "线性动太规划": {
+    "wrong": "线性动太规划",
+    "correct": "线性动态规划",
+    "confidence": 0.55,
+    "reason": "'态'与'太'发音相似",
+    "source_term": "线性动态规划",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "线性动态规": {
+    "wrong": "线性动态规",
+    "correct": "线性动态规划",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "线性动态规划",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "区间动太规划": {
+    "wrong": "区间动太规划",
+    "correct": "区间动态规划",
+    "confidence": 0.55,
+    "reason": "'态'与'太'音近",
+    "source_term": "区间动态规划",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "区建动态规划": {
+    "wrong": "区建动态规划",
+    "correct": "区间动态规划",
+    "confidence": 0.45,
+    "reason": "'间'与'建'音近",
+    "source_term": "区间动态规划",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "区间动态规": {
+    "wrong": "区间动态规",
+    "correct": "区间动态规划",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "区间动态规划",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "树形动太规划": {
+    "wrong": "树形动太规划",
+    "correct": "树形动态规划",
+    "confidence": 0.5,
+    "reason": "'态'与'太'音近",
+    "source_term": "树形动态规划",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "书形动态规划": {
+    "wrong": "书形动态规划",
+    "correct": "树形动态规划",
+    "confidence": 0.6,
+    "reason": "'树'与'书'同音",
+    "source_term": "树形动态规划",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "树形动态规": {
+    "wrong": "树形动态规",
+    "correct": "树形动态规划",
+    "confidence": 0.55,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "树形动态规划",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "数位动太规划": {
+    "wrong": "数位动太规划",
+    "correct": "数位动态规划",
+    "confidence": 0.5,
+    "reason": "'态'与'太'音近",
+    "source_term": "数位动态规划",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "术位动态规划": {
+    "wrong": "术位动态规划",
+    "correct": "数位动态规划",
+    "confidence": 0.55,
+    "reason": "'数'与'术'同音",
+    "source_term": "数位动态规划",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "数位动态规": {
+    "wrong": "数位动态规",
+    "correct": "数位动态规划",
+    "confidence": 0.5,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "数位动态规划",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "盖率动态规划": {
+    "wrong": "盖率动态规划",
+    "correct": "概率动态规划",
+    "confidence": 0.5,
+    "reason": "'概'与'盖'音近",
+    "source_term": "概率动态规划",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "概率动太规划": {
+    "wrong": "概率动太规划",
+    "correct": "概率动态规划",
+    "confidence": 0.55,
+    "reason": "'态'与'太'音近",
+    "source_term": "概率动态规划",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "概率动态规": {
+    "wrong": "概率动态规",
+    "correct": "概率动态规划",
+    "confidence": 0.4,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "概率动态规划",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "动太规划初始化": {
+    "wrong": "动太规划初始化",
+    "correct": "动态规划初始化",
+    "confidence": 0.6,
+    "reason": "'态'与'太'音近",
+    "source_term": "动态规划初始化",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "动态规划处使化": {
+    "wrong": "动态规划处使化",
+    "correct": "动态规划初始化",
+    "confidence": 0.5,
+    "reason": "'初'与'处'、'始'与'使'音近",
+    "source_term": "动态规划初始化",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "动态规划初始": {
+    "wrong": "动态规划初始",
+    "correct": "动态规划初始化",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "动态规划初始化",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "最终答案提却": {
+    "wrong": "最终答案提却",
+    "correct": "最终答案提取",
+    "confidence": 0.45,
+    "reason": "'取'与'却'音近",
+    "source_term": "最终答案提取",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "最重答案提取": {
+    "wrong": "最重答案提取",
+    "correct": "最终答案提取",
+    "confidence": 0.5,
+    "reason": "'终'与'重'音近",
+    "source_term": "最终答案提取",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "最终答案提": {
+    "wrong": "最终答案提",
+    "correct": "最终答案提取",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "最终答案提取",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "分治与动太规划对比": {
+    "wrong": "分治与动太规划对比",
+    "correct": "分治与动态规划对比",
+    "confidence": 0.55,
+    "reason": "'态'与'太'音近",
+    "source_term": "分治与动态规划对比",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "分支与动态规划对比": {
+    "wrong": "分支与动态规划对比",
+    "correct": "分治与动态规划对比",
+    "confidence": 0.5,
+    "reason": "'治'与'支'音近",
+    "source_term": "分治与动态规划对比",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "分治与动态规划对": {
+    "wrong": "分治与动态规划对",
+    "correct": "分治与动态规划对比",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "分治与动态规划对比",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "担心与动态规划对比": {
+    "wrong": "担心与动态规划对比",
+    "correct": "贪心与动态规划对比",
+    "confidence": 0.5,
+    "reason": "'贪'与'担'音近",
+    "source_term": "贪心与动态规划对比",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "贪心与动太规划对比": {
+    "wrong": "贪心与动太规划对比",
+    "correct": "贪心与动态规划对比",
+    "confidence": 0.55,
+    "reason": "'态'与'太'音近",
+    "source_term": "贪心与动态规划对比",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "贪心与动态规划对": {
+    "wrong": "贪心与动态规划对",
+    "correct": "贪心与动态规划对比",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "贪心与动态规划对比",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "最优值含数": {
+    "wrong": "最优值含数",
+    "correct": "最优值函数",
+    "confidence": 0.55,
+    "reason": "'函'与'含'音近",
+    "source_term": "最优值函数",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "最优值函术": {
+    "wrong": "最优值函术",
+    "correct": "最优值函数",
+    "confidence": 0.5,
+    "reason": "'数'与'术'同音",
+    "source_term": "最优值函数",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "最优值函": {
+    "wrong": "最优值函",
+    "correct": "最优值函数",
+    "confidence": 0.6,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "最优值函数",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "地推关系": {
+    "wrong": "地推关系",
+    "correct": "递推关系",
+    "confidence": 0.6,
+    "reason": "'递'与'地'同音",
+    "source_term": "递推关系",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "递推关细": {
+    "wrong": "递推关细",
+    "correct": "递推关系",
+    "confidence": 0.45,
+    "reason": "'系'与'细'音近",
+    "source_term": "递推关系",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "递推关": {
+    "wrong": "递推关",
+    "correct": "递推关系",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "递推关系",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "多边型不等式": {
+    "wrong": "多边型不等式",
+    "correct": "多边形不等式",
+    "confidence": 0.5,
+    "reason": "'形'与'型'同音",
+    "source_term": "多边形不等式",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "多边形不登式": {
+    "wrong": "多边形不登式",
+    "correct": "多边形不等式",
+    "confidence": 0.45,
+    "reason": "'等'与'登'音近",
+    "source_term": "多边形不等式",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "多边形不等是": {
+    "wrong": "多边形不等是",
+    "correct": "多边形不等式",
+    "confidence": 0.4,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "多边形不等式",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "多边形不等": {
+    "wrong": "多边形不等",
+    "correct": "多边形不等式",
+    "confidence": 0.4,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "多边形不等式",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "内春换效率": {
+    "wrong": "内春换效率",
+    "correct": "内存换效率",
+    "confidence": 0.4,
+    "reason": "'存'与'春'音近（某些方言）",
+    "source_term": "内存换效率",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "内存换效录": {
+    "wrong": "内存换效录",
+    "correct": "内存换效率",
+    "confidence": 0.45,
+    "reason": "'率'与'录'音近",
+    "source_term": "内存换效率",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "内存换效": {
+    "wrong": "内存换效",
+    "correct": "内存换效率",
+    "confidence": 0.5,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "内存换效率",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "自问题独立性": {
+    "wrong": "自问题独立性",
+    "correct": "子问题独立性",
+    "confidence": 0.5,
+    "reason": "'子'与'自'音近",
+    "source_term": "子问题独立性",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "子问题独李性": {
+    "wrong": "子问题独李性",
+    "correct": "子问题独立性",
+    "confidence": 0.5,
+    "reason": "'立'与'李'同音",
+    "source_term": "子问题独立性",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "子问题独立": {
+    "wrong": "子问题独立",
+    "correct": "子问题独立性",
+    "confidence": 0.6,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "子问题独立性",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "平谈分析": {
+    "wrong": "平谈分析",
+    "correct": "平摊分析",
+    "confidence": 0.5,
+    "reason": "'摊'与'谈'音近",
+    "source_term": "平摊分析",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "平摊分系": {
+    "wrong": "平摊分系",
+    "correct": "平摊分析",
+    "confidence": 0.45,
+    "reason": "'析'与'系'音近",
+    "source_term": "平摊分析",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "平摊分": {
+    "wrong": "平摊分",
+    "correct": "平摊分析",
+    "confidence": 0.55,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "平摊分析",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "空间下解": {
+    "wrong": "空间下解",
+    "correct": "空间下界",
+    "confidence": 0.5,
+    "reason": "'界'与'解'音近",
+    "source_term": "空间下界",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "空间虾界": {
+    "wrong": "空间虾界",
+    "correct": "空间下界",
+    "confidence": 0.4,
+    "reason": "'下'与'虾'音近（方言）",
+    "source_term": "空间下界",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "空间下届": {
+    "wrong": "空间下届",
+    "correct": "空间下界",
+    "confidence": 0.45,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "空间下界",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "空间下": {
+    "wrong": "空间下",
+    "correct": "空间下界",
+    "confidence": 0.45,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "空间下界",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_82b5b1a1178d"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:08:51.978284+00:00",
+    "updated_at": "2026-06-09T12:08:51.978284+00:00"
+  },
+  "退推": {
+    "wrong": "退推",
+    "correct": "递推",
+    "confidence": 0.5,
+    "reason": "音近",
+    "source_term": "递推",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "分子递归深度": {
+    "wrong": "分子递归深度",
+    "correct": "分治递归深度",
+    "confidence": 0.4,
+    "reason": "音近",
+    "source_term": "分治递归深度",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "分治递归深": {
+    "wrong": "分治递归深",
+    "correct": "分治递归深度",
+    "confidence": 0.6,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "分治递归深度",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "贪心算法无趋与反例": {
+    "wrong": "贪心算法无趋与反例",
+    "correct": "贪心算法误区与反例",
+    "confidence": 0.3,
+    "reason": "音近及错误理解",
+    "source_term": "贪心算法误区与反例",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "贪心算法误区与反": {
+    "wrong": "贪心算法误区与反",
+    "correct": "贪心算法误区与反例",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "贪心算法误区与反例",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "哥性质": {
+    "wrong": "哥性质",
+    "correct": "割性质",
+    "confidence": 0.5,
+    "reason": "音近",
+    "source_term": "割性质",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "割性": {
+    "wrong": "割性",
+    "correct": "割性质",
+    "confidence": 0.6,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "割性质",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "有先队列": {
+    "wrong": "有先队列",
+    "correct": "优先队列",
+    "confidence": 0.4,
+    "reason": "音近",
+    "source_term": "优先队列",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "优先队": {
+    "wrong": "优先队",
+    "correct": "优先队列",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "优先队列",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "冰茶姬": {
+    "wrong": "冰茶姬",
+    "correct": "并查集",
+    "confidence": 0.3,
+    "reason": "音近及网络梗",
+    "source_term": "并查集",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "并查": {
+    "wrong": "并查",
+    "correct": "并查集",
+    "confidence": 0.6,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "并查集",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "退推关系求解方法": {
+    "wrong": "退推关系求解方法",
+    "correct": "递推关系求解方法",
+    "confidence": 0.4,
+    "reason": "音近",
+    "source_term": "递推关系求解方法",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "递推关系求解方发": {
+    "wrong": "递推关系求解方发",
+    "correct": "递推关系求解方法",
+    "confidence": 0.6,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "递推关系求解方法",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "递推关系求解方": {
+    "wrong": "递推关系求解方",
+    "correct": "递推关系求解方法",
+    "confidence": 0.6,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "递推关系求解方法",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "自底向上退推与空间优化": {
+    "wrong": "自底向上退推与空间优化",
+    "correct": "自底向上递推与空间优化",
+    "confidence": 0.4,
+    "reason": "音近",
+    "source_term": "自底向上递推与空间优化",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "自底向上递推与空间优": {
+    "wrong": "自底向上递推与空间优",
+    "correct": "自底向上递推与空间优化",
+    "confidence": 0.6,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "自底向上递推与空间优化",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "动态规划游戏技巧": {
+    "wrong": "动态规划游戏技巧",
+    "correct": "动态规划优化技巧",
+    "confidence": 0.3,
+    "reason": "音近",
+    "source_term": "动态规划优化技巧",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "动态规划优化技": {
+    "wrong": "动态规划优化技",
+    "correct": "动态规划优化技巧",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "动态规划优化技巧",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "算法正确性正名": {
+    "wrong": "算法正确性正名",
+    "correct": "算法正确性证明",
+    "confidence": 0.2,
+    "reason": "音近",
+    "source_term": "算法正确性证明",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "算法正确性证": {
+    "wrong": "算法正确性证",
+    "correct": "算法正确性证明",
+    "confidence": 0.62,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "算法正确性证明",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "递归与接待分析": {
+    "wrong": "递归与接待分析",
+    "correct": "递归与迭代分析",
+    "confidence": 0.4,
+    "reason": "音近",
+    "source_term": "递归与迭代分析",
+    "source_type": "llm_supplement",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  },
+  "递归与迭代分": {
+    "wrong": "递归与迭代分",
+    "correct": "递归与迭代分析",
+    "confidence": 0.5,
+    "reason": "候选术语的近似听写或截断表达",
+    "source_term": "递归与迭代分析",
+    "source_type": "local_candidate_rule",
+    "status": "candidate",
+    "source_materials": [
+      "mat_022f372ddb36"
+    ],
+    "hit_count": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "created_at": "2026-06-09T12:10:00.817389+00:00",
+    "updated_at": "2026-06-09T12:10:00.817389+00:00"
+  }
+}

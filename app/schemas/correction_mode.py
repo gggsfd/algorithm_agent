@@ -5,3 +5,4 @@ class CorrectionMode(str, Enum):
     RULE = "rule"
     AGENT = "agent"
     HYBRID = "hybrid"
+    HYBRID_AUTO = "hybrid_auto"
